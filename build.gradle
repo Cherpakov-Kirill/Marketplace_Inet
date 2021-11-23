@@ -1,0 +1,48 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.com.google.protobuf:protobuf-gradle-plugin:0.8.17"
+    }
+}
+
+plugins {
+    id 'maven-publish'
+    id 'java'
+    id "com.google.protobuf" version "0.8.17"
+}
+
+group 'nsu.oop.marketplace.inet'
+version '1.0-SNAKEINET'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.protobuf:protobuf-java:3.14.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+apply plugin: "com.google.protobuf"
+apply plugin: "maven-publish"
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest.attributes("Class-Path": "protobuf-java-3.14.0.jar")
+}
