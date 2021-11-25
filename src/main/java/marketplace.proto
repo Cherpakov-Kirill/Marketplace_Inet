@@ -1,0 +1,69 @@
+syntax = "proto2";
+package marketplace;
+option java_package = "nsu.oop.marketplace.inet";
+option java_outer_classname = "MarketplaceProto";
+
+// Тип пользователя
+enum UserType {
+    UNAUTHENTICATED = 0; // Не прошедший аутентификацию пользователь
+    DIRECTOR = 1;  // Директор
+    ADMINISTRATOR = 2; // Администратор
+    MANAGER = 3; // Менеджер
+}
+
+// Пользователь
+message User {
+    required string name = 1;       // Имя пользователя
+    required int32 id = 2;          // Уникальный идентификатор пользователя в пределах игры
+    required string ip_address = 3; // IPv4 или IPv6 адрес пользователя в виде строки (отправитель не знает свой IP, поэтому указывает тут пустую строку)
+    required int32 port = 4;        // Порт UDP-сокета пользователя
+    optional UserType type = 5 [default = UNAUTHENTICATED]; // Тип пользователя
+}
+
+// Небольшая конфиругация для всех пользователей одинаковая
+message SessionConfig {
+    optional int32 ping_delay_ms = 1 [default = 100];   // Задержка между отправкой ping-сообщений, в миллисекундах (от 1 до 10000)
+    optional int32 node_timeout_ms = 2 [default = 800]; // Таймаут, после которого считаем что узел отпал, в миллисекундах (от 1 до 10000)
+}
+
+// Общий формат любого сообщения
+message Message {
+    // Говорим что мы живы с интервалом ping_delay_ms
+    message PingMsg {
+    }
+    // Подтверждение сообщения с таким же seq
+    message AckMsg {
+    }
+    // Уведомление о открытой сессии, регулярно отправляется multicast-ом
+    message AnnouncementMsg {
+        required SessionConfig config = 1;           // Параметры сессии
+    }
+    // Авторизация пользователя
+    message JoinMsg {
+        required string login = 1;      // Имя пользователя
+        required string password = 2;   // Пароль пользователя
+    }
+    // Ошибка операции
+    message ErrorMsg {
+        required string error_message = 1; // Строковое сообщение ошибки
+    }
+
+    // Смена типа пользователя
+    message TypeChangeMsg {
+        optional UserType receiver_type = 1;
+    }
+
+    required int64 msg_seq = 1;     // Порядковый номер сообщения, уникален для отправителя в пределах сессии, монотонно возрастает
+    optional int32 sender_id = 2;   // ID узла-отправителя этого сообщения
+    optional int32 receiver_id = 3; // ID узла-получателя этого сообщения
+
+    // Тип сообщения
+    oneof Type {
+        PingMsg ping = 4;
+        AckMsg ack = 5;
+        AnnouncementMsg announcement = 6;
+        JoinMsg join = 7;
+        ErrorMsg error = 8;
+        TypeChangeMsg type_change = 9;
+    }
+}
