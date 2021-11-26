@@ -41,16 +41,16 @@ public class UnicastReceiver extends Thread {
                         port
                         );
                 messageAcceptor.acceptMessage(newPlayerId, messageSequence);
-
             }
             case ERROR -> {
                 System.out.println("ERROR id:" + messageSenderId + " seq=" + messageSequence);
                 messageAcceptor.acceptMessage(messageSenderId, messageSequence);
+                listener.receiveErrorMsg(msg.getError().getErrorMessage(), messageSenderId);
             }
             case TYPE_CHANGE -> {
                 System.out.println("TYPE_CHANGE from id:" + messageSenderId + " new user type = " + msg.getTypeChange().getReceiverType() + " seq =" + messageSequence);
-                boolean isMessageFromKnownPlayer = messageAcceptor.acceptMessage(messageSenderId, messageSequence);
-                if (isMessageFromKnownPlayer) listener.receiveTypeChangeMsg(msg.getTypeChange(), messageSenderId);
+                messageAcceptor.acceptMessage(messageSenderId, messageSequence);
+                if (messageSenderId == 0) listener.receiveTypeChangeMsg(msg.getTypeChange(), messageSenderId);
             }
         }
     }

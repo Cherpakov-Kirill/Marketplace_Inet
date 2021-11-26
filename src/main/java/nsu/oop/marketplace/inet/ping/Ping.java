@@ -43,7 +43,7 @@ public class Ping extends Thread implements PingForSender {
             for (int idUser : new LinkedList<>(lastMessageTimeFromNode.keySet())) {
                 long now = (new Date()).getTime();
                 if (now - lastMessageTimeFromNode.get(idUser) > nodeTimeOut) {
-                    listener.disconnectPlayer(idUser);
+                    listener.disconnectUser("Sorry, you have exceeded the disappearance timeout!", idUser);
                     lastMessageTimeFromNode.remove(idUser);
                     pingSender.removeUser(idUser);
                 }

@@ -11,13 +11,14 @@ import nsu.oop.marketplace.inet.multicast.MulticastPublisherListener;
 import nsu.oop.marketplace.inet.multicast.MulticastReceiver;
 import nsu.oop.marketplace.inet.multicast.MulticastReceiverListener;
 import nsu.oop.marketplace.inet.unicast.*;
+import nsu.oop.marketplace.inet.users.InetForUsers;
 
 import java.net.DatagramSocket;
 import java.net.SocketException;
 
-public class InetController implements MulticastPublisherListener, MulticastReceiverListener, UnicastReceiverListener, MessageAcceptorListener, PingListener, InetForPlayers {
+public class InetController implements MulticastPublisherListener, MulticastReceiverListener, UnicastReceiverListener, MessageAcceptorListener, PingListener, InetForUsers {
     private final InetControllerListener listener;
-    private PlayersForInet players;
+    private UsersForInet users;
     private DatagramSocket socket;
     private final MessageAcceptor messageAcceptor;
     private final Ping ping;
@@ -50,8 +51,8 @@ public class InetController implements MulticastPublisherListener, MulticastRece
         receiver.interrupt();
     }
 
-    public void attachPlayers(PlayersForInet players){
-        this.players = players;
+    public void attachPlayers(UsersForInet players){
+        this.users = players;
     }
 
     public void startMulticastReceiver() {
@@ -92,19 +93,23 @@ public class InetController implements MulticastPublisherListener, MulticastRece
     }
 
     @Override
-    public void launchGameCore(int playerId) {
-        listener.launchGameCore(playerId);
+    public void launchClientCore(int playerId) {
+        listener.launchClientCore(playerId);
     }
 
     @Override
     public MarketplaceProto.User getGamePlayerById(int id) {
-        return players.getGamePLayerById(id);
+        return users.getUserById(id);
     }
 
     @Override
-    public void receiveAnnouncementMsg(MarketplaceProto.Message.AnnouncementMsg msg, String masterIp) {
-        //todo make action on receiving of the announcement message
-        //listener.updateFindGameList(gamesList);
+    public void receiveAnnouncementMsg(MarketplaceProto.Message.AnnouncementMsg msg, String ip, int port) {
+        listener.receiveAnnouncementMsg(msg, ip, port);
+    }
+
+    @Override
+    public void receiveErrorMsg(String error, int senderId) {
+        listener.receiveErrorMsg(error, senderId);
     }
 
     @Override
@@ -118,13 +123,13 @@ public class InetController implements MulticastPublisherListener, MulticastRece
     }
 
     @Override
-    public void disconnectPlayer(int playerId) {
-        players.disconnectPlayer(playerId);
+    public void disconnectUser(String errorMessage, int userId) {
+        users.disconnectUser(errorMessage, userId);
     }
 
     @Override
     public void sendPing(int playerId) {
-        players.sendPing(playerId);
+        users.sendPing(playerId);
     }
 
     @Override

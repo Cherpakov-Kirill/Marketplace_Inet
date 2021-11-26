@@ -43,9 +43,9 @@ public class MessageAcceptor implements AcceptorForSender, AcceptorForReceiver {
         synchronized (acceptedMessages) {
             acceptedMessages.add(messageSequence);
         }
-        if (messageSequence == 1) {
+        if (messageSequence == 1 && receiverId != 0) {
             thisNodeId = receiverId;
-            listener.launchGameCore(receiverId);
+            listener.launchClientCore(receiverId);
         }
     }
 }

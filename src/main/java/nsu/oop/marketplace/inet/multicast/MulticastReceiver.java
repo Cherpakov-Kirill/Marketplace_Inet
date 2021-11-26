@@ -33,7 +33,7 @@ public class MulticastReceiver extends Thread {
             byte[] gotBytes = new byte[packet.getLength()];
             System.arraycopy(buf, 0, gotBytes, 0, packet.getLength());
             MarketplaceProto.Message msg = MarketplaceProto.Message.parseFrom(gotBytes);
-            listener.receiveAnnouncementMsg(msg.getAnnouncement(), packet.getAddress().getHostAddress());
+            listener.receiveAnnouncementMsg(msg.getAnnouncement(), packet.getAddress().getHostAddress(), packet.getPort());
             socket.leaveGroup(group, netIf);
         } catch (IOException e) {
             e.printStackTrace();

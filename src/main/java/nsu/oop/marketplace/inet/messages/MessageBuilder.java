@@ -55,7 +55,7 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.Message roleChangingMsgBuilder(MarketplaceProto.UserType receiverType, int senderId, int receiverId) {
+    public static MarketplaceProto.Message typeChangingMsgBuilder(MarketplaceProto.UserType receiverType, int senderId, int receiverId) {
         return MarketplaceProto.Message.newBuilder()
                 .setTypeChange(MarketplaceProto.Message.TypeChangeMsg.newBuilder()
                         .setReceiverType(receiverType)
