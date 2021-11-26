@@ -11,14 +11,14 @@ import nsu.oop.marketplace.inet.multicast.MulticastPublisherListener;
 import nsu.oop.marketplace.inet.multicast.MulticastReceiver;
 import nsu.oop.marketplace.inet.multicast.MulticastReceiverListener;
 import nsu.oop.marketplace.inet.unicast.*;
-import nsu.oop.marketplace.inet.users.InetForUsers;
+import nsu.oop.marketplace.inet.users.InetForUsersController;
 
 import java.net.DatagramSocket;
 import java.net.SocketException;
 
-public class InetController implements MulticastPublisherListener, MulticastReceiverListener, UnicastReceiverListener, MessageAcceptorListener, PingListener, InetForUsers {
+public class InetController implements Inet, MulticastPublisherListener, MulticastReceiverListener, UnicastReceiverListener, MessageAcceptorListener, PingListener, InetForUsersController {
     private final InetControllerListener listener;
-    private UsersForInet users;
+    private UsersControllerForInet users;
     private DatagramSocket socket;
     private final MessageAcceptor messageAcceptor;
     private final Ping ping;
@@ -46,20 +46,24 @@ public class InetController implements MulticastPublisherListener, MulticastRece
         this.messageSequence = 0;
     }
 
+    @Override
     public void interruptUnicast(){
         ping.interrupt();
         receiver.interrupt();
     }
 
-    public void attachPlayers(UsersForInet players){
-        this.users = players;
+    @Override
+    public void attachUsers(UsersControllerForInet users){
+        this.users = users;
     }
 
+    @Override
     public void startMulticastReceiver() {
         inviteReceiver = new MulticastReceiver(this);
         inviteReceiver.start();
     }
 
+    @Override
     public void startMulticastPublisher(int nodeId, MarketplaceProto.SessionConfig config) {
         inviteSender = new MulticastPublisher(this,
                 nodeId,
@@ -67,10 +71,12 @@ public class InetController implements MulticastPublisherListener, MulticastRece
         inviteSender.start();
     }
 
+    @Override
     public void stopMulticastPublisher() {
         if (inviteSender != null) inviteSender.interrupt();
     }
 
+    @Override
     public synchronized long getMessageSequence() {
         messageSequence++;
         return messageSequence;
@@ -98,7 +104,7 @@ public class InetController implements MulticastPublisherListener, MulticastRece
     }
 
     @Override
-    public MarketplaceProto.User getGamePlayerById(int id) {
+    public MarketplaceProto.User getUserById(int id) {
         return users.getUserById(id);
     }
 

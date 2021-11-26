@@ -1,15 +1,11 @@
 package nsu.oop.marketplace.inet.unicast;
 
 import nsu.oop.marketplace.inet.MarketplaceProto;
-import nsu.oop.marketplace.inet.ping.Ping;
-import nsu.oop.marketplace.inet.ping.PingListener;
-import nsu.oop.marketplace.inet.messages.MessageAcceptor;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.util.*;
 
 public class UnicastSender {
     private final DatagramSocket socket;

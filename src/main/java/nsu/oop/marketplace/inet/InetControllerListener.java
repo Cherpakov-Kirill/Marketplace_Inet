@@ -1,7 +1,7 @@
 package nsu.oop.marketplace.inet;
 
 public interface InetControllerListener {
-    void launchClientCore(int playerId);
+    void launchClientCore(int userId);
 
     void receiveRoleChangeMsg(MarketplaceProto.Message.TypeChangeMsg typeChangeMsg, int senderId);
     int receiveJoinMsg(String name, String password, String ip, int port);

@@ -21,7 +21,7 @@ public class MessageAcceptor implements AcceptorForSender, AcceptorForReceiver {
     @Override
     public boolean acceptMessage(int userId, long messageSequence) {
         listener.setTimeOfReceivedMessage(userId);
-        MarketplaceProto.User user = listener.getGamePlayerById(userId);
+        MarketplaceProto.User user = listener.getUserById(userId);
         if (user != null) {
             listener.sendAckMessage(user, MessageBuilder.ackMsgBuilder(messageSequence, thisNodeId, userId));
             //System.out.println("Message acceptor sent ACK to " + playerId);
