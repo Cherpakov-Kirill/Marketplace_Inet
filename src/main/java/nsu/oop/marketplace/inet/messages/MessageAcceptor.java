@@ -46,9 +46,6 @@ public class MessageAcceptor implements AcceptorForSender, AcceptorForReceiver {
         if (messageSequence == 1 && receiverId != 0) {
             thisNodeId = receiverId;
             listener.setNewNodeId(thisNodeId);
-            //здесь нужно изменить id у users controller вызов launchClientCore будет после type change message
-            // todo listener.launchClientCore(receiverId);
-            //todo listener.showErrorInLogInUI();
         }
     }
 }

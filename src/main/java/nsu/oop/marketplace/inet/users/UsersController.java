@@ -11,7 +11,6 @@ public class UsersController implements UsersControllerForInet, Users {
     private final UsersControllerListener listener;
     private final InetForUsersController inetController;
     private final List<MarketplaceProto.User> userList;
-    private int newPlayerIdCounter;
     private int nodeId;
 
     public UsersController(UsersControllerListener listener, InetForUsersController inetController) {
@@ -19,7 +18,6 @@ public class UsersController implements UsersControllerForInet, Users {
         this.inetController = inetController;
         this.userList = new LinkedList<>();
         this.nodeId = 0;
-        newPlayerIdCounter = 1;
     }
 
     @Override
@@ -28,31 +26,19 @@ public class UsersController implements UsersControllerForInet, Users {
     }
 
     @Override
-    public int addUser(String name, String ip, int port, MarketplaceProto.UserType type) {
-        int newUserId = getUserIdByIPAndPort(ip, port);
-        if (newUserId == 0) {
-            if(type != MarketplaceProto.UserType.UNAUTHENTICATED){
-                newUserId = newPlayerIdCounter;
-                newPlayerIdCounter++;
-            }
+    public void addUser(int userId, String name, String ip, int port, MarketplaceProto.UserType type) {
+        if (getUserIdByIPAndPort(ip, port) == 0) {
             MarketplaceProto.User newPlayer;
             MarketplaceProto.User.Builder playerBuilder = MarketplaceProto.User
                     .newBuilder()
                     .setName(name)
-                    .setId(newUserId)
+                    .setId(userId)
                     .setIpAddress(ip)
                     .setPort(port)
                     .setType(type);
             newPlayer = playerBuilder.build();
             userList.add(newPlayer);
-            if(type != MarketplaceProto.UserType.UNAUTHENTICATED){
-                if (!listener.addUserInWorkspace(newUserId)) {
-                    disconnectUser("We couldn't create a working session for you! Sorry.", newUserId);
-                    return -1;
-                }
-            }
         }
-        return newUserId;
     }
 
     @Override

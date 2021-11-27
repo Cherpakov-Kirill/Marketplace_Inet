@@ -16,7 +16,7 @@ plugins {
 }
 
 group 'nsu.oop.marketplace.inet'
-version '1.1-MARKETPLACEINET'
+version '1.2-MARKETPLACEINET'
 
 repositories {
     mavenCentral()
