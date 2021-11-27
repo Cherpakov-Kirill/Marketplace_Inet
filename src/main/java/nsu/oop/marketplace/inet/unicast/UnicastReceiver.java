@@ -24,23 +24,24 @@ public class UnicastReceiver extends Thread {
         long messageSequence = msg.getMsgSeq();
         switch (msg.getTypeCase()) {
             case PING -> {
-                System.out.println("PING id:" + messageSenderId + " seq=" + messageSequence);
+                System.out.println("PING senderId:" + messageSenderId + " seq=" + messageSequence);
                 messageAcceptor.acceptMessage(messageSenderId, messageSequence);
             }
             case ACK -> {
-                System.out.println("ACK id:" + messageSenderId + " seq=" + messageSequence);
+                System.out.println("ACK senderId:" + messageSenderId + " seq=" + messageSequence);
                 messageAcceptor.receiveAckMsg(msg.getReceiverId(), messageSenderId, messageSequence);
             }
             case JOIN -> {
-                System.out.println("JOIN id:" + messageSenderId + " seq=" + messageSequence);
+                System.out.println("JOIN senderId:" + messageSenderId + " seq=" + messageSequence);
                 MarketplaceProto.Message.JoinMsg joinMsg = msg.getJoin();
-                int newPlayerId = listener.receiveJoinMsg(
+                int newUserId = listener.receiveJoinMsg(
                         joinMsg.getLogin(),
                         joinMsg.getPassword(),
                         address.getHostAddress(),
                         port
                         );
-                messageAcceptor.acceptMessage(newPlayerId, messageSequence);
+                messageAcceptor.acceptMessage(newUserId, messageSequence);
+                listener.notifyNewUserAboutConnecting(newUserId);
             }
             case ERROR -> {
                 System.out.println("ERROR id:" + messageSenderId + " seq=" + messageSequence);
@@ -63,7 +64,7 @@ public class UnicastReceiver extends Thread {
                 byte[] buffer = new byte[2048];
                 DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
                 socket.receive(packet);
-                System.out.println("Received "+packet.getLength()+" bytes");
+                //System.out.println("Received "+packet.getLength()+" bytes");
                 byte[] gotBytes = new byte[packet.getLength()];
                 System.arraycopy(buffer, 0, gotBytes, 0, packet.getLength());
                 MarketplaceProto.Message msg = MarketplaceProto.Message.parseFrom(gotBytes);

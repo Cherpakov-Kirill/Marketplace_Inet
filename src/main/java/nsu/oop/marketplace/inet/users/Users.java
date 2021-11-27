@@ -7,10 +7,9 @@ import java.util.List;
 public interface Users {
     void addUser(int userId, String name, String ip, int port, MarketplaceProto.UserType type);
     void changeUserInList(int index, MarketplaceProto.User newUser);
-    void sendErrorMessage(String errorMessage, int userId);
-    void sendJoinMessage(String login, String password, int senderId, int receiverId);
+    void sendErrorMessage(String errorMessage, int receiverId);
+    void sendJoinMessage(String login, String password);
     void disconnectUser(String errorMessage, int userId);
-    void sendChangeTypeMessage(MarketplaceProto.User receiver, MarketplaceProto.UserType receiverType);
     int getNumberOfUsers();
     List<MarketplaceProto.User> getUsersList();
     MarketplaceProto.User getUserById(int id);

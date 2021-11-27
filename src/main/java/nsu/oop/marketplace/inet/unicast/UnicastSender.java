@@ -47,7 +47,7 @@ public class UnicastSender {
         }
 
         void send() throws IOException {
-            System.out.println("Unicast Sender is sending a " + message.getTypeCase() + " message seq = " + message.getMsgSeq() + " to id=" + user.getId() + " ip:port=" + user.getIpAddress() + ":" + user.getPort());
+            System.out.println("Unicast Sender from nodeId = " + message.getSenderId() + " is sending a " + message.getTypeCase() + " message seq = " + message.getMsgSeq() + " to id = " + user.getId() + " ip:port=" + user.getIpAddress() + ":" + user.getPort());
             byte[] buffer = message.toByteArray();
             InetAddress ip = InetAddress.getByName(user.getIpAddress());
             DatagramPacket packet = new DatagramPacket(buffer, buffer.length, ip, user.getPort());

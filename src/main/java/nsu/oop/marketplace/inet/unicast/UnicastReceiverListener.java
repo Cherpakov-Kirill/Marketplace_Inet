@@ -7,4 +7,5 @@ public interface UnicastReceiverListener {
     void receiveTypeChangeMsg(MarketplaceProto.Message.TypeChangeMsg roleChangeMsg, int receiverId);
     int receiveJoinMsg(String login, String password, String ip, int port);
     void receiveErrorMsg(String error, int senderId);
+    void notifyNewUserAboutConnecting(int userId);
 }

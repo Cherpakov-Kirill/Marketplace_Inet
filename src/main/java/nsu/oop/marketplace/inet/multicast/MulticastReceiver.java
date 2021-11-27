@@ -30,10 +30,11 @@ public class MulticastReceiver extends Thread {
             byte[] buf = new byte[256];
             DatagramPacket packet = new DatagramPacket(buf, buf.length);
             socket.receive(packet);
+            System.out.println("Received Announcement message from ip:port="+packet.getAddress().getHostAddress()+":"+packet.getPort());
             byte[] gotBytes = new byte[packet.getLength()];
             System.arraycopy(buf, 0, gotBytes, 0, packet.getLength());
             MarketplaceProto.Message msg = MarketplaceProto.Message.parseFrom(gotBytes);
-            listener.receiveAnnouncementMsg(msg.getAnnouncement(), packet.getAddress().getHostAddress(), packet.getPort());
+            listener.receiveAnnouncementMsg(msg.getAnnouncement(), packet.getAddress().getHostAddress());
             socket.leaveGroup(group, netIf);
         } catch (IOException e) {
             e.printStackTrace();

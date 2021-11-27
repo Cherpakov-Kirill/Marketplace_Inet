@@ -23,7 +23,7 @@ class PingSender extends Thread {
     }
 
     public void setUserPingTime(int userId) {
-        //System.out.println("Ping Sender setPlayerPingTime player id = " + playerId);
+        //System.out.println("Ping Sender setPlayerPingTime player id = " + userId);
         usersPingTime.put(userId, (new Date()).getTime());
     }
 
@@ -35,7 +35,7 @@ class PingSender extends Thread {
                 for (int id : new LinkedList<>(usersPingTime.keySet())) {
                     long now = (new Date()).getTime();
                     if (now - usersPingTime.get(id) > pingDelay) {
-                        //System.out.println("Ping Sender id = " + id + " Delay = " + (now - playersPingTime.get(id)));
+                        //System.out.println("Ping Sender id = " + id + " Delay = " + (now - usersPingTime.get(id)));
                         listener.sendPing(id);
                     }
                 }

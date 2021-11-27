@@ -19,17 +19,21 @@ import java.net.SocketException;
 public class InetController implements Inet, MulticastPublisherListener, MulticastReceiverListener, UnicastReceiverListener, MessageAcceptorListener, PingListener, InetForUsersController {
     private final InetControllerListener listener;
     private UsersControllerForInet users;
+    private int pingDelayMs;
+    private int nodeTimeOutMs;
     private DatagramSocket socket;
-    private final MessageAcceptor messageAcceptor;
-    private final Ping ping;
-    private final UnicastSender sender;
-    private final UnicastReceiver receiver;
+    private MessageAcceptor messageAcceptor;
+    private Ping ping;
+    private UnicastSender sender;
+    private UnicastReceiver receiver;
     private MulticastPublisher inviteSender;
     private MulticastReceiver inviteReceiver;
     private long messageSequence;
 
     public InetController(InetControllerListener listener, int port, int pingDelayMs, int nodeTimeOutMs) {
         this.listener = listener;
+        this.pingDelayMs = pingDelayMs;
+        this.nodeTimeOutMs = nodeTimeOutMs;
         try {
             socket = new DatagramSocket(port);
             System.out.println("Socket port " + port);
@@ -37,13 +41,18 @@ public class InetController implements Inet, MulticastPublisherListener, Multica
             System.err.println("ERROR: Node did not started");
             e.printStackTrace();
         }
+
+        this.messageSequence = 0;
+    }
+
+    @Override
+    public void startUnicast(){
         this.messageAcceptor = new MessageAcceptor(this);
         this.ping = new Ping(this,pingDelayMs,nodeTimeOutMs);
         this.ping.start();
         this.sender = new UnicastSender(socket, messageAcceptor, ping, pingDelayMs);
         this.receiver = new UnicastReceiver(this, socket, messageAcceptor);
         this.receiver.start();
-        this.messageSequence = 0;
     }
 
     @Override
@@ -104,18 +113,36 @@ public class InetController implements Inet, MulticastPublisherListener, Multica
     }
 
     @Override
+    public void showErrorAuthMessage() {
+        listener.showErrorAuthMessage();
+    }
+
+    @Override
     public MarketplaceProto.User getUserById(int id) {
         return users.getUserById(id);
     }
 
     @Override
-    public void receiveAnnouncementMsg(MarketplaceProto.Message.AnnouncementMsg msg, String ip, int port) {
+    public void receiveAnnouncementMsg(MarketplaceProto.Message.AnnouncementMsg msg, String ip) {
+        nodeTimeOutMs = msg.getConfig().getNodeTimeoutMs();
+        pingDelayMs = msg.getConfig().getPingDelayMs();
+        int port = msg.getConfig().getServerPort();
         listener.receiveAnnouncementMsg(msg, ip, port);
     }
 
     @Override
     public void receiveErrorMsg(String error, int senderId) {
         listener.receiveErrorMsg(error, senderId);
+    }
+
+    @Override
+    public void notifyNewUserAboutConnecting(int userId) {
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        users.sendChangeTypeMessage(userId);
     }
 
     @Override

@@ -58,13 +58,13 @@ public class UsersController implements UsersControllerForInet, Users {
     }
 
     @Override
-    public void sendErrorMessage(String errorMessage, int userId) {
-        inetController.sendMessage(getUserById(userId), MessageBuilder.errorMsgBuilder(errorMessage, nodeId, userId));
+    public void sendErrorMessage(String errorMessage, int receiverId) {
+        inetController.sendMessage(getUserById(receiverId), MessageBuilder.errorMsgBuilder(errorMessage, nodeId, receiverId));
     }
 
     @Override
-    public void sendPing(int playerId) {
-        inetController.sendMessage(getUserById(playerId), MessageBuilder.pingMsgBuilder(nodeId, playerId));
+    public void sendPing(int receiverId) {
+        inetController.sendMessage(getUserById(receiverId), MessageBuilder.pingMsgBuilder(nodeId, receiverId));
     }
 
     @Override
@@ -74,13 +74,14 @@ public class UsersController implements UsersControllerForInet, Users {
     }
 
     @Override
-    public void sendJoinMessage(String login, String password, int senderId, int receiverId) {
+    public void sendJoinMessage(String login, String password) {
         inetController.sendMessage(getUserById(0), MessageBuilder.joinMsgBuilder(login, password, nodeId, 0));
     }
 
     @Override
-    public void sendChangeTypeMessage(MarketplaceProto.User receiver, MarketplaceProto.UserType receiverType) {
-        inetController.sendMessage(receiver, MessageBuilder.typeChangingMsgBuilder(receiverType, nodeId, receiver.getId()));
+    public void sendChangeTypeMessage(int receiverId) {
+        MarketplaceProto.User receiver = getUserById(receiverId);
+        inetController.sendMessage(receiver, MessageBuilder.typeChangingMsgBuilder(receiver.getType(), nodeId, receiverId));
     }
 
     @Override

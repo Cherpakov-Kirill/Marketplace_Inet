@@ -15,7 +15,7 @@ public class MessageAcceptor implements AcceptorForSender, AcceptorForReceiver {
     public MessageAcceptor(MessageAcceptorListener listener) {
         this.listener = listener;
         this.acceptedMessages = new HashSet<>();
-        this.thisNodeId = 1;
+        this.thisNodeId = 0;
     }
 
     @Override
@@ -43,9 +43,13 @@ public class MessageAcceptor implements AcceptorForSender, AcceptorForReceiver {
         synchronized (acceptedMessages) {
             acceptedMessages.add(messageSequence);
         }
-        if (messageSequence == 1 && receiverId != 0) {
-            thisNodeId = receiverId;
-            listener.setNewNodeId(thisNodeId);
+        if (messageSequence == 1){
+            if (receiverId != 0) {
+                thisNodeId = receiverId;
+                listener.setNewNodeId(thisNodeId);
+            } else {
+                listener.showErrorAuthMessage();
+            }
         }
     }
 }

@@ -1529,6 +1529,25 @@ public final class MarketplaceProto {
      * @return The nodeTimeoutMs.
      */
     int getNodeTimeoutMs();
+
+    /**
+     * <pre>
+     * Unicast port сервера для приёма сообщений
+     * </pre>
+     *
+     * <code>required int32 serverPort = 3;</code>
+     * @return Whether the serverPort field is set.
+     */
+    boolean hasServerPort();
+    /**
+     * <pre>
+     * Unicast port сервера для приёма сообщений
+     * </pre>
+     *
+     * <code>required int32 serverPort = 3;</code>
+     * @return The serverPort.
+     */
+    int getServerPort();
   }
   /**
    * <pre>
@@ -1590,6 +1609,11 @@ public final class MarketplaceProto {
             case 16: {
               bitField0_ |= 0x00000002;
               nodeTimeoutMs_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              serverPort_ = input.readInt32();
               break;
             }
             default: {
@@ -1679,6 +1703,33 @@ public final class MarketplaceProto {
       return nodeTimeoutMs_;
     }
 
+    public static final int SERVERPORT_FIELD_NUMBER = 3;
+    private int serverPort_;
+    /**
+     * <pre>
+     * Unicast port сервера для приёма сообщений
+     * </pre>
+     *
+     * <code>required int32 serverPort = 3;</code>
+     * @return Whether the serverPort field is set.
+     */
+    @java.lang.Override
+    public boolean hasServerPort() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Unicast port сервера для приёма сообщений
+     * </pre>
+     *
+     * <code>required int32 serverPort = 3;</code>
+     * @return The serverPort.
+     */
+    @java.lang.Override
+    public int getServerPort() {
+      return serverPort_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1686,6 +1737,10 @@ public final class MarketplaceProto {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      if (!hasServerPort()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -1698,6 +1753,9 @@ public final class MarketplaceProto {
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeInt32(2, nodeTimeoutMs_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeInt32(3, serverPort_);
       }
       unknownFields.writeTo(output);
     }
@@ -1715,6 +1773,10 @@ public final class MarketplaceProto {
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, nodeTimeoutMs_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, serverPort_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1741,6 +1803,11 @@ public final class MarketplaceProto {
         if (getNodeTimeoutMs()
             != other.getNodeTimeoutMs()) return false;
       }
+      if (hasServerPort() != other.hasServerPort()) return false;
+      if (hasServerPort()) {
+        if (getServerPort()
+            != other.getServerPort()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1759,6 +1826,10 @@ public final class MarketplaceProto {
       if (hasNodeTimeoutMs()) {
         hash = (37 * hash) + NODE_TIMEOUT_MS_FIELD_NUMBER;
         hash = (53 * hash) + getNodeTimeoutMs();
+      }
+      if (hasServerPort()) {
+        hash = (37 * hash) + SERVERPORT_FIELD_NUMBER;
+        hash = (53 * hash) + getServerPort();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1901,6 +1972,8 @@ public final class MarketplaceProto {
         bitField0_ = (bitField0_ & ~0x00000001);
         nodeTimeoutMs_ = 800;
         bitField0_ = (bitField0_ & ~0x00000002);
+        serverPort_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -1937,6 +2010,10 @@ public final class MarketplaceProto {
           to_bitField0_ |= 0x00000002;
         }
         result.nodeTimeoutMs_ = nodeTimeoutMs_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.serverPort_ = serverPort_;
+          to_bitField0_ |= 0x00000004;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1992,6 +2069,9 @@ public final class MarketplaceProto {
         if (other.hasNodeTimeoutMs()) {
           setNodeTimeoutMs(other.getNodeTimeoutMs());
         }
+        if (other.hasServerPort()) {
+          setServerPort(other.getServerPort());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1999,6 +2079,9 @@ public final class MarketplaceProto {
 
       @java.lang.Override
       public final boolean isInitialized() {
+        if (!hasServerPort()) {
+          return false;
+        }
         return true;
       }
 
@@ -2128,6 +2211,61 @@ public final class MarketplaceProto {
       public Builder clearNodeTimeoutMs() {
         bitField0_ = (bitField0_ & ~0x00000002);
         nodeTimeoutMs_ = 800;
+        onChanged();
+        return this;
+      }
+
+      private int serverPort_ ;
+      /**
+       * <pre>
+       * Unicast port сервера для приёма сообщений
+       * </pre>
+       *
+       * <code>required int32 serverPort = 3;</code>
+       * @return Whether the serverPort field is set.
+       */
+      @java.lang.Override
+      public boolean hasServerPort() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Unicast port сервера для приёма сообщений
+       * </pre>
+       *
+       * <code>required int32 serverPort = 3;</code>
+       * @return The serverPort.
+       */
+      @java.lang.Override
+      public int getServerPort() {
+        return serverPort_;
+      }
+      /**
+       * <pre>
+       * Unicast port сервера для приёма сообщений
+       * </pre>
+       *
+       * <code>required int32 serverPort = 3;</code>
+       * @param value The serverPort to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerPort(int value) {
+        bitField0_ |= 0x00000004;
+        serverPort_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unicast port сервера для приёма сообщений
+       * </pre>
+       *
+       * <code>required int32 serverPort = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerPort() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        serverPort_ = 0;
         onChanged();
         return this;
       }
@@ -3546,6 +3684,10 @@ public final class MarketplaceProto {
           memoizedIsInitialized = 0;
           return false;
         }
+        if (!getConfig().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
         memoizedIsInitialized = 1;
         return true;
       }
@@ -3844,6 +3986,9 @@ public final class MarketplaceProto {
         @java.lang.Override
         public final boolean isInitialized() {
           if (!hasConfig()) {
+            return false;
+          }
+          if (!getConfig().isInitialized()) {
             return false;
           }
           return true;
@@ -8228,28 +8373,28 @@ public final class MarketplaceProto {
       "\n\021marketplace.proto\022\013marketplace\"x\n\004User" +
       "\022\014\n\004name\030\001 \002(\t\022\n\n\002id\030\002 \002(\005\022\022\n\nip_address" +
       "\030\003 \002(\t\022\014\n\004port\030\004 \002(\005\0224\n\004type\030\005 \001(\0162\025.mar" +
-      "ketplace.UserType:\017UNAUTHENTICATED\"I\n\rSe" +
+      "ketplace.UserType:\017UNAUTHENTICATED\"]\n\rSe" +
       "ssionConfig\022\032\n\rping_delay_ms\030\001 \001(\005:\003100\022" +
-      "\034\n\017node_timeout_ms\030\002 \001(\005:\003800\"\335\004\n\007Messag" +
-      "e\022\017\n\007msg_seq\030\001 \002(\003\022\021\n\tsender_id\030\002 \001(\005\022\023\n" +
-      "\013receiver_id\030\003 \001(\005\022,\n\004ping\030\004 \001(\0132\034.marke" +
-      "tplace.Message.PingMsgH\000\022*\n\003ack\030\005 \001(\0132\033." +
-      "marketplace.Message.AckMsgH\000\022<\n\014announce" +
-      "ment\030\006 \001(\0132$.marketplace.Message.Announc" +
-      "ementMsgH\000\022,\n\004join\030\007 \001(\0132\034.marketplace.M" +
-      "essage.JoinMsgH\000\022.\n\005error\030\010 \001(\0132\035.market" +
-      "place.Message.ErrorMsgH\000\0229\n\013type_change\030" +
-      "\t \001(\0132\".marketplace.Message.TypeChangeMs" +
-      "gH\000\032\t\n\007PingMsg\032\010\n\006AckMsg\032=\n\017Announcement" +
-      "Msg\022*\n\006config\030\001 \002(\0132\032.marketplace.Sessio" +
-      "nConfig\032*\n\007JoinMsg\022\r\n\005login\030\001 \002(\t\022\020\n\010pas" +
-      "sword\030\002 \002(\t\032!\n\010ErrorMsg\022\025\n\rerror_message" +
-      "\030\001 \002(\t\032=\n\rTypeChangeMsg\022,\n\rreceiver_type" +
-      "\030\001 \001(\0162\025.marketplace.UserTypeB\006\n\004Type*M\n" +
-      "\010UserType\022\023\n\017UNAUTHENTICATED\020\000\022\014\n\010DIRECT" +
-      "OR\020\001\022\021\n\rADMINISTRATOR\020\002\022\013\n\007MANAGER\020\003B,\n\030" +
-      "nsu.oop.marketplace.inetB\020MarketplacePro" +
-      "to"
+      "\034\n\017node_timeout_ms\030\002 \001(\005:\003800\022\022\n\nserverP" +
+      "ort\030\003 \002(\005\"\335\004\n\007Message\022\017\n\007msg_seq\030\001 \002(\003\022\021" +
+      "\n\tsender_id\030\002 \001(\005\022\023\n\013receiver_id\030\003 \001(\005\022," +
+      "\n\004ping\030\004 \001(\0132\034.marketplace.Message.PingM" +
+      "sgH\000\022*\n\003ack\030\005 \001(\0132\033.marketplace.Message." +
+      "AckMsgH\000\022<\n\014announcement\030\006 \001(\0132$.marketp" +
+      "lace.Message.AnnouncementMsgH\000\022,\n\004join\030\007" +
+      " \001(\0132\034.marketplace.Message.JoinMsgH\000\022.\n\005" +
+      "error\030\010 \001(\0132\035.marketplace.Message.ErrorM" +
+      "sgH\000\0229\n\013type_change\030\t \001(\0132\".marketplace." +
+      "Message.TypeChangeMsgH\000\032\t\n\007PingMsg\032\010\n\006Ac" +
+      "kMsg\032=\n\017AnnouncementMsg\022*\n\006config\030\001 \002(\0132" +
+      "\032.marketplace.SessionConfig\032*\n\007JoinMsg\022\r" +
+      "\n\005login\030\001 \002(\t\022\020\n\010password\030\002 \002(\t\032!\n\010Error" +
+      "Msg\022\025\n\rerror_message\030\001 \002(\t\032=\n\rTypeChange" +
+      "Msg\022,\n\rreceiver_type\030\001 \001(\0162\025.marketplace" +
+      ".UserTypeB\006\n\004Type*M\n\010UserType\022\023\n\017UNAUTHE" +
+      "NTICATED\020\000\022\014\n\010DIRECTOR\020\001\022\021\n\rADMINISTRATO" +
+      "R\020\002\022\013\n\007MANAGER\020\003B,\n\030nsu.oop.marketplace." +
+      "inetB\020MarketplaceProto"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8266,7 +8411,7 @@ public final class MarketplaceProto {
     internal_static_marketplace_SessionConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_marketplace_SessionConfig_descriptor,
-        new java.lang.String[] { "PingDelayMs", "NodeTimeoutMs", });
+        new java.lang.String[] { "PingDelayMs", "NodeTimeoutMs", "ServerPort", });
     internal_static_marketplace_Message_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_marketplace_Message_fieldAccessorTable = new

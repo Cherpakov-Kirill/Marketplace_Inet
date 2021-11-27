@@ -24,6 +24,7 @@ message User {
 message SessionConfig {
     optional int32 ping_delay_ms = 1 [default = 100];   // Задержка между отправкой ping-сообщений, в миллисекундах (от 1 до 10000)
     optional int32 node_timeout_ms = 2 [default = 800]; // Таймаут, после которого считаем что узел отпал, в миллисекундах (от 1 до 10000)
+    required int32 serverPort = 3;                      // Unicast port сервера для приёма сообщений
 }
 
 // Общий формат любого сообщения
