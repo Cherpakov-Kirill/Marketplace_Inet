@@ -50,7 +50,7 @@ public class UnicastReceiver extends Thread {
             case TYPE_CHANGE -> {
                 System.out.println("TYPE_CHANGE from id:" + messageSenderId + " new user type = " + msg.getTypeChange().getReceiverType() + " seq =" + messageSequence);
                 messageAcceptor.acceptMessage(messageSenderId, messageSequence);
-                if (messageSenderId == 0) listener.receiveTypeChangeMsg(msg.getTypeChange(), messageSenderId);
+                if (messageSenderId == 0) listener.receiveTypeChangeMsg(msg.getTypeChange(), msg.getReceiverId());
             }
         }
     }

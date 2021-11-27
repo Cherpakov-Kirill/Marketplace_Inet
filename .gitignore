@@ -1,0 +1,8 @@
+/.gradle/
+/.idea/
+/build/classes/
+/build/extracted-include-protos/
+/build/extracted-protos/
+/build/generated/
+/build/publications/
+/build/tmp/

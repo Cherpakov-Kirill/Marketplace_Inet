@@ -99,8 +99,8 @@ public class InetController implements Inet, MulticastPublisherListener, Multica
     }
 
     @Override
-    public void launchClientCore(int playerId) {
-        listener.launchClientCore(playerId);
+    public void setNewNodeId(int nodeId) {
+        users.setNodeId(nodeId);
     }
 
     @Override
@@ -119,8 +119,8 @@ public class InetController implements Inet, MulticastPublisherListener, Multica
     }
 
     @Override
-    public void receiveTypeChangeMsg(MarketplaceProto.Message.TypeChangeMsg typeChangeMsg, int senderId) {
-        listener.receiveRoleChangeMsg(typeChangeMsg, senderId);
+    public void receiveTypeChangeMsg(MarketplaceProto.Message.TypeChangeMsg typeChangeMsg, int receiverId) {
+        listener.launchClientCore(receiverId, typeChangeMsg.getReceiverType());
     }
 
     @Override

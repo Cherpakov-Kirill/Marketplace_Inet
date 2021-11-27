@@ -5,7 +5,6 @@ import nsu.oop.marketplace.inet.MarketplaceProto;
 import java.util.List;
 
 public interface Users {
-    void setNodeId(int nodeId);
     int addUser(String name, String ip, int port, MarketplaceProto.UserType type);
     void changeUserInList(int index, MarketplaceProto.User newUser);
     void sendErrorMessage(String errorMessage, int userId);
