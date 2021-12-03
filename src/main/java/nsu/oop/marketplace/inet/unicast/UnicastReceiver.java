@@ -39,9 +39,11 @@ public class UnicastReceiver extends Thread {
                         joinMsg.getPassword(),
                         address.getHostAddress(),
                         port
-                        );
+                );
                 messageAcceptor.acceptMessage(newUserId, messageSequence);
-                listener.notifyNewUserAboutConnecting(newUserId);
+                if (newUserId > 0) {
+                    listener.notifyNewUserAboutConnecting(newUserId);
+                }
             }
             case ERROR -> {
                 System.out.println("ERROR id:" + messageSenderId + " seq=" + messageSequence);
@@ -52,6 +54,11 @@ public class UnicastReceiver extends Thread {
                 System.out.println("TYPE_CHANGE from id:" + messageSenderId + " new user type = " + msg.getTypeChange().getReceiverType() + " seq =" + messageSequence);
                 messageAcceptor.acceptMessage(messageSenderId, messageSequence);
                 if (messageSenderId == 0) listener.receiveTypeChangeMsg(msg.getTypeChange(), msg.getReceiverId());
+            }
+            case CHAT -> {
+                System.out.println("CHAT " + msg.getChat().getTypeCase() + " senderId:" + messageSenderId + " seq=" + messageSequence);
+                messageAcceptor.acceptMessage(messageSenderId, messageSequence);
+                listener.receiveChatMsg(msg.getChat(), messageSenderId);
             }
         }
     }

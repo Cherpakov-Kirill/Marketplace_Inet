@@ -2322,6 +2322,711 @@ public final class MarketplaceProto {
 
   }
 
+  public interface ChatUsersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:marketplace.ChatUsers)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Список всех пользователей чата
+     * </pre>
+     *
+     * <code>repeated string name = 1;</code>
+     * @return A list containing the name.
+     */
+    java.util.List<java.lang.String>
+        getNameList();
+    /**
+     * <pre>
+     * Список всех пользователей чата
+     * </pre>
+     *
+     * <code>repeated string name = 1;</code>
+     * @return The count of name.
+     */
+    int getNameCount();
+    /**
+     * <pre>
+     * Список всех пользователей чата
+     * </pre>
+     *
+     * <code>repeated string name = 1;</code>
+     * @param index The index of the element to return.
+     * @return The name at the given index.
+     */
+    java.lang.String getName(int index);
+    /**
+     * <pre>
+     * Список всех пользователей чата
+     * </pre>
+     *
+     * <code>repeated string name = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the name at the given index.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes(int index);
+  }
+  /**
+   * Protobuf type {@code marketplace.ChatUsers}
+   */
+  public static final class ChatUsers extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:marketplace.ChatUsers)
+      ChatUsersOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ChatUsers.newBuilder() to construct.
+    private ChatUsers(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ChatUsers() {
+      name_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ChatUsers();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ChatUsers(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                name_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              name_.add(bs);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          name_ = name_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_ChatUsers_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_ChatUsers_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.class, nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList name_;
+    /**
+     * <pre>
+     * Список всех пользователей чата
+     * </pre>
+     *
+     * <code>repeated string name = 1;</code>
+     * @return A list containing the name.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getNameList() {
+      return name_;
+    }
+    /**
+     * <pre>
+     * Список всех пользователей чата
+     * </pre>
+     *
+     * <code>repeated string name = 1;</code>
+     * @return The count of name.
+     */
+    public int getNameCount() {
+      return name_.size();
+    }
+    /**
+     * <pre>
+     * Список всех пользователей чата
+     * </pre>
+     *
+     * <code>repeated string name = 1;</code>
+     * @param index The index of the element to return.
+     * @return The name at the given index.
+     */
+    public java.lang.String getName(int index) {
+      return name_.get(index);
+    }
+    /**
+     * <pre>
+     * Список всех пользователей чата
+     * </pre>
+     *
+     * <code>repeated string name = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the name at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes(int index) {
+      return name_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < name_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < name_.size(); i++) {
+          dataSize += computeStringSizeNoTag(name_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getNameList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers)) {
+        return super.equals(obj);
+      }
+      nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers other = (nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers) obj;
+
+      if (!getNameList()
+          .equals(other.getNameList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getNameCount() > 0) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getNameList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code marketplace.ChatUsers}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:marketplace.ChatUsers)
+        nsu.oop.marketplace.inet.MarketplaceProto.ChatUsersOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_ChatUsers_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_ChatUsers_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.class, nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.Builder.class);
+      }
+
+      // Construct using nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_ChatUsers_descriptor;
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers getDefaultInstanceForType() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers build() {
+        nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers buildPartial() {
+        nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers result = new nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          name_ = name_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.name_ = name_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers) {
+          return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers other) {
+        if (other == nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.getDefaultInstance()) return this;
+        if (!other.name_.isEmpty()) {
+          if (name_.isEmpty()) {
+            name_ = other.name_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureNameIsMutable();
+            name_.addAll(other.name_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList name_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureNameIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          name_ = new com.google.protobuf.LazyStringArrayList(name_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Список всех пользователей чата
+       * </pre>
+       *
+       * <code>repeated string name = 1;</code>
+       * @return A list containing the name.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getNameList() {
+        return name_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Список всех пользователей чата
+       * </pre>
+       *
+       * <code>repeated string name = 1;</code>
+       * @return The count of name.
+       */
+      public int getNameCount() {
+        return name_.size();
+      }
+      /**
+       * <pre>
+       * Список всех пользователей чата
+       * </pre>
+       *
+       * <code>repeated string name = 1;</code>
+       * @param index The index of the element to return.
+       * @return The name at the given index.
+       */
+      public java.lang.String getName(int index) {
+        return name_.get(index);
+      }
+      /**
+       * <pre>
+       * Список всех пользователей чата
+       * </pre>
+       *
+       * <code>repeated string name = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the name at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes(int index) {
+        return name_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Список всех пользователей чата
+       * </pre>
+       *
+       * <code>repeated string name = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNameIsMutable();
+        name_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Список всех пользователей чата
+       * </pre>
+       *
+       * <code>repeated string name = 1;</code>
+       * @param value The name to add.
+       * @return This builder for chaining.
+       */
+      public Builder addName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNameIsMutable();
+        name_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Список всех пользователей чата
+       * </pre>
+       *
+       * <code>repeated string name = 1;</code>
+       * @param values The name to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllName(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureNameIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, name_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Список всех пользователей чата
+       * </pre>
+       *
+       * <code>repeated string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Список всех пользователей чата
+       * </pre>
+       *
+       * <code>repeated string name = 1;</code>
+       * @param value The bytes of the name to add.
+       * @return This builder for chaining.
+       */
+      public Builder addNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNameIsMutable();
+        name_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:marketplace.ChatUsers)
+    }
+
+    // @@protoc_insertion_point(class_scope:marketplace.ChatUsers)
+    private static final nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers();
+    }
+
+    public static nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ChatUsers>
+        PARSER = new com.google.protobuf.AbstractParser<ChatUsers>() {
+      @java.lang.Override
+      public ChatUsers parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ChatUsers(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ChatUsers> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ChatUsers> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface MessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:marketplace.Message)
       com.google.protobuf.MessageOrBuilder {
@@ -2473,6 +3178,21 @@ public final class MarketplaceProto {
      */
     nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsgOrBuilder getTypeChangeOrBuilder();
 
+    /**
+     * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+     * @return Whether the chat field is set.
+     */
+    boolean hasChat();
+    /**
+     * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+     * @return The chat.
+     */
+    nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage getChat();
+    /**
+     * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+     */
+    nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessageOrBuilder getChatOrBuilder();
+
     public nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeCase getTypeCase();
   }
   /**
@@ -2622,6 +3342,20 @@ public final class MarketplaceProto {
                 type_ = subBuilder.buildPartial();
               }
               typeCase_ = 9;
+              break;
+            }
+            case 82: {
+              nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.Builder subBuilder = null;
+              if (typeCase_ == 10) {
+                subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 10;
               break;
             }
             default: {
@@ -6339,6 +7073,6212 @@ public final class MarketplaceProto {
 
     }
 
+    public interface ChatMessageOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:marketplace.Message.ChatMessage)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+       * @return Whether the join field is set.
+       */
+      boolean hasJoin();
+      /**
+       * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+       * @return The join.
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg getJoin();
+      /**
+       * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsgOrBuilder getJoinOrBuilder();
+
+      /**
+       * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+       * @return Whether the end field is set.
+       */
+      boolean hasEnd();
+      /**
+       * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+       * @return The end.
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg getEnd();
+      /**
+       * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsgOrBuilder getEndOrBuilder();
+
+      /**
+       * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+       * @return Whether the public field is set.
+       */
+      boolean hasPublic();
+      /**
+       * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+       * @return The public.
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg getPublic();
+      /**
+       * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsgOrBuilder getPublicOrBuilder();
+
+      /**
+       * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+       * @return Whether the private field is set.
+       */
+      boolean hasPrivate();
+      /**
+       * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+       * @return The private.
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg getPrivate();
+      /**
+       * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsgOrBuilder getPrivateOrBuilder();
+
+      /**
+       * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+       * @return Whether the list field is set.
+       */
+      boolean hasList();
+      /**
+       * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+       * @return The list.
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg getList();
+      /**
+       * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsgOrBuilder getListOrBuilder();
+
+      /**
+       * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+       * @return Whether the error field is set.
+       */
+      boolean hasError();
+      /**
+       * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+       * @return The error.
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg getError();
+      /**
+       * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsgOrBuilder getErrorOrBuilder();
+
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.TypeCase getTypeCase();
+    }
+    /**
+     * Protobuf type {@code marketplace.Message.ChatMessage}
+     */
+    public static final class ChatMessage extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:marketplace.Message.ChatMessage)
+        ChatMessageOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ChatMessage.newBuilder() to construct.
+      private ChatMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ChatMessage() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ChatMessage();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ChatMessage(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.Builder subBuilder = null;
+                if (typeCase_ == 1) {
+                  subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 1;
+                break;
+              }
+              case 18: {
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.Builder subBuilder = null;
+                if (typeCase_ == 2) {
+                  subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 2;
+                break;
+              }
+              case 26: {
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.Builder subBuilder = null;
+                if (typeCase_ == 3) {
+                  subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 3;
+                break;
+              }
+              case 34: {
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.Builder subBuilder = null;
+                if (typeCase_ == 4) {
+                  subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 4;
+                break;
+              }
+              case 42: {
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.Builder subBuilder = null;
+                if (typeCase_ == 5) {
+                  subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 5;
+                break;
+              }
+              case 50: {
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.Builder subBuilder = null;
+                if (typeCase_ == 6) {
+                  subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 6;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.Builder.class);
+      }
+
+      public interface JoinMsgOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:marketplace.Message.ChatMessage.JoinMsg)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>required string name = 1;</code>
+         * @return Whether the name field is set.
+         */
+        boolean hasName();
+        /**
+         * <code>required string name = 1;</code>
+         * @return The name.
+         */
+        java.lang.String getName();
+        /**
+         * <code>required string name = 1;</code>
+         * @return The bytes for name.
+         */
+        com.google.protobuf.ByteString
+            getNameBytes();
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.ChatMessage.JoinMsg}
+       */
+      public static final class JoinMsg extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:marketplace.Message.ChatMessage.JoinMsg)
+          JoinMsgOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use JoinMsg.newBuilder() to construct.
+        private JoinMsg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private JoinMsg() {
+          name_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new JoinMsg();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private JoinMsg(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  com.google.protobuf.ByteString bs = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  name_ = bs;
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_JoinMsg_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_JoinMsg_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int NAME_FIELD_NUMBER = 1;
+        private volatile java.lang.Object name_;
+        /**
+         * <code>required string name = 1;</code>
+         * @return Whether the name field is set.
+         */
+        @java.lang.Override
+        public boolean hasName() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>required string name = 1;</code>
+         * @return The name.
+         */
+        @java.lang.Override
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              name_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <code>required string name = 1;</code>
+         * @return The bytes for name.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          if (!hasName()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg)) {
+            return super.equals(obj);
+          }
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg) obj;
+
+          if (hasName() != other.hasName()) return false;
+          if (hasName()) {
+            if (!getName()
+                .equals(other.getName())) return false;
+          }
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasName()) {
+            hash = (37 * hash) + NAME_FIELD_NUMBER;
+            hash = (53 * hash) + getName().hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code marketplace.Message.ChatMessage.JoinMsg}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:marketplace.Message.ChatMessage.JoinMsg)
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsgOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_JoinMsg_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_JoinMsg_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.Builder.class);
+          }
+
+          // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            name_ = "";
+            bitField0_ = (bitField0_ & ~0x00000001);
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_JoinMsg_descriptor;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg getDefaultInstanceForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg build() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg buildPartial() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              to_bitField0_ |= 0x00000001;
+            }
+            result.name_ = name_;
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg) {
+              return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg other) {
+            if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.getDefaultInstance()) return this;
+            if (other.hasName()) {
+              bitField0_ |= 0x00000001;
+              name_ = other.name_;
+              onChanged();
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            if (!hasName()) {
+              return false;
+            }
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private java.lang.Object name_ = "";
+          /**
+           * <code>required string name = 1;</code>
+           * @return Whether the name field is set.
+           */
+          public boolean hasName() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <code>required string name = 1;</code>
+           * @return The name.
+           */
+          public java.lang.String getName() {
+            java.lang.Object ref = name_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                name_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>required string name = 1;</code>
+           * @return The bytes for name.
+           */
+          public com.google.protobuf.ByteString
+              getNameBytes() {
+            java.lang.Object ref = name_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              name_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>required string name = 1;</code>
+           * @param value The name to set.
+           * @return This builder for chaining.
+           */
+          public Builder setName(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+            name_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string name = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearName() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            name_ = getDefaultInstance().getName();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string name = 1;</code>
+           * @param value The bytes for name to set.
+           * @return This builder for chaining.
+           */
+          public Builder setNameBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+            name_ = value;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:marketplace.Message.ChatMessage.JoinMsg)
+        }
+
+        // @@protoc_insertion_point(class_scope:marketplace.Message.ChatMessage.JoinMsg)
+        private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg();
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<JoinMsg>
+            PARSER = new com.google.protobuf.AbstractParser<JoinMsg>() {
+          @java.lang.Override
+          public JoinMsg parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new JoinMsg(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<JoinMsg> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<JoinMsg> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface EndMsgOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:marketplace.Message.ChatMessage.EndMsg)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>required string name = 1;</code>
+         * @return Whether the name field is set.
+         */
+        boolean hasName();
+        /**
+         * <code>required string name = 1;</code>
+         * @return The name.
+         */
+        java.lang.String getName();
+        /**
+         * <code>required string name = 1;</code>
+         * @return The bytes for name.
+         */
+        com.google.protobuf.ByteString
+            getNameBytes();
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.ChatMessage.EndMsg}
+       */
+      public static final class EndMsg extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:marketplace.Message.ChatMessage.EndMsg)
+          EndMsgOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use EndMsg.newBuilder() to construct.
+        private EndMsg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private EndMsg() {
+          name_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new EndMsg();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private EndMsg(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  com.google.protobuf.ByteString bs = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  name_ = bs;
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_EndMsg_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_EndMsg_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int NAME_FIELD_NUMBER = 1;
+        private volatile java.lang.Object name_;
+        /**
+         * <code>required string name = 1;</code>
+         * @return Whether the name field is set.
+         */
+        @java.lang.Override
+        public boolean hasName() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>required string name = 1;</code>
+         * @return The name.
+         */
+        @java.lang.Override
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              name_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <code>required string name = 1;</code>
+         * @return The bytes for name.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          if (!hasName()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg)) {
+            return super.equals(obj);
+          }
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg) obj;
+
+          if (hasName() != other.hasName()) return false;
+          if (hasName()) {
+            if (!getName()
+                .equals(other.getName())) return false;
+          }
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasName()) {
+            hash = (37 * hash) + NAME_FIELD_NUMBER;
+            hash = (53 * hash) + getName().hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code marketplace.Message.ChatMessage.EndMsg}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:marketplace.Message.ChatMessage.EndMsg)
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsgOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_EndMsg_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_EndMsg_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.Builder.class);
+          }
+
+          // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            name_ = "";
+            bitField0_ = (bitField0_ & ~0x00000001);
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_EndMsg_descriptor;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg getDefaultInstanceForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg build() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg buildPartial() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              to_bitField0_ |= 0x00000001;
+            }
+            result.name_ = name_;
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg) {
+              return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg other) {
+            if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.getDefaultInstance()) return this;
+            if (other.hasName()) {
+              bitField0_ |= 0x00000001;
+              name_ = other.name_;
+              onChanged();
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            if (!hasName()) {
+              return false;
+            }
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private java.lang.Object name_ = "";
+          /**
+           * <code>required string name = 1;</code>
+           * @return Whether the name field is set.
+           */
+          public boolean hasName() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <code>required string name = 1;</code>
+           * @return The name.
+           */
+          public java.lang.String getName() {
+            java.lang.Object ref = name_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                name_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>required string name = 1;</code>
+           * @return The bytes for name.
+           */
+          public com.google.protobuf.ByteString
+              getNameBytes() {
+            java.lang.Object ref = name_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              name_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>required string name = 1;</code>
+           * @param value The name to set.
+           * @return This builder for chaining.
+           */
+          public Builder setName(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+            name_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string name = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearName() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            name_ = getDefaultInstance().getName();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string name = 1;</code>
+           * @param value The bytes for name to set.
+           * @return This builder for chaining.
+           */
+          public Builder setNameBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+            name_ = value;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:marketplace.Message.ChatMessage.EndMsg)
+        }
+
+        // @@protoc_insertion_point(class_scope:marketplace.Message.ChatMessage.EndMsg)
+        private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg();
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<EndMsg>
+            PARSER = new com.google.protobuf.AbstractParser<EndMsg>() {
+          @java.lang.Override
+          public EndMsg parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new EndMsg(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<EndMsg> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<EndMsg> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface PublicMsgOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:marketplace.Message.ChatMessage.PublicMsg)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>required string senderName = 1;</code>
+         * @return Whether the senderName field is set.
+         */
+        boolean hasSenderName();
+        /**
+         * <code>required string senderName = 1;</code>
+         * @return The senderName.
+         */
+        java.lang.String getSenderName();
+        /**
+         * <code>required string senderName = 1;</code>
+         * @return The bytes for senderName.
+         */
+        com.google.protobuf.ByteString
+            getSenderNameBytes();
+
+        /**
+         * <code>required string message = 2;</code>
+         * @return Whether the message field is set.
+         */
+        boolean hasMessage();
+        /**
+         * <code>required string message = 2;</code>
+         * @return The message.
+         */
+        java.lang.String getMessage();
+        /**
+         * <code>required string message = 2;</code>
+         * @return The bytes for message.
+         */
+        com.google.protobuf.ByteString
+            getMessageBytes();
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.ChatMessage.PublicMsg}
+       */
+      public static final class PublicMsg extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:marketplace.Message.ChatMessage.PublicMsg)
+          PublicMsgOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use PublicMsg.newBuilder() to construct.
+        private PublicMsg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private PublicMsg() {
+          senderName_ = "";
+          message_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new PublicMsg();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private PublicMsg(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  com.google.protobuf.ByteString bs = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  senderName_ = bs;
+                  break;
+                }
+                case 18: {
+                  com.google.protobuf.ByteString bs = input.readBytes();
+                  bitField0_ |= 0x00000002;
+                  message_ = bs;
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_PublicMsg_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_PublicMsg_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int SENDERNAME_FIELD_NUMBER = 1;
+        private volatile java.lang.Object senderName_;
+        /**
+         * <code>required string senderName = 1;</code>
+         * @return Whether the senderName field is set.
+         */
+        @java.lang.Override
+        public boolean hasSenderName() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>required string senderName = 1;</code>
+         * @return The senderName.
+         */
+        @java.lang.Override
+        public java.lang.String getSenderName() {
+          java.lang.Object ref = senderName_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              senderName_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <code>required string senderName = 1;</code>
+         * @return The bytes for senderName.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getSenderNameBytes() {
+          java.lang.Object ref = senderName_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            senderName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int MESSAGE_FIELD_NUMBER = 2;
+        private volatile java.lang.Object message_;
+        /**
+         * <code>required string message = 2;</code>
+         * @return Whether the message field is set.
+         */
+        @java.lang.Override
+        public boolean hasMessage() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>required string message = 2;</code>
+         * @return The message.
+         */
+        @java.lang.Override
+        public java.lang.String getMessage() {
+          java.lang.Object ref = message_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              message_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <code>required string message = 2;</code>
+         * @return The bytes for message.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getMessageBytes() {
+          java.lang.Object ref = message_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            message_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          if (!hasSenderName()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+          if (!hasMessage()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, senderName_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, senderName_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg)) {
+            return super.equals(obj);
+          }
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg) obj;
+
+          if (hasSenderName() != other.hasSenderName()) return false;
+          if (hasSenderName()) {
+            if (!getSenderName()
+                .equals(other.getSenderName())) return false;
+          }
+          if (hasMessage() != other.hasMessage()) return false;
+          if (hasMessage()) {
+            if (!getMessage()
+                .equals(other.getMessage())) return false;
+          }
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasSenderName()) {
+            hash = (37 * hash) + SENDERNAME_FIELD_NUMBER;
+            hash = (53 * hash) + getSenderName().hashCode();
+          }
+          if (hasMessage()) {
+            hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+            hash = (53 * hash) + getMessage().hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code marketplace.Message.ChatMessage.PublicMsg}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:marketplace.Message.ChatMessage.PublicMsg)
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsgOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_PublicMsg_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_PublicMsg_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.Builder.class);
+          }
+
+          // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            senderName_ = "";
+            bitField0_ = (bitField0_ & ~0x00000001);
+            message_ = "";
+            bitField0_ = (bitField0_ & ~0x00000002);
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_PublicMsg_descriptor;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg getDefaultInstanceForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg build() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg buildPartial() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              to_bitField0_ |= 0x00000001;
+            }
+            result.senderName_ = senderName_;
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              to_bitField0_ |= 0x00000002;
+            }
+            result.message_ = message_;
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg) {
+              return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg other) {
+            if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.getDefaultInstance()) return this;
+            if (other.hasSenderName()) {
+              bitField0_ |= 0x00000001;
+              senderName_ = other.senderName_;
+              onChanged();
+            }
+            if (other.hasMessage()) {
+              bitField0_ |= 0x00000002;
+              message_ = other.message_;
+              onChanged();
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            if (!hasSenderName()) {
+              return false;
+            }
+            if (!hasMessage()) {
+              return false;
+            }
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private java.lang.Object senderName_ = "";
+          /**
+           * <code>required string senderName = 1;</code>
+           * @return Whether the senderName field is set.
+           */
+          public boolean hasSenderName() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <code>required string senderName = 1;</code>
+           * @return The senderName.
+           */
+          public java.lang.String getSenderName() {
+            java.lang.Object ref = senderName_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                senderName_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>required string senderName = 1;</code>
+           * @return The bytes for senderName.
+           */
+          public com.google.protobuf.ByteString
+              getSenderNameBytes() {
+            java.lang.Object ref = senderName_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              senderName_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>required string senderName = 1;</code>
+           * @param value The senderName to set.
+           * @return This builder for chaining.
+           */
+          public Builder setSenderName(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+            senderName_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string senderName = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearSenderName() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            senderName_ = getDefaultInstance().getSenderName();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string senderName = 1;</code>
+           * @param value The bytes for senderName to set.
+           * @return This builder for chaining.
+           */
+          public Builder setSenderNameBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+            senderName_ = value;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object message_ = "";
+          /**
+           * <code>required string message = 2;</code>
+           * @return Whether the message field is set.
+           */
+          public boolean hasMessage() {
+            return ((bitField0_ & 0x00000002) != 0);
+          }
+          /**
+           * <code>required string message = 2;</code>
+           * @return The message.
+           */
+          public java.lang.String getMessage() {
+            java.lang.Object ref = message_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                message_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>required string message = 2;</code>
+           * @return The bytes for message.
+           */
+          public com.google.protobuf.ByteString
+              getMessageBytes() {
+            java.lang.Object ref = message_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              message_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>required string message = 2;</code>
+           * @param value The message to set.
+           * @return This builder for chaining.
+           */
+          public Builder setMessage(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+            message_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string message = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearMessage() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            message_ = getDefaultInstance().getMessage();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string message = 2;</code>
+           * @param value The bytes for message to set.
+           * @return This builder for chaining.
+           */
+          public Builder setMessageBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+            message_ = value;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:marketplace.Message.ChatMessage.PublicMsg)
+        }
+
+        // @@protoc_insertion_point(class_scope:marketplace.Message.ChatMessage.PublicMsg)
+        private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg();
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<PublicMsg>
+            PARSER = new com.google.protobuf.AbstractParser<PublicMsg>() {
+          @java.lang.Override
+          public PublicMsg parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new PublicMsg(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<PublicMsg> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<PublicMsg> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface PrivateMsgOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:marketplace.Message.ChatMessage.PrivateMsg)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>required string senderName = 1;</code>
+         * @return Whether the senderName field is set.
+         */
+        boolean hasSenderName();
+        /**
+         * <code>required string senderName = 1;</code>
+         * @return The senderName.
+         */
+        java.lang.String getSenderName();
+        /**
+         * <code>required string senderName = 1;</code>
+         * @return The bytes for senderName.
+         */
+        com.google.protobuf.ByteString
+            getSenderNameBytes();
+
+        /**
+         * <code>required string receiverName = 2;</code>
+         * @return Whether the receiverName field is set.
+         */
+        boolean hasReceiverName();
+        /**
+         * <code>required string receiverName = 2;</code>
+         * @return The receiverName.
+         */
+        java.lang.String getReceiverName();
+        /**
+         * <code>required string receiverName = 2;</code>
+         * @return The bytes for receiverName.
+         */
+        com.google.protobuf.ByteString
+            getReceiverNameBytes();
+
+        /**
+         * <code>required string message = 3;</code>
+         * @return Whether the message field is set.
+         */
+        boolean hasMessage();
+        /**
+         * <code>required string message = 3;</code>
+         * @return The message.
+         */
+        java.lang.String getMessage();
+        /**
+         * <code>required string message = 3;</code>
+         * @return The bytes for message.
+         */
+        com.google.protobuf.ByteString
+            getMessageBytes();
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.ChatMessage.PrivateMsg}
+       */
+      public static final class PrivateMsg extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:marketplace.Message.ChatMessage.PrivateMsg)
+          PrivateMsgOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use PrivateMsg.newBuilder() to construct.
+        private PrivateMsg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private PrivateMsg() {
+          senderName_ = "";
+          receiverName_ = "";
+          message_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new PrivateMsg();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private PrivateMsg(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  com.google.protobuf.ByteString bs = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  senderName_ = bs;
+                  break;
+                }
+                case 18: {
+                  com.google.protobuf.ByteString bs = input.readBytes();
+                  bitField0_ |= 0x00000002;
+                  receiverName_ = bs;
+                  break;
+                }
+                case 26: {
+                  com.google.protobuf.ByteString bs = input.readBytes();
+                  bitField0_ |= 0x00000004;
+                  message_ = bs;
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_PrivateMsg_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_PrivateMsg_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int SENDERNAME_FIELD_NUMBER = 1;
+        private volatile java.lang.Object senderName_;
+        /**
+         * <code>required string senderName = 1;</code>
+         * @return Whether the senderName field is set.
+         */
+        @java.lang.Override
+        public boolean hasSenderName() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>required string senderName = 1;</code>
+         * @return The senderName.
+         */
+        @java.lang.Override
+        public java.lang.String getSenderName() {
+          java.lang.Object ref = senderName_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              senderName_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <code>required string senderName = 1;</code>
+         * @return The bytes for senderName.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getSenderNameBytes() {
+          java.lang.Object ref = senderName_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            senderName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int RECEIVERNAME_FIELD_NUMBER = 2;
+        private volatile java.lang.Object receiverName_;
+        /**
+         * <code>required string receiverName = 2;</code>
+         * @return Whether the receiverName field is set.
+         */
+        @java.lang.Override
+        public boolean hasReceiverName() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>required string receiverName = 2;</code>
+         * @return The receiverName.
+         */
+        @java.lang.Override
+        public java.lang.String getReceiverName() {
+          java.lang.Object ref = receiverName_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              receiverName_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <code>required string receiverName = 2;</code>
+         * @return The bytes for receiverName.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getReceiverNameBytes() {
+          java.lang.Object ref = receiverName_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            receiverName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int MESSAGE_FIELD_NUMBER = 3;
+        private volatile java.lang.Object message_;
+        /**
+         * <code>required string message = 3;</code>
+         * @return Whether the message field is set.
+         */
+        @java.lang.Override
+        public boolean hasMessage() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <code>required string message = 3;</code>
+         * @return The message.
+         */
+        @java.lang.Override
+        public java.lang.String getMessage() {
+          java.lang.Object ref = message_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              message_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <code>required string message = 3;</code>
+         * @return The bytes for message.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getMessageBytes() {
+          java.lang.Object ref = message_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            message_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          if (!hasSenderName()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+          if (!hasReceiverName()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+          if (!hasMessage()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, senderName_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 2, receiverName_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 3, message_);
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, senderName_);
+          }
+          if (((bitField0_ & 0x00000002) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, receiverName_);
+          }
+          if (((bitField0_ & 0x00000004) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, message_);
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg)) {
+            return super.equals(obj);
+          }
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg) obj;
+
+          if (hasSenderName() != other.hasSenderName()) return false;
+          if (hasSenderName()) {
+            if (!getSenderName()
+                .equals(other.getSenderName())) return false;
+          }
+          if (hasReceiverName() != other.hasReceiverName()) return false;
+          if (hasReceiverName()) {
+            if (!getReceiverName()
+                .equals(other.getReceiverName())) return false;
+          }
+          if (hasMessage() != other.hasMessage()) return false;
+          if (hasMessage()) {
+            if (!getMessage()
+                .equals(other.getMessage())) return false;
+          }
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasSenderName()) {
+            hash = (37 * hash) + SENDERNAME_FIELD_NUMBER;
+            hash = (53 * hash) + getSenderName().hashCode();
+          }
+          if (hasReceiverName()) {
+            hash = (37 * hash) + RECEIVERNAME_FIELD_NUMBER;
+            hash = (53 * hash) + getReceiverName().hashCode();
+          }
+          if (hasMessage()) {
+            hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+            hash = (53 * hash) + getMessage().hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code marketplace.Message.ChatMessage.PrivateMsg}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:marketplace.Message.ChatMessage.PrivateMsg)
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsgOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_PrivateMsg_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_PrivateMsg_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.Builder.class);
+          }
+
+          // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            senderName_ = "";
+            bitField0_ = (bitField0_ & ~0x00000001);
+            receiverName_ = "";
+            bitField0_ = (bitField0_ & ~0x00000002);
+            message_ = "";
+            bitField0_ = (bitField0_ & ~0x00000004);
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_PrivateMsg_descriptor;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg getDefaultInstanceForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg build() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg buildPartial() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              to_bitField0_ |= 0x00000001;
+            }
+            result.senderName_ = senderName_;
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              to_bitField0_ |= 0x00000002;
+            }
+            result.receiverName_ = receiverName_;
+            if (((from_bitField0_ & 0x00000004) != 0)) {
+              to_bitField0_ |= 0x00000004;
+            }
+            result.message_ = message_;
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg) {
+              return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg other) {
+            if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.getDefaultInstance()) return this;
+            if (other.hasSenderName()) {
+              bitField0_ |= 0x00000001;
+              senderName_ = other.senderName_;
+              onChanged();
+            }
+            if (other.hasReceiverName()) {
+              bitField0_ |= 0x00000002;
+              receiverName_ = other.receiverName_;
+              onChanged();
+            }
+            if (other.hasMessage()) {
+              bitField0_ |= 0x00000004;
+              message_ = other.message_;
+              onChanged();
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            if (!hasSenderName()) {
+              return false;
+            }
+            if (!hasReceiverName()) {
+              return false;
+            }
+            if (!hasMessage()) {
+              return false;
+            }
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private java.lang.Object senderName_ = "";
+          /**
+           * <code>required string senderName = 1;</code>
+           * @return Whether the senderName field is set.
+           */
+          public boolean hasSenderName() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <code>required string senderName = 1;</code>
+           * @return The senderName.
+           */
+          public java.lang.String getSenderName() {
+            java.lang.Object ref = senderName_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                senderName_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>required string senderName = 1;</code>
+           * @return The bytes for senderName.
+           */
+          public com.google.protobuf.ByteString
+              getSenderNameBytes() {
+            java.lang.Object ref = senderName_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              senderName_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>required string senderName = 1;</code>
+           * @param value The senderName to set.
+           * @return This builder for chaining.
+           */
+          public Builder setSenderName(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+            senderName_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string senderName = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearSenderName() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            senderName_ = getDefaultInstance().getSenderName();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string senderName = 1;</code>
+           * @param value The bytes for senderName to set.
+           * @return This builder for chaining.
+           */
+          public Builder setSenderNameBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+            senderName_ = value;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object receiverName_ = "";
+          /**
+           * <code>required string receiverName = 2;</code>
+           * @return Whether the receiverName field is set.
+           */
+          public boolean hasReceiverName() {
+            return ((bitField0_ & 0x00000002) != 0);
+          }
+          /**
+           * <code>required string receiverName = 2;</code>
+           * @return The receiverName.
+           */
+          public java.lang.String getReceiverName() {
+            java.lang.Object ref = receiverName_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                receiverName_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>required string receiverName = 2;</code>
+           * @return The bytes for receiverName.
+           */
+          public com.google.protobuf.ByteString
+              getReceiverNameBytes() {
+            java.lang.Object ref = receiverName_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              receiverName_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>required string receiverName = 2;</code>
+           * @param value The receiverName to set.
+           * @return This builder for chaining.
+           */
+          public Builder setReceiverName(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+            receiverName_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string receiverName = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearReceiverName() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            receiverName_ = getDefaultInstance().getReceiverName();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string receiverName = 2;</code>
+           * @param value The bytes for receiverName to set.
+           * @return This builder for chaining.
+           */
+          public Builder setReceiverNameBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+            receiverName_ = value;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object message_ = "";
+          /**
+           * <code>required string message = 3;</code>
+           * @return Whether the message field is set.
+           */
+          public boolean hasMessage() {
+            return ((bitField0_ & 0x00000004) != 0);
+          }
+          /**
+           * <code>required string message = 3;</code>
+           * @return The message.
+           */
+          public java.lang.String getMessage() {
+            java.lang.Object ref = message_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                message_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>required string message = 3;</code>
+           * @return The bytes for message.
+           */
+          public com.google.protobuf.ByteString
+              getMessageBytes() {
+            java.lang.Object ref = message_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              message_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>required string message = 3;</code>
+           * @param value The message to set.
+           * @return This builder for chaining.
+           */
+          public Builder setMessage(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+            message_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string message = 3;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearMessage() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            message_ = getDefaultInstance().getMessage();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string message = 3;</code>
+           * @param value The bytes for message to set.
+           * @return This builder for chaining.
+           */
+          public Builder setMessageBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+            message_ = value;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:marketplace.Message.ChatMessage.PrivateMsg)
+        }
+
+        // @@protoc_insertion_point(class_scope:marketplace.Message.ChatMessage.PrivateMsg)
+        private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg();
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<PrivateMsg>
+            PARSER = new com.google.protobuf.AbstractParser<PrivateMsg>() {
+          @java.lang.Override
+          public PrivateMsg parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new PrivateMsg(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<PrivateMsg> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<PrivateMsg> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface UserListMsgOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:marketplace.Message.ChatMessage.UserListMsg)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>required .marketplace.ChatUsers userList = 1;</code>
+         * @return Whether the userList field is set.
+         */
+        boolean hasUserList();
+        /**
+         * <code>required .marketplace.ChatUsers userList = 1;</code>
+         * @return The userList.
+         */
+        nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers getUserList();
+        /**
+         * <code>required .marketplace.ChatUsers userList = 1;</code>
+         */
+        nsu.oop.marketplace.inet.MarketplaceProto.ChatUsersOrBuilder getUserListOrBuilder();
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.ChatMessage.UserListMsg}
+       */
+      public static final class UserListMsg extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:marketplace.Message.ChatMessage.UserListMsg)
+          UserListMsgOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use UserListMsg.newBuilder() to construct.
+        private UserListMsg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private UserListMsg() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new UserListMsg();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private UserListMsg(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.Builder subBuilder = null;
+                  if (((bitField0_ & 0x00000001) != 0)) {
+                    subBuilder = userList_.toBuilder();
+                  }
+                  userList_ = input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.PARSER, extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(userList_);
+                    userList_ = subBuilder.buildPartial();
+                  }
+                  bitField0_ |= 0x00000001;
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_UserListMsg_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_UserListMsg_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int USERLIST_FIELD_NUMBER = 1;
+        private nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers userList_;
+        /**
+         * <code>required .marketplace.ChatUsers userList = 1;</code>
+         * @return Whether the userList field is set.
+         */
+        @java.lang.Override
+        public boolean hasUserList() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>required .marketplace.ChatUsers userList = 1;</code>
+         * @return The userList.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers getUserList() {
+          return userList_ == null ? nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.getDefaultInstance() : userList_;
+        }
+        /**
+         * <code>required .marketplace.ChatUsers userList = 1;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.ChatUsersOrBuilder getUserListOrBuilder() {
+          return userList_ == null ? nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.getDefaultInstance() : userList_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          if (!hasUserList()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            output.writeMessage(1, getUserList());
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(1, getUserList());
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg)) {
+            return super.equals(obj);
+          }
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg) obj;
+
+          if (hasUserList() != other.hasUserList()) return false;
+          if (hasUserList()) {
+            if (!getUserList()
+                .equals(other.getUserList())) return false;
+          }
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasUserList()) {
+            hash = (37 * hash) + USERLIST_FIELD_NUMBER;
+            hash = (53 * hash) + getUserList().hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code marketplace.Message.ChatMessage.UserListMsg}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:marketplace.Message.ChatMessage.UserListMsg)
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsgOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_UserListMsg_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_UserListMsg_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.Builder.class);
+          }
+
+          // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+              getUserListFieldBuilder();
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            if (userListBuilder_ == null) {
+              userList_ = null;
+            } else {
+              userListBuilder_.clear();
+            }
+            bitField0_ = (bitField0_ & ~0x00000001);
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_UserListMsg_descriptor;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg getDefaultInstanceForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg build() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg buildPartial() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              if (userListBuilder_ == null) {
+                result.userList_ = userList_;
+              } else {
+                result.userList_ = userListBuilder_.build();
+              }
+              to_bitField0_ |= 0x00000001;
+            }
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg) {
+              return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg other) {
+            if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.getDefaultInstance()) return this;
+            if (other.hasUserList()) {
+              mergeUserList(other.getUserList());
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            if (!hasUserList()) {
+              return false;
+            }
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers userList_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers, nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.Builder, nsu.oop.marketplace.inet.MarketplaceProto.ChatUsersOrBuilder> userListBuilder_;
+          /**
+           * <code>required .marketplace.ChatUsers userList = 1;</code>
+           * @return Whether the userList field is set.
+           */
+          public boolean hasUserList() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <code>required .marketplace.ChatUsers userList = 1;</code>
+           * @return The userList.
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers getUserList() {
+            if (userListBuilder_ == null) {
+              return userList_ == null ? nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.getDefaultInstance() : userList_;
+            } else {
+              return userListBuilder_.getMessage();
+            }
+          }
+          /**
+           * <code>required .marketplace.ChatUsers userList = 1;</code>
+           */
+          public Builder setUserList(nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers value) {
+            if (userListBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              userList_ = value;
+              onChanged();
+            } else {
+              userListBuilder_.setMessage(value);
+            }
+            bitField0_ |= 0x00000001;
+            return this;
+          }
+          /**
+           * <code>required .marketplace.ChatUsers userList = 1;</code>
+           */
+          public Builder setUserList(
+              nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.Builder builderForValue) {
+            if (userListBuilder_ == null) {
+              userList_ = builderForValue.build();
+              onChanged();
+            } else {
+              userListBuilder_.setMessage(builderForValue.build());
+            }
+            bitField0_ |= 0x00000001;
+            return this;
+          }
+          /**
+           * <code>required .marketplace.ChatUsers userList = 1;</code>
+           */
+          public Builder mergeUserList(nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers value) {
+            if (userListBuilder_ == null) {
+              if (((bitField0_ & 0x00000001) != 0) &&
+                  userList_ != null &&
+                  userList_ != nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.getDefaultInstance()) {
+                userList_ =
+                  nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.newBuilder(userList_).mergeFrom(value).buildPartial();
+              } else {
+                userList_ = value;
+              }
+              onChanged();
+            } else {
+              userListBuilder_.mergeFrom(value);
+            }
+            bitField0_ |= 0x00000001;
+            return this;
+          }
+          /**
+           * <code>required .marketplace.ChatUsers userList = 1;</code>
+           */
+          public Builder clearUserList() {
+            if (userListBuilder_ == null) {
+              userList_ = null;
+              onChanged();
+            } else {
+              userListBuilder_.clear();
+            }
+            bitField0_ = (bitField0_ & ~0x00000001);
+            return this;
+          }
+          /**
+           * <code>required .marketplace.ChatUsers userList = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.Builder getUserListBuilder() {
+            bitField0_ |= 0x00000001;
+            onChanged();
+            return getUserListFieldBuilder().getBuilder();
+          }
+          /**
+           * <code>required .marketplace.ChatUsers userList = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.ChatUsersOrBuilder getUserListOrBuilder() {
+            if (userListBuilder_ != null) {
+              return userListBuilder_.getMessageOrBuilder();
+            } else {
+              return userList_ == null ?
+                  nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.getDefaultInstance() : userList_;
+            }
+          }
+          /**
+           * <code>required .marketplace.ChatUsers userList = 1;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers, nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.Builder, nsu.oop.marketplace.inet.MarketplaceProto.ChatUsersOrBuilder> 
+              getUserListFieldBuilder() {
+            if (userListBuilder_ == null) {
+              userListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers, nsu.oop.marketplace.inet.MarketplaceProto.ChatUsers.Builder, nsu.oop.marketplace.inet.MarketplaceProto.ChatUsersOrBuilder>(
+                      getUserList(),
+                      getParentForChildren(),
+                      isClean());
+              userList_ = null;
+            }
+            return userListBuilder_;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:marketplace.Message.ChatMessage.UserListMsg)
+        }
+
+        // @@protoc_insertion_point(class_scope:marketplace.Message.ChatMessage.UserListMsg)
+        private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg();
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<UserListMsg>
+            PARSER = new com.google.protobuf.AbstractParser<UserListMsg>() {
+          @java.lang.Override
+          public UserListMsg parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new UserListMsg(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<UserListMsg> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<UserListMsg> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface ErrorMsgOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:marketplace.Message.ChatMessage.ErrorMsg)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>required string error = 1;</code>
+         * @return Whether the error field is set.
+         */
+        boolean hasError();
+        /**
+         * <code>required string error = 1;</code>
+         * @return The error.
+         */
+        java.lang.String getError();
+        /**
+         * <code>required string error = 1;</code>
+         * @return The bytes for error.
+         */
+        com.google.protobuf.ByteString
+            getErrorBytes();
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.ChatMessage.ErrorMsg}
+       */
+      public static final class ErrorMsg extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:marketplace.Message.ChatMessage.ErrorMsg)
+          ErrorMsgOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use ErrorMsg.newBuilder() to construct.
+        private ErrorMsg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private ErrorMsg() {
+          error_ = "";
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new ErrorMsg();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private ErrorMsg(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  com.google.protobuf.ByteString bs = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  error_ = bs;
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_ErrorMsg_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_ErrorMsg_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.Builder.class);
+        }
+
+        private int bitField0_;
+        public static final int ERROR_FIELD_NUMBER = 1;
+        private volatile java.lang.Object error_;
+        /**
+         * <code>required string error = 1;</code>
+         * @return Whether the error field is set.
+         */
+        @java.lang.Override
+        public boolean hasError() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>required string error = 1;</code>
+         * @return The error.
+         */
+        @java.lang.Override
+        public java.lang.String getError() {
+          java.lang.Object ref = error_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              error_ = s;
+            }
+            return s;
+          }
+        }
+        /**
+         * <code>required string error = 1;</code>
+         * @return The bytes for error.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getErrorBytes() {
+          java.lang.Object ref = error_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            error_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          if (!hasError()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, error_);
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) != 0)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, error_);
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg)) {
+            return super.equals(obj);
+          }
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg) obj;
+
+          if (hasError() != other.hasError()) return false;
+          if (hasError()) {
+            if (!getError()
+                .equals(other.getError())) return false;
+          }
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (hasError()) {
+            hash = (37 * hash) + ERROR_FIELD_NUMBER;
+            hash = (53 * hash) + getError().hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code marketplace.Message.ChatMessage.ErrorMsg}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:marketplace.Message.ChatMessage.ErrorMsg)
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsgOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_ErrorMsg_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_ErrorMsg_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.Builder.class);
+          }
+
+          // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            error_ = "";
+            bitField0_ = (bitField0_ & ~0x00000001);
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_ErrorMsg_descriptor;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg getDefaultInstanceForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg build() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg buildPartial() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              to_bitField0_ |= 0x00000001;
+            }
+            result.error_ = error_;
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg) {
+              return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg other) {
+            if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.getDefaultInstance()) return this;
+            if (other.hasError()) {
+              bitField0_ |= 0x00000001;
+              error_ = other.error_;
+              onChanged();
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            if (!hasError()) {
+              return false;
+            }
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private java.lang.Object error_ = "";
+          /**
+           * <code>required string error = 1;</code>
+           * @return Whether the error field is set.
+           */
+          public boolean hasError() {
+            return ((bitField0_ & 0x00000001) != 0);
+          }
+          /**
+           * <code>required string error = 1;</code>
+           * @return The error.
+           */
+          public java.lang.String getError() {
+            java.lang.Object ref = error_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                error_ = s;
+              }
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>required string error = 1;</code>
+           * @return The bytes for error.
+           */
+          public com.google.protobuf.ByteString
+              getErrorBytes() {
+            java.lang.Object ref = error_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              error_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>required string error = 1;</code>
+           * @param value The error to set.
+           * @return This builder for chaining.
+           */
+          public Builder setError(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+            error_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string error = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearError() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            error_ = getDefaultInstance().getError();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>required string error = 1;</code>
+           * @param value The bytes for error to set.
+           * @return This builder for chaining.
+           */
+          public Builder setErrorBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+            error_ = value;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:marketplace.Message.ChatMessage.ErrorMsg)
+        }
+
+        // @@protoc_insertion_point(class_scope:marketplace.Message.ChatMessage.ErrorMsg)
+        private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg();
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<ErrorMsg>
+            PARSER = new com.google.protobuf.AbstractParser<ErrorMsg>() {
+          @java.lang.Override
+          public ErrorMsg parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new ErrorMsg(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<ErrorMsg> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<ErrorMsg> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      private int bitField0_;
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public enum TypeCase
+          implements com.google.protobuf.Internal.EnumLite,
+              com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+        JOIN(1),
+        END(2),
+        PUBLIC(3),
+        PRIVATE(4),
+        LIST(5),
+        ERROR(6),
+        TYPE_NOT_SET(0);
+        private final int value;
+        private TypeCase(int value) {
+          this.value = value;
+        }
+        /**
+         * @param value The number of the enum to look for.
+         * @return The enum associated with the given number.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static TypeCase valueOf(int value) {
+          return forNumber(value);
+        }
+
+        public static TypeCase forNumber(int value) {
+          switch (value) {
+            case 1: return JOIN;
+            case 2: return END;
+            case 3: return PUBLIC;
+            case 4: return PRIVATE;
+            case 5: return LIST;
+            case 6: return ERROR;
+            case 0: return TYPE_NOT_SET;
+            default: return null;
+          }
+        }
+        public int getNumber() {
+          return this.value;
+        }
+      };
+
+      public TypeCase
+      getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      public static final int JOIN_FIELD_NUMBER = 1;
+      /**
+       * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+       * @return Whether the join field is set.
+       */
+      @java.lang.Override
+      public boolean hasJoin() {
+        return typeCase_ == 1;
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+       * @return The join.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg getJoin() {
+        if (typeCase_ == 1) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.getDefaultInstance();
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsgOrBuilder getJoinOrBuilder() {
+        if (typeCase_ == 1) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.getDefaultInstance();
+      }
+
+      public static final int END_FIELD_NUMBER = 2;
+      /**
+       * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+       * @return Whether the end field is set.
+       */
+      @java.lang.Override
+      public boolean hasEnd() {
+        return typeCase_ == 2;
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+       * @return The end.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg getEnd() {
+        if (typeCase_ == 2) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.getDefaultInstance();
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsgOrBuilder getEndOrBuilder() {
+        if (typeCase_ == 2) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.getDefaultInstance();
+      }
+
+      public static final int PUBLIC_FIELD_NUMBER = 3;
+      /**
+       * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+       * @return Whether the public field is set.
+       */
+      @java.lang.Override
+      public boolean hasPublic() {
+        return typeCase_ == 3;
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+       * @return The public.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg getPublic() {
+        if (typeCase_ == 3) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.getDefaultInstance();
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsgOrBuilder getPublicOrBuilder() {
+        if (typeCase_ == 3) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.getDefaultInstance();
+      }
+
+      public static final int PRIVATE_FIELD_NUMBER = 4;
+      /**
+       * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+       * @return Whether the private field is set.
+       */
+      @java.lang.Override
+      public boolean hasPrivate() {
+        return typeCase_ == 4;
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+       * @return The private.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg getPrivate() {
+        if (typeCase_ == 4) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.getDefaultInstance();
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsgOrBuilder getPrivateOrBuilder() {
+        if (typeCase_ == 4) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.getDefaultInstance();
+      }
+
+      public static final int LIST_FIELD_NUMBER = 5;
+      /**
+       * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+       * @return Whether the list field is set.
+       */
+      @java.lang.Override
+      public boolean hasList() {
+        return typeCase_ == 5;
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+       * @return The list.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg getList() {
+        if (typeCase_ == 5) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.getDefaultInstance();
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsgOrBuilder getListOrBuilder() {
+        if (typeCase_ == 5) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.getDefaultInstance();
+      }
+
+      public static final int ERROR_FIELD_NUMBER = 6;
+      /**
+       * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+       * @return Whether the error field is set.
+       */
+      @java.lang.Override
+      public boolean hasError() {
+        return typeCase_ == 6;
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+       * @return The error.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg getError() {
+        if (typeCase_ == 6) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.getDefaultInstance();
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsgOrBuilder getErrorOrBuilder() {
+        if (typeCase_ == 6) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.getDefaultInstance();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        if (hasJoin()) {
+          if (!getJoin().isInitialized()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+        }
+        if (hasEnd()) {
+          if (!getEnd().isInitialized()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+        }
+        if (hasPublic()) {
+          if (!getPublic().isInitialized()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+        }
+        if (hasPrivate()) {
+          if (!getPrivate().isInitialized()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+        }
+        if (hasList()) {
+          if (!getList().isInitialized()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+        }
+        if (hasError()) {
+          if (!getError().isInitialized()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+        }
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (typeCase_ == 1) {
+          output.writeMessage(1, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg) type_);
+        }
+        if (typeCase_ == 2) {
+          output.writeMessage(2, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg) type_);
+        }
+        if (typeCase_ == 3) {
+          output.writeMessage(3, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg) type_);
+        }
+        if (typeCase_ == 4) {
+          output.writeMessage(4, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg) type_);
+        }
+        if (typeCase_ == 5) {
+          output.writeMessage(5, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg) type_);
+        }
+        if (typeCase_ == 6) {
+          output.writeMessage(6, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg) type_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (typeCase_ == 1) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg) type_);
+        }
+        if (typeCase_ == 2) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg) type_);
+        }
+        if (typeCase_ == 3) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg) type_);
+        }
+        if (typeCase_ == 4) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg) type_);
+        }
+        if (typeCase_ == 5) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg) type_);
+        }
+        if (typeCase_ == 6) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg) type_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage)) {
+          return super.equals(obj);
+        }
+        nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage) obj;
+
+        if (!getTypeCase().equals(other.getTypeCase())) return false;
+        switch (typeCase_) {
+          case 1:
+            if (!getJoin()
+                .equals(other.getJoin())) return false;
+            break;
+          case 2:
+            if (!getEnd()
+                .equals(other.getEnd())) return false;
+            break;
+          case 3:
+            if (!getPublic()
+                .equals(other.getPublic())) return false;
+            break;
+          case 4:
+            if (!getPrivate()
+                .equals(other.getPrivate())) return false;
+            break;
+          case 5:
+            if (!getList()
+                .equals(other.getList())) return false;
+            break;
+          case 6:
+            if (!getError()
+                .equals(other.getError())) return false;
+            break;
+          case 0:
+          default:
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        switch (typeCase_) {
+          case 1:
+            hash = (37 * hash) + JOIN_FIELD_NUMBER;
+            hash = (53 * hash) + getJoin().hashCode();
+            break;
+          case 2:
+            hash = (37 * hash) + END_FIELD_NUMBER;
+            hash = (53 * hash) + getEnd().hashCode();
+            break;
+          case 3:
+            hash = (37 * hash) + PUBLIC_FIELD_NUMBER;
+            hash = (53 * hash) + getPublic().hashCode();
+            break;
+          case 4:
+            hash = (37 * hash) + PRIVATE_FIELD_NUMBER;
+            hash = (53 * hash) + getPrivate().hashCode();
+            break;
+          case 5:
+            hash = (37 * hash) + LIST_FIELD_NUMBER;
+            hash = (53 * hash) + getList().hashCode();
+            break;
+          case 6:
+            hash = (37 * hash) + ERROR_FIELD_NUMBER;
+            hash = (53 * hash) + getError().hashCode();
+            break;
+          case 0:
+          default:
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.ChatMessage}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:marketplace.Message.ChatMessage)
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessageOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.Builder.class);
+        }
+
+        // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          typeCase_ = 0;
+          type_ = null;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_ChatMessage_descriptor;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage getDefaultInstanceForType() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage build() {
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage buildPartial() {
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (typeCase_ == 1) {
+            if (joinBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = joinBuilder_.build();
+            }
+          }
+          if (typeCase_ == 2) {
+            if (endBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = endBuilder_.build();
+            }
+          }
+          if (typeCase_ == 3) {
+            if (publicBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = publicBuilder_.build();
+            }
+          }
+          if (typeCase_ == 4) {
+            if (privateBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = privateBuilder_.build();
+            }
+          }
+          if (typeCase_ == 5) {
+            if (listBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = listBuilder_.build();
+            }
+          }
+          if (typeCase_ == 6) {
+            if (errorBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = errorBuilder_.build();
+            }
+          }
+          result.bitField0_ = to_bitField0_;
+          result.typeCase_ = typeCase_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage) {
+            return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage other) {
+          if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.getDefaultInstance()) return this;
+          switch (other.getTypeCase()) {
+            case JOIN: {
+              mergeJoin(other.getJoin());
+              break;
+            }
+            case END: {
+              mergeEnd(other.getEnd());
+              break;
+            }
+            case PUBLIC: {
+              mergePublic(other.getPublic());
+              break;
+            }
+            case PRIVATE: {
+              mergePrivate(other.getPrivate());
+              break;
+            }
+            case LIST: {
+              mergeList(other.getList());
+              break;
+            }
+            case ERROR: {
+              mergeError(other.getError());
+              break;
+            }
+            case TYPE_NOT_SET: {
+              break;
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          if (hasJoin()) {
+            if (!getJoin().isInitialized()) {
+              return false;
+            }
+          }
+          if (hasEnd()) {
+            if (!getEnd().isInitialized()) {
+              return false;
+            }
+          }
+          if (hasPublic()) {
+            if (!getPublic().isInitialized()) {
+              return false;
+            }
+          }
+          if (hasPrivate()) {
+            if (!getPrivate().isInitialized()) {
+              return false;
+            }
+          }
+          if (hasList()) {
+            if (!getList().isInitialized()) {
+              return false;
+            }
+          }
+          if (hasError()) {
+            if (!getError().isInitialized()) {
+              return false;
+            }
+          }
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int typeCase_ = 0;
+        private java.lang.Object type_;
+        public TypeCase
+            getTypeCase() {
+          return TypeCase.forNumber(
+              typeCase_);
+        }
+
+        public Builder clearType() {
+          typeCase_ = 0;
+          type_ = null;
+          onChanged();
+          return this;
+        }
+
+        private int bitField0_;
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsgOrBuilder> joinBuilder_;
+        /**
+         * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+         * @return Whether the join field is set.
+         */
+        @java.lang.Override
+        public boolean hasJoin() {
+          return typeCase_ == 1;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+         * @return The join.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg getJoin() {
+          if (joinBuilder_ == null) {
+            if (typeCase_ == 1) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.getDefaultInstance();
+          } else {
+            if (typeCase_ == 1) {
+              return joinBuilder_.getMessage();
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+         */
+        public Builder setJoin(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg value) {
+          if (joinBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            joinBuilder_.setMessage(value);
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+         */
+        public Builder setJoin(
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.Builder builderForValue) {
+          if (joinBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            joinBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+         */
+        public Builder mergeJoin(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg value) {
+          if (joinBuilder_ == null) {
+            if (typeCase_ == 1 &&
+                type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.getDefaultInstance()) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 1) {
+              joinBuilder_.mergeFrom(value);
+            }
+            joinBuilder_.setMessage(value);
+          }
+          typeCase_ = 1;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+         */
+        public Builder clearJoin() {
+          if (joinBuilder_ == null) {
+            if (typeCase_ == 1) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 1) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            joinBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+         */
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.Builder getJoinBuilder() {
+          return getJoinFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsgOrBuilder getJoinOrBuilder() {
+          if ((typeCase_ == 1) && (joinBuilder_ != null)) {
+            return joinBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 1) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.JoinMsg join = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsgOrBuilder> 
+            getJoinFieldBuilder() {
+          if (joinBuilder_ == null) {
+            if (!(typeCase_ == 1)) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.getDefaultInstance();
+            }
+            joinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsgOrBuilder>(
+                    (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.JoinMsg) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 1;
+          onChanged();;
+          return joinBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsgOrBuilder> endBuilder_;
+        /**
+         * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+         * @return Whether the end field is set.
+         */
+        @java.lang.Override
+        public boolean hasEnd() {
+          return typeCase_ == 2;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+         * @return The end.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg getEnd() {
+          if (endBuilder_ == null) {
+            if (typeCase_ == 2) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.getDefaultInstance();
+          } else {
+            if (typeCase_ == 2) {
+              return endBuilder_.getMessage();
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+         */
+        public Builder setEnd(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg value) {
+          if (endBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            endBuilder_.setMessage(value);
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+         */
+        public Builder setEnd(
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.Builder builderForValue) {
+          if (endBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            endBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+         */
+        public Builder mergeEnd(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg value) {
+          if (endBuilder_ == null) {
+            if (typeCase_ == 2 &&
+                type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.getDefaultInstance()) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 2) {
+              endBuilder_.mergeFrom(value);
+            }
+            endBuilder_.setMessage(value);
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+         */
+        public Builder clearEnd() {
+          if (endBuilder_ == null) {
+            if (typeCase_ == 2) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 2) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            endBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+         */
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.Builder getEndBuilder() {
+          return getEndFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsgOrBuilder getEndOrBuilder() {
+          if ((typeCase_ == 2) && (endBuilder_ != null)) {
+            return endBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 2) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.EndMsg end = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsgOrBuilder> 
+            getEndFieldBuilder() {
+          if (endBuilder_ == null) {
+            if (!(typeCase_ == 2)) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.getDefaultInstance();
+            }
+            endBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsgOrBuilder>(
+                    (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.EndMsg) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 2;
+          onChanged();;
+          return endBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsgOrBuilder> publicBuilder_;
+        /**
+         * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+         * @return Whether the public field is set.
+         */
+        @java.lang.Override
+        public boolean hasPublic() {
+          return typeCase_ == 3;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+         * @return The public.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg getPublic() {
+          if (publicBuilder_ == null) {
+            if (typeCase_ == 3) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.getDefaultInstance();
+          } else {
+            if (typeCase_ == 3) {
+              return publicBuilder_.getMessage();
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+         */
+        public Builder setPublic(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg value) {
+          if (publicBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            publicBuilder_.setMessage(value);
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+         */
+        public Builder setPublic(
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.Builder builderForValue) {
+          if (publicBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            publicBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+         */
+        public Builder mergePublic(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg value) {
+          if (publicBuilder_ == null) {
+            if (typeCase_ == 3 &&
+                type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.getDefaultInstance()) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 3) {
+              publicBuilder_.mergeFrom(value);
+            }
+            publicBuilder_.setMessage(value);
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+         */
+        public Builder clearPublic() {
+          if (publicBuilder_ == null) {
+            if (typeCase_ == 3) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 3) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            publicBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+         */
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.Builder getPublicBuilder() {
+          return getPublicFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsgOrBuilder getPublicOrBuilder() {
+          if ((typeCase_ == 3) && (publicBuilder_ != null)) {
+            return publicBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 3) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PublicMsg public = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsgOrBuilder> 
+            getPublicFieldBuilder() {
+          if (publicBuilder_ == null) {
+            if (!(typeCase_ == 3)) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.getDefaultInstance();
+            }
+            publicBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsgOrBuilder>(
+                    (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PublicMsg) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 3;
+          onChanged();;
+          return publicBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsgOrBuilder> privateBuilder_;
+        /**
+         * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+         * @return Whether the private field is set.
+         */
+        @java.lang.Override
+        public boolean hasPrivate() {
+          return typeCase_ == 4;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+         * @return The private.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg getPrivate() {
+          if (privateBuilder_ == null) {
+            if (typeCase_ == 4) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.getDefaultInstance();
+          } else {
+            if (typeCase_ == 4) {
+              return privateBuilder_.getMessage();
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+         */
+        public Builder setPrivate(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg value) {
+          if (privateBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            privateBuilder_.setMessage(value);
+          }
+          typeCase_ = 4;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+         */
+        public Builder setPrivate(
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.Builder builderForValue) {
+          if (privateBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            privateBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 4;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+         */
+        public Builder mergePrivate(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg value) {
+          if (privateBuilder_ == null) {
+            if (typeCase_ == 4 &&
+                type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.getDefaultInstance()) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 4) {
+              privateBuilder_.mergeFrom(value);
+            }
+            privateBuilder_.setMessage(value);
+          }
+          typeCase_ = 4;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+         */
+        public Builder clearPrivate() {
+          if (privateBuilder_ == null) {
+            if (typeCase_ == 4) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 4) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            privateBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+         */
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.Builder getPrivateBuilder() {
+          return getPrivateFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsgOrBuilder getPrivateOrBuilder() {
+          if ((typeCase_ == 4) && (privateBuilder_ != null)) {
+            return privateBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 4) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.PrivateMsg private = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsgOrBuilder> 
+            getPrivateFieldBuilder() {
+          if (privateBuilder_ == null) {
+            if (!(typeCase_ == 4)) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.getDefaultInstance();
+            }
+            privateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsgOrBuilder>(
+                    (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.PrivateMsg) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 4;
+          onChanged();;
+          return privateBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsgOrBuilder> listBuilder_;
+        /**
+         * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+         * @return Whether the list field is set.
+         */
+        @java.lang.Override
+        public boolean hasList() {
+          return typeCase_ == 5;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+         * @return The list.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg getList() {
+          if (listBuilder_ == null) {
+            if (typeCase_ == 5) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.getDefaultInstance();
+          } else {
+            if (typeCase_ == 5) {
+              return listBuilder_.getMessage();
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+         */
+        public Builder setList(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg value) {
+          if (listBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            listBuilder_.setMessage(value);
+          }
+          typeCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+         */
+        public Builder setList(
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.Builder builderForValue) {
+          if (listBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            listBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+         */
+        public Builder mergeList(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg value) {
+          if (listBuilder_ == null) {
+            if (typeCase_ == 5 &&
+                type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.getDefaultInstance()) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 5) {
+              listBuilder_.mergeFrom(value);
+            }
+            listBuilder_.setMessage(value);
+          }
+          typeCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+         */
+        public Builder clearList() {
+          if (listBuilder_ == null) {
+            if (typeCase_ == 5) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 5) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            listBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+         */
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.Builder getListBuilder() {
+          return getListFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsgOrBuilder getListOrBuilder() {
+          if ((typeCase_ == 5) && (listBuilder_ != null)) {
+            return listBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 5) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.UserListMsg list = 5;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsgOrBuilder> 
+            getListFieldBuilder() {
+          if (listBuilder_ == null) {
+            if (!(typeCase_ == 5)) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.getDefaultInstance();
+            }
+            listBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsgOrBuilder>(
+                    (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.UserListMsg) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 5;
+          onChanged();;
+          return listBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsgOrBuilder> errorBuilder_;
+        /**
+         * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+         * @return Whether the error field is set.
+         */
+        @java.lang.Override
+        public boolean hasError() {
+          return typeCase_ == 6;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+         * @return The error.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg getError() {
+          if (errorBuilder_ == null) {
+            if (typeCase_ == 6) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.getDefaultInstance();
+          } else {
+            if (typeCase_ == 6) {
+              return errorBuilder_.getMessage();
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+         */
+        public Builder setError(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg value) {
+          if (errorBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            errorBuilder_.setMessage(value);
+          }
+          typeCase_ = 6;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+         */
+        public Builder setError(
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.Builder builderForValue) {
+          if (errorBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            errorBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 6;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+         */
+        public Builder mergeError(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg value) {
+          if (errorBuilder_ == null) {
+            if (typeCase_ == 6 &&
+                type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.getDefaultInstance()) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 6) {
+              errorBuilder_.mergeFrom(value);
+            }
+            errorBuilder_.setMessage(value);
+          }
+          typeCase_ = 6;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+         */
+        public Builder clearError() {
+          if (errorBuilder_ == null) {
+            if (typeCase_ == 6) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 6) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            errorBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+         */
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.Builder getErrorBuilder() {
+          return getErrorFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsgOrBuilder getErrorOrBuilder() {
+          if ((typeCase_ == 6) && (errorBuilder_ != null)) {
+            return errorBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 6) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.ChatMessage.ErrorMsg error = 6;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsgOrBuilder> 
+            getErrorFieldBuilder() {
+          if (errorBuilder_ == null) {
+            if (!(typeCase_ == 6)) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.getDefaultInstance();
+            }
+            errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsgOrBuilder>(
+                    (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.ErrorMsg) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 6;
+          onChanged();;
+          return errorBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:marketplace.Message.ChatMessage)
+      }
+
+      // @@protoc_insertion_point(class_scope:marketplace.Message.ChatMessage)
+      private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage();
+      }
+
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<ChatMessage>
+          PARSER = new com.google.protobuf.AbstractParser<ChatMessage>() {
+        @java.lang.Override
+        public ChatMessage parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ChatMessage(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ChatMessage> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ChatMessage> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private int bitField0_;
     private int typeCase_ = 0;
     private java.lang.Object type_;
@@ -6351,6 +13291,7 @@ public final class MarketplaceProto {
       JOIN(7),
       ERROR(8),
       TYPE_CHANGE(9),
+      CHAT(10),
       TYPE_NOT_SET(0);
       private final int value;
       private TypeCase(int value) {
@@ -6374,6 +13315,7 @@ public final class MarketplaceProto {
           case 7: return JOIN;
           case 8: return ERROR;
           case 9: return TYPE_CHANGE;
+          case 10: return CHAT;
           case 0: return TYPE_NOT_SET;
           default: return null;
         }
@@ -6656,6 +13598,37 @@ public final class MarketplaceProto {
       return nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.getDefaultInstance();
     }
 
+    public static final int CHAT_FIELD_NUMBER = 10;
+    /**
+     * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+     * @return Whether the chat field is set.
+     */
+    @java.lang.Override
+    public boolean hasChat() {
+      return typeCase_ == 10;
+    }
+    /**
+     * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+     * @return The chat.
+     */
+    @java.lang.Override
+    public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage getChat() {
+      if (typeCase_ == 10) {
+         return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage) type_;
+      }
+      return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.getDefaultInstance();
+    }
+    /**
+     * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+     */
+    @java.lang.Override
+    public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessageOrBuilder getChatOrBuilder() {
+      if (typeCase_ == 10) {
+         return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage) type_;
+      }
+      return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6681,6 +13654,12 @@ public final class MarketplaceProto {
       }
       if (hasError()) {
         if (!getError().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      if (hasChat()) {
+        if (!getChat().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -6718,6 +13697,9 @@ public final class MarketplaceProto {
       }
       if (typeCase_ == 9) {
         output.writeMessage(9, (nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) type_);
+      }
+      if (typeCase_ == 10) {
+        output.writeMessage(10, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage) type_);
       }
       unknownFields.writeTo(output);
     }
@@ -6763,6 +13745,10 @@ public final class MarketplaceProto {
       if (typeCase_ == 9) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, (nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) type_);
+      }
+      if (typeCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage) type_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6820,6 +13806,10 @@ public final class MarketplaceProto {
           if (!getTypeChange()
               .equals(other.getTypeChange())) return false;
           break;
+        case 10:
+          if (!getChat()
+              .equals(other.getChat())) return false;
+          break;
         case 0:
         default:
       }
@@ -6871,6 +13861,10 @@ public final class MarketplaceProto {
         case 9:
           hash = (37 * hash) + TYPE_CHANGE_FIELD_NUMBER;
           hash = (53 * hash) + getTypeChange().hashCode();
+          break;
+        case 10:
+          hash = (37 * hash) + CHAT_FIELD_NUMBER;
+          hash = (53 * hash) + getChat().hashCode();
           break;
         case 0:
         default:
@@ -7102,6 +14096,13 @@ public final class MarketplaceProto {
             result.type_ = typeChangeBuilder_.build();
           }
         }
+        if (typeCase_ == 10) {
+          if (chatBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = chatBuilder_.build();
+          }
+        }
         result.bitField0_ = to_bitField0_;
         result.typeCase_ = typeCase_;
         onBuilt();
@@ -7186,6 +14187,10 @@ public final class MarketplaceProto {
             mergeTypeChange(other.getTypeChange());
             break;
           }
+          case CHAT: {
+            mergeChat(other.getChat());
+            break;
+          }
           case TYPE_NOT_SET: {
             break;
           }
@@ -7212,6 +14217,11 @@ public final class MarketplaceProto {
         }
         if (hasError()) {
           if (!getError().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasChat()) {
+          if (!getChat().isInitialized()) {
             return false;
           }
         }
@@ -8263,6 +15273,147 @@ public final class MarketplaceProto {
         onChanged();;
         return typeChangeBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessageOrBuilder> chatBuilder_;
+      /**
+       * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+       * @return Whether the chat field is set.
+       */
+      @java.lang.Override
+      public boolean hasChat() {
+        return typeCase_ == 10;
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+       * @return The chat.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage getChat() {
+        if (chatBuilder_ == null) {
+          if (typeCase_ == 10) {
+            return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage) type_;
+          }
+          return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.getDefaultInstance();
+        } else {
+          if (typeCase_ == 10) {
+            return chatBuilder_.getMessage();
+          }
+          return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+       */
+      public Builder setChat(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage value) {
+        if (chatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          chatBuilder_.setMessage(value);
+        }
+        typeCase_ = 10;
+        return this;
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+       */
+      public Builder setChat(
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.Builder builderForValue) {
+        if (chatBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          chatBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 10;
+        return this;
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+       */
+      public Builder mergeChat(nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage value) {
+        if (chatBuilder_ == null) {
+          if (typeCase_ == 10 &&
+              type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.getDefaultInstance()) {
+            type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 10) {
+            chatBuilder_.mergeFrom(value);
+          }
+          chatBuilder_.setMessage(value);
+        }
+        typeCase_ = 10;
+        return this;
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+       */
+      public Builder clearChat() {
+        if (chatBuilder_ == null) {
+          if (typeCase_ == 10) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 10) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          chatBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+       */
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.Builder getChatBuilder() {
+        return getChatFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessageOrBuilder getChatOrBuilder() {
+        if ((typeCase_ == 10) && (chatBuilder_ != null)) {
+          return chatBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 10) {
+            return (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage) type_;
+          }
+          return nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.marketplace.Message.ChatMessage chat = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessageOrBuilder> 
+          getChatFieldBuilder() {
+        if (chatBuilder_ == null) {
+          if (!(typeCase_ == 10)) {
+            type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.getDefaultInstance();
+          }
+          chatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessageOrBuilder>(
+                  (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 10;
+        onChanged();;
+        return chatBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8327,6 +15478,11 @@ public final class MarketplaceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_marketplace_SessionConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_ChatUsers_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_ChatUsers_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_marketplace_Message_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8361,6 +15517,41 @@ public final class MarketplaceProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_marketplace_Message_TypeChangeMsg_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_ChatMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_ChatMessage_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_ChatMessage_JoinMsg_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_ChatMessage_JoinMsg_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_ChatMessage_EndMsg_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_ChatMessage_EndMsg_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_ChatMessage_PublicMsg_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_ChatMessage_PublicMsg_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_ChatMessage_PrivateMsg_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_ChatMessage_PrivateMsg_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_ChatMessage_UserListMsg_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_ChatMessage_UserListMsg_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_ChatMessage_ErrorMsg_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_ChatMessage_ErrorMsg_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8376,25 +15567,43 @@ public final class MarketplaceProto {
       "ketplace.UserType:\017UNAUTHENTICATED\"]\n\rSe" +
       "ssionConfig\022\032\n\rping_delay_ms\030\001 \001(\005:\003100\022" +
       "\034\n\017node_timeout_ms\030\002 \001(\005:\003800\022\022\n\nserverP" +
-      "ort\030\003 \002(\005\"\335\004\n\007Message\022\017\n\007msg_seq\030\001 \002(\003\022\021" +
-      "\n\tsender_id\030\002 \001(\005\022\023\n\013receiver_id\030\003 \001(\005\022," +
-      "\n\004ping\030\004 \001(\0132\034.marketplace.Message.PingM" +
-      "sgH\000\022*\n\003ack\030\005 \001(\0132\033.marketplace.Message." +
-      "AckMsgH\000\022<\n\014announcement\030\006 \001(\0132$.marketp" +
-      "lace.Message.AnnouncementMsgH\000\022,\n\004join\030\007" +
-      " \001(\0132\034.marketplace.Message.JoinMsgH\000\022.\n\005" +
-      "error\030\010 \001(\0132\035.marketplace.Message.ErrorM" +
-      "sgH\000\0229\n\013type_change\030\t \001(\0132\".marketplace." +
-      "Message.TypeChangeMsgH\000\032\t\n\007PingMsg\032\010\n\006Ac" +
-      "kMsg\032=\n\017AnnouncementMsg\022*\n\006config\030\001 \002(\0132" +
-      "\032.marketplace.SessionConfig\032*\n\007JoinMsg\022\r" +
-      "\n\005login\030\001 \002(\t\022\020\n\010password\030\002 \002(\t\032!\n\010Error" +
-      "Msg\022\025\n\rerror_message\030\001 \002(\t\032=\n\rTypeChange" +
-      "Msg\022,\n\rreceiver_type\030\001 \001(\0162\025.marketplace" +
-      ".UserTypeB\006\n\004Type*M\n\010UserType\022\023\n\017UNAUTHE" +
-      "NTICATED\020\000\022\014\n\010DIRECTOR\020\001\022\021\n\rADMINISTRATO" +
-      "R\020\002\022\013\n\007MANAGER\020\003B,\n\030nsu.oop.marketplace." +
-      "inetB\020MarketplaceProto"
+      "ort\030\003 \002(\005\"\031\n\tChatUsers\022\014\n\004name\030\001 \003(\t\"\221\n\n" +
+      "\007Message\022\017\n\007msg_seq\030\001 \002(\003\022\021\n\tsender_id\030\002" +
+      " \001(\005\022\023\n\013receiver_id\030\003 \001(\005\022,\n\004ping\030\004 \001(\0132" +
+      "\034.marketplace.Message.PingMsgH\000\022*\n\003ack\030\005" +
+      " \001(\0132\033.marketplace.Message.AckMsgH\000\022<\n\014a" +
+      "nnouncement\030\006 \001(\0132$.marketplace.Message." +
+      "AnnouncementMsgH\000\022,\n\004join\030\007 \001(\0132\034.market" +
+      "place.Message.JoinMsgH\000\022.\n\005error\030\010 \001(\0132\035" +
+      ".marketplace.Message.ErrorMsgH\000\0229\n\013type_" +
+      "change\030\t \001(\0132\".marketplace.Message.TypeC" +
+      "hangeMsgH\000\0220\n\004chat\030\n \001(\0132 .marketplace.M" +
+      "essage.ChatMessageH\000\032\t\n\007PingMsg\032\010\n\006AckMs" +
+      "g\032=\n\017AnnouncementMsg\022*\n\006config\030\001 \002(\0132\032.m" +
+      "arketplace.SessionConfig\032*\n\007JoinMsg\022\r\n\005l" +
+      "ogin\030\001 \002(\t\022\020\n\010password\030\002 \002(\t\032!\n\010ErrorMsg" +
+      "\022\025\n\rerror_message\030\001 \002(\t\032=\n\rTypeChangeMsg" +
+      "\022,\n\rreceiver_type\030\001 \001(\0162\025.marketplace.Us" +
+      "erType\032\377\004\n\013ChatMessage\0228\n\004join\030\001 \001(\0132(.m" +
+      "arketplace.Message.ChatMessage.JoinMsgH\000" +
+      "\0226\n\003end\030\002 \001(\0132\'.marketplace.Message.Chat" +
+      "Message.EndMsgH\000\022<\n\006public\030\003 \001(\0132*.marke" +
+      "tplace.Message.ChatMessage.PublicMsgH\000\022>" +
+      "\n\007private\030\004 \001(\0132+.marketplace.Message.Ch" +
+      "atMessage.PrivateMsgH\000\022<\n\004list\030\005 \001(\0132,.m" +
+      "arketplace.Message.ChatMessage.UserListM" +
+      "sgH\000\022:\n\005error\030\006 \001(\0132).marketplace.Messag" +
+      "e.ChatMessage.ErrorMsgH\000\032\027\n\007JoinMsg\022\014\n\004n" +
+      "ame\030\001 \002(\t\032\026\n\006EndMsg\022\014\n\004name\030\001 \002(\t\0320\n\tPub" +
+      "licMsg\022\022\n\nsenderName\030\001 \002(\t\022\017\n\007message\030\002 " +
+      "\002(\t\032G\n\nPrivateMsg\022\022\n\nsenderName\030\001 \002(\t\022\024\n" +
+      "\014receiverName\030\002 \002(\t\022\017\n\007message\030\003 \002(\t\0327\n\013" +
+      "UserListMsg\022(\n\010userList\030\001 \002(\0132\026.marketpl" +
+      "ace.ChatUsers\032\031\n\010ErrorMsg\022\r\n\005error\030\001 \002(\t" +
+      "B\006\n\004TypeB\006\n\004Type*M\n\010UserType\022\023\n\017UNAUTHEN" +
+      "TICATED\020\000\022\014\n\010DIRECTOR\020\001\022\021\n\rADMINISTRATOR" +
+      "\020\002\022\013\n\007MANAGER\020\003B,\n\030nsu.oop.marketplace.i" +
+      "netB\020MarketplaceProto"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8412,12 +15621,18 @@ public final class MarketplaceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_marketplace_SessionConfig_descriptor,
         new java.lang.String[] { "PingDelayMs", "NodeTimeoutMs", "ServerPort", });
-    internal_static_marketplace_Message_descriptor =
+    internal_static_marketplace_ChatUsers_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_marketplace_ChatUsers_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_ChatUsers_descriptor,
+        new java.lang.String[] { "Name", });
+    internal_static_marketplace_Message_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_marketplace_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_marketplace_Message_descriptor,
-        new java.lang.String[] { "MsgSeq", "SenderId", "ReceiverId", "Ping", "Ack", "Announcement", "Join", "Error", "TypeChange", "Type", });
+        new java.lang.String[] { "MsgSeq", "SenderId", "ReceiverId", "Ping", "Ack", "Announcement", "Join", "Error", "TypeChange", "Chat", "Type", });
     internal_static_marketplace_Message_PingMsg_descriptor =
       internal_static_marketplace_Message_descriptor.getNestedTypes().get(0);
     internal_static_marketplace_Message_PingMsg_fieldAccessorTable = new
@@ -8454,6 +15669,48 @@ public final class MarketplaceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_marketplace_Message_TypeChangeMsg_descriptor,
         new java.lang.String[] { "ReceiverType", });
+    internal_static_marketplace_Message_ChatMessage_descriptor =
+      internal_static_marketplace_Message_descriptor.getNestedTypes().get(6);
+    internal_static_marketplace_Message_ChatMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_ChatMessage_descriptor,
+        new java.lang.String[] { "Join", "End", "Public", "Private", "List", "Error", "Type", });
+    internal_static_marketplace_Message_ChatMessage_JoinMsg_descriptor =
+      internal_static_marketplace_Message_ChatMessage_descriptor.getNestedTypes().get(0);
+    internal_static_marketplace_Message_ChatMessage_JoinMsg_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_ChatMessage_JoinMsg_descriptor,
+        new java.lang.String[] { "Name", });
+    internal_static_marketplace_Message_ChatMessage_EndMsg_descriptor =
+      internal_static_marketplace_Message_ChatMessage_descriptor.getNestedTypes().get(1);
+    internal_static_marketplace_Message_ChatMessage_EndMsg_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_ChatMessage_EndMsg_descriptor,
+        new java.lang.String[] { "Name", });
+    internal_static_marketplace_Message_ChatMessage_PublicMsg_descriptor =
+      internal_static_marketplace_Message_ChatMessage_descriptor.getNestedTypes().get(2);
+    internal_static_marketplace_Message_ChatMessage_PublicMsg_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_ChatMessage_PublicMsg_descriptor,
+        new java.lang.String[] { "SenderName", "Message", });
+    internal_static_marketplace_Message_ChatMessage_PrivateMsg_descriptor =
+      internal_static_marketplace_Message_ChatMessage_descriptor.getNestedTypes().get(3);
+    internal_static_marketplace_Message_ChatMessage_PrivateMsg_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_ChatMessage_PrivateMsg_descriptor,
+        new java.lang.String[] { "SenderName", "ReceiverName", "Message", });
+    internal_static_marketplace_Message_ChatMessage_UserListMsg_descriptor =
+      internal_static_marketplace_Message_ChatMessage_descriptor.getNestedTypes().get(4);
+    internal_static_marketplace_Message_ChatMessage_UserListMsg_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_ChatMessage_UserListMsg_descriptor,
+        new java.lang.String[] { "UserList", });
+    internal_static_marketplace_Message_ChatMessage_ErrorMsg_descriptor =
+      internal_static_marketplace_Message_ChatMessage_descriptor.getNestedTypes().get(5);
+    internal_static_marketplace_Message_ChatMessage_ErrorMsg_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_ChatMessage_ErrorMsg_descriptor,
+        new java.lang.String[] { "Error", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

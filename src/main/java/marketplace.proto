@@ -27,6 +27,10 @@ message SessionConfig {
     required int32 serverPort = 3;                      // Unicast port сервера для приёма сообщений
 }
 
+message ChatUsers {
+    repeated string name = 1;        // Список всех пользователей чата
+}
+
 // Общий формат любого сообщения
 message Message {
     // Говорим что мы живы с интервалом ping_delay_ms
@@ -54,6 +58,45 @@ message Message {
         optional UserType receiver_type = 1;
     }
 
+    message ChatMessage {
+        message JoinMsg{
+            required string name = 1;
+        }
+
+        message EndMsg {
+            required string name = 1;
+        }
+
+        message PublicMsg {
+            required string senderName = 1;
+            required string message = 2;
+        }
+
+        message PrivateMsg {
+            required string senderName = 1;
+            required string receiverName = 2;
+            required string message = 3;
+        }
+
+        message UserListMsg {
+            required ChatUsers userList = 1;
+        }
+
+        message ErrorMsg {
+            required string error = 1;
+        }
+
+        // Тип сообщения
+        oneof Type {
+            JoinMsg join = 1;
+            EndMsg end = 2;
+            PublicMsg public = 3;
+            PrivateMsg private = 4;
+            UserListMsg list = 5;
+            ErrorMsg error = 6;
+        }
+    }
+
     required int64 msg_seq = 1;     // Порядковый номер сообщения, уникален для отправителя в пределах сессии, монотонно возрастает
     optional int32 sender_id = 2;   // ID узла-отправителя этого сообщения
     optional int32 receiver_id = 3; // ID узла-получателя этого сообщения
@@ -66,5 +109,8 @@ message Message {
         JoinMsg join = 7;
         ErrorMsg error = 8;
         TypeChangeMsg type_change = 9;
+        ChatMessage chat = 10;
     }
 }
+
+

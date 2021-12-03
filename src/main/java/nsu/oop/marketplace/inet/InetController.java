@@ -46,9 +46,9 @@ public class InetController implements Inet, MulticastPublisherListener, Multica
     }
 
     @Override
-    public void startUnicast(){
+    public void startUnicast() {
         this.messageAcceptor = new MessageAcceptor(this);
-        this.ping = new Ping(this,pingDelayMs,nodeTimeOutMs);
+        this.ping = new Ping(this, pingDelayMs, nodeTimeOutMs);
         this.ping.start();
         this.sender = new UnicastSender(socket, messageAcceptor, ping, pingDelayMs);
         this.receiver = new UnicastReceiver(this, socket, messageAcceptor);
@@ -56,13 +56,13 @@ public class InetController implements Inet, MulticastPublisherListener, Multica
     }
 
     @Override
-    public void interruptUnicast(){
+    public void interruptUnicast() {
         ping.interrupt();
         receiver.interrupt();
     }
 
     @Override
-    public void attachUsers(UsersControllerForInet users){
+    public void attachUsers(UsersControllerForInet users) {
         this.users = users;
     }
 
@@ -104,7 +104,13 @@ public class InetController implements Inet, MulticastPublisherListener, Multica
 
     @Override
     public void sendMessage(MarketplaceProto.User user, MarketplaceProto.Message message) {
+        if (message.getTypeCase() == MarketplaceProto.Message.TypeCase.JOIN) messageSequence = 0;
         sender.sendMessage(user, MessageBuilder.setMessageSequence(message, getMessageSequence()));
+    }
+
+    @Override
+    public void removeUserFromPing(int id) {
+        ping.removeUser(id);
     }
 
     @Override
@@ -146,6 +152,11 @@ public class InetController implements Inet, MulticastPublisherListener, Multica
     }
 
     @Override
+    public void receiveChatMsg(MarketplaceProto.Message.ChatMessage chat, int messageSenderId) {
+        listener.receiveChatMsg(chat, messageSenderId);
+    }
+
+    @Override
     public void receiveTypeChangeMsg(MarketplaceProto.Message.TypeChangeMsg typeChangeMsg, int receiverId) {
         listener.launchClientCore(receiverId, typeChangeMsg.getReceiverType());
     }
@@ -155,18 +166,15 @@ public class InetController implements Inet, MulticastPublisherListener, Multica
         return listener.receiveJoinMsg(name, password, ip, port);
     }
 
+
     @Override
     public void disconnectUser(String errorMessage, int userId) {
         users.disconnectUser(errorMessage, userId);
+        listener.notifyCoreAboutDisconnect(userId);
     }
 
     @Override
     public void sendPing(int playerId) {
         users.sendPing(playerId);
-    }
-
-    @Override
-    public void removeUserFromPing(int userId){
-        ping.removeUser(userId);
     }
 }

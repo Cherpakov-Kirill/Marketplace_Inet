@@ -24,7 +24,7 @@ public class UnicastSender {
 
 
     public void sendMessage(MarketplaceProto.User user, MarketplaceProto.Message message) {
-        (new SenderSchedule(socket, messageAcceptor, ping, pingDelay, user, message)).start();
+        if(user != null) (new SenderSchedule(socket, messageAcceptor, ping, pingDelay, user, message)).start();
     }
 
     static class SenderSchedule extends Thread {
@@ -67,6 +67,7 @@ public class UnicastSender {
                 while (true) {
                     try {
                         send();
+                        if(message.getTypeCase() == MarketplaceProto.Message.TypeCase.ERROR) break;
                         Thread.sleep(pingDelay);
                         if (messageAcceptor.checkAcceptedMessage(message.getMsgSeq())) {
                             //System.out.println("Sender found accepted message. Break.");

@@ -20,9 +20,9 @@ public class MessageAcceptor implements AcceptorForSender, AcceptorForReceiver {
 
     @Override
     public boolean acceptMessage(int userId, long messageSequence) {
-        listener.setTimeOfReceivedMessage(userId);
         MarketplaceProto.User user = listener.getUserById(userId);
         if (user != null) {
+            listener.setTimeOfReceivedMessage(userId);
             listener.sendAckMessage(user, MessageBuilder.ackMsgBuilder(messageSequence, thisNodeId, userId));
             //System.out.println("Message acceptor sent ACK to " + playerId);
             return true;
@@ -44,10 +44,9 @@ public class MessageAcceptor implements AcceptorForSender, AcceptorForReceiver {
             acceptedMessages.add(messageSequence);
         }
         if (messageSequence == 1){
-            if (receiverId != 0) {
-                thisNodeId = receiverId;
-                listener.setNewNodeId(thisNodeId);
-            } else {
+            thisNodeId = receiverId;
+            listener.setNewNodeId(thisNodeId);
+            if (receiverId < 0) {
                 listener.showErrorAuthMessage();
             }
         }

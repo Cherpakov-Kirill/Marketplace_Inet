@@ -66,7 +66,67 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.Message setMessageSequence(MarketplaceProto.Message gameMessage, long messageSeq){
+    public static MarketplaceProto.Message chatMsgBuilder(MarketplaceProto.Message.ChatMessage chatMessage, int senderId, int receiverId) {
+        return MarketplaceProto.Message.newBuilder()
+                .setChat(chatMessage)
+                .setMsgSeq(0)
+                .setSenderId(senderId)
+                .setReceiverId(receiverId)
+                .build();
+    }
+
+    public static MarketplaceProto.Message.ChatMessage chatJoinMsgBuilder(String name) {
+        return MarketplaceProto.Message.ChatMessage.newBuilder()
+                .setJoin(MarketplaceProto.Message.ChatMessage.JoinMsg.newBuilder()
+                        .setName(name)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.ChatMessage chatEndMsgBuilder(String name) {
+        return MarketplaceProto.Message.ChatMessage.newBuilder()
+                .setEnd(MarketplaceProto.Message.ChatMessage.EndMsg.newBuilder()
+                        .setName(name)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.ChatMessage chatPublicMsgBuilder(String senderName, String message) {
+        return MarketplaceProto.Message.ChatMessage.newBuilder()
+                .setPublic(MarketplaceProto.Message.ChatMessage.PublicMsg.newBuilder()
+                        .setSenderName(senderName)
+                        .setMessage(message)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.ChatMessage chatPrivateMsgBuilder(String senderName, String receiverName, String message) {
+        return MarketplaceProto.Message.ChatMessage.newBuilder()
+                .setPrivate(MarketplaceProto.Message.ChatMessage.PrivateMsg.newBuilder()
+                        .setSenderName(senderName)
+                        .setReceiverName(receiverName)
+                        .setMessage(message)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.ChatMessage chatUserListMsgBuilder(MarketplaceProto.ChatUsers chatUsers) {
+        return MarketplaceProto.Message.ChatMessage.newBuilder()
+                .setList(MarketplaceProto.Message.ChatMessage.UserListMsg.newBuilder()
+                        .setUserList(chatUsers)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.ChatMessage chatErrorMsgBuilder(String errorMessage) {
+        return MarketplaceProto.Message.ChatMessage.newBuilder()
+                .setError(MarketplaceProto.Message.ChatMessage.ErrorMsg.newBuilder()
+                        .setError(errorMessage)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message setMessageSequence(MarketplaceProto.Message gameMessage, long messageSeq) {
         return gameMessage.toBuilder().setMsgSeq(messageSeq).build();
     }
 }

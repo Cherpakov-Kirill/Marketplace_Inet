@@ -4,5 +4,6 @@ import nsu.oop.marketplace.inet.MarketplaceProto;
 
 public interface InetForUsersController {
     void sendMessage(MarketplaceProto.User user, MarketplaceProto.Message message);
-    void removeUserFromPing(int userId);
+
+    void removeUserFromPing(int id);
 }

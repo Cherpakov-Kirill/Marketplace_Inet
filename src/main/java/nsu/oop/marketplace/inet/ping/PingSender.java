@@ -9,11 +9,13 @@ class PingSender extends Thread {
     private final PingListener listener;
     private final Map<Integer, Long> usersPingTime;
     private final int pingDelay;
+    private final Ping ping;
 
-    PingSender(PingListener listener, int pingDelay) {
+    PingSender(PingListener listener, Ping ping, int pingDelay) {
         this.listener = listener;
         this.usersPingTime = new HashMap<>();
         this.pingDelay = pingDelay;
+        this.ping = ping;
     }
 
     public void removeUser(int userId) {
@@ -35,8 +37,9 @@ class PingSender extends Thread {
                 for (int id : new LinkedList<>(usersPingTime.keySet())) {
                     long now = (new Date()).getTime();
                     if (now - usersPingTime.get(id) > pingDelay) {
+                        if (ping.isAlivePlayer(id)) listener.sendPing(id);
+                        else removeUser(id);
                         //System.out.println("Ping Sender id = " + id + " Delay = " + (now - usersPingTime.get(id)));
-                        listener.sendPing(id);
                     }
                 }
                 Thread.sleep(delay);

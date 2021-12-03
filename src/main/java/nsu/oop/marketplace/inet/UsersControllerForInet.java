@@ -6,4 +6,5 @@ public interface UsersControllerForInet {
     void sendPing(int playerId);
     void disconnectUser(String errorMessage, int userId);
     void setNodeId(int nodeId);
+    void deleteUser(int userId);
 }

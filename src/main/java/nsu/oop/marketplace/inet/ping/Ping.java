@@ -14,7 +14,7 @@ public class Ping extends Thread implements PingForSender {
         this.listener = listener;
         this.nodeTimeOut = nodeTimeOut;
         this.lastMessageTimeFromNode = new HashMap<>();
-        this.pingSender = new PingSender(listener, pingDelay);
+        this.pingSender = new PingSender(listener, this, pingDelay);
     }
 
     public void setTimeOfReceivedMessage(int userId) {
@@ -45,8 +45,7 @@ public class Ping extends Thread implements PingForSender {
                 if (now - lastMessageTimeFromNode.get(idUser) > nodeTimeOut) {
                     //System.out.println("Ping id = " + idUser + " Delay = " + (now - lastMessageTimeFromNode.get(idUser) + " nodeTimeOut = " + nodeTimeOut));
                     listener.disconnectUser("Sorry, you have exceeded the disappearance timeout!", idUser);
-                    lastMessageTimeFromNode.remove(idUser);
-                    pingSender.removeUser(idUser);
+                    removeUser(idUser);
                 }
             }
         }

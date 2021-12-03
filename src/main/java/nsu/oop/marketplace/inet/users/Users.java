@@ -9,9 +9,9 @@ public interface Users {
     void changeUserInList(int index, MarketplaceProto.User newUser);
     void sendErrorMessage(String errorMessage, int receiverId);
     void sendJoinMessage(String login, String password);
+    void sendChatMessage(MarketplaceProto.Message.ChatMessage chatMessage, int receiverId);
     void disconnectUser(String errorMessage, int userId);
     int getNumberOfUsers();
     List<MarketplaceProto.User> getUsersList();
     MarketplaceProto.User getUserById(int id);
-    int getUserIdByIPAndPort(String ip, int port);
 }

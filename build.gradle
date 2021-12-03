@@ -16,7 +16,7 @@ plugins {
 }
 
 group 'nsu.oop.marketplace.inet'
-version '1.4-MARKETPLACEINET'
+version '1.9-MARKETPLACEINET'
 
 repositories {
     mavenCentral()
@@ -44,5 +44,4 @@ test {
 }
 
 jar {
-    manifest.attributes("Class-Path": "protobuf-java-3.14.0.jar")
 }

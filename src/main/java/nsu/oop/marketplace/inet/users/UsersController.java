@@ -27,18 +27,17 @@ public class UsersController implements UsersControllerForInet, Users {
 
     @Override
     public void addUser(int userId, String name, String ip, int port, MarketplaceProto.UserType type) {
-        if (getUserIdByIPAndPort(ip, port) == 0) {
-            MarketplaceProto.User newPlayer;
-            MarketplaceProto.User.Builder playerBuilder = MarketplaceProto.User
-                    .newBuilder()
-                    .setName(name)
-                    .setId(userId)
-                    .setIpAddress(ip)
-                    .setPort(port)
-                    .setType(type);
-            newPlayer = playerBuilder.build();
-            userList.add(newPlayer);
-        }
+        removeUnAuthUserByIPAndPort(ip,port);
+        MarketplaceProto.User newPlayer;
+        MarketplaceProto.User.Builder playerBuilder = MarketplaceProto.User
+                .newBuilder()
+                .setName(name)
+                .setId(userId)
+                .setIpAddress(ip)
+                .setPort(port)
+                .setType(type);
+        newPlayer = playerBuilder.build();
+        userList.add(newPlayer);
     }
 
     @Override
@@ -46,7 +45,8 @@ public class UsersController implements UsersControllerForInet, Users {
         userList.set(index, newUser);
     }
 
-    private void deleteUser(int userId) {
+    @Override
+    public void deleteUser(int userId) {
         int index = 0;
         for (MarketplaceProto.User user : userList) {
             if (user.getId() == userId) break;
@@ -54,7 +54,6 @@ public class UsersController implements UsersControllerForInet, Users {
         }
         userList.remove(index);
         System.out.println("Users: delete dead node = " + userId);
-        inetController.removeUserFromPing(userId);
     }
 
     @Override
@@ -85,6 +84,12 @@ public class UsersController implements UsersControllerForInet, Users {
     }
 
     @Override
+    public void sendChatMessage(MarketplaceProto.Message.ChatMessage chatMessage, int receiverId) {
+        MarketplaceProto.User receiver = getUserById(receiverId);
+        inetController.sendMessage(receiver, MessageBuilder.chatMsgBuilder(chatMessage,nodeId,receiverId));
+    }
+
+    @Override
     public int getNumberOfUsers() {
         return userList.size();
     }
@@ -104,11 +109,14 @@ public class UsersController implements UsersControllerForInet, Users {
         return null;
     }
 
-    @Override
-    public int getUserIdByIPAndPort(String ip, int port) {
+    public void removeUnAuthUserByIPAndPort(String ip, int port) {
         for (MarketplaceProto.User user : userList) {
-            if (user.getIpAddress().equals(ip) && user.getPort() == port) return user.getId();
+            if (user.getIpAddress().equals(ip) && user.getPort() == port) {
+                int id = user.getId();
+                if(id > 0) continue;
+                inetController.removeUserFromPing(id);
+                deleteUser(id);
+            }
         }
-        return 0;
     }
 }
