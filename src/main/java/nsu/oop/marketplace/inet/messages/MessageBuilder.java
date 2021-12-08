@@ -3,6 +3,8 @@ package nsu.oop.marketplace.inet.messages;
 
 import nsu.oop.marketplace.inet.MarketplaceProto;
 
+import java.util.List;
+
 public class MessageBuilder {
     public static MarketplaceProto.Message pingMsgBuilder(int senderId, int receiverId) {
         return MarketplaceProto.Message.newBuilder()
@@ -100,6 +102,112 @@ public class MessageBuilder {
                 .setDescription(description)
                 .build();
     }
+
+    public static MarketplaceProto.Message dbRequestMsgBuilder(MarketplaceProto.Message.DBRequest request, int senderId, int receiverId) {
+        return MarketplaceProto.Message.newBuilder()
+                .setDbRequest(request)
+                .setMsgSeq(0)
+                .setSenderId(senderId)
+                .setReceiverId(receiverId)
+                .build();
+    }
+
+    public static MarketplaceProto.Message dbResponseMsgBuilder(MarketplaceProto.Message.DBResponse response, int senderId, int receiverId) {
+        return MarketplaceProto.Message.newBuilder()
+                .setDbResponse(response)
+                .setMsgSeq(0)
+                .setSenderId(senderId)
+                .setReceiverId(receiverId)
+                .build();
+    }
+
+    //Создание msg по таблицам
+    public static MarketplaceProto.DBFullProduct dbFullProductBuilder(int id, String name, String price, String description) {
+        return MarketplaceProto.DBFullProduct.newBuilder()
+                .setId(id)
+                .setName(name)
+                .setPrice(price)
+                .setDescription(description)
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBResponse productTableBuilder(List<MarketplaceProto.DBFullProduct> productList){
+        return MarketplaceProto.Message.DBResponse.newBuilder()
+                .setProductTable(MarketplaceProto.Message.DBResponse.ProductTable.newBuilder()
+                        .addAllFullProduct(productList)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.DBFullTask dbFullTaskBuilder(int id, String name, String task){
+        return MarketplaceProto.DBFullTask.newBuilder()
+                .setId(id)
+                .setName(name)
+                .setTask(task)
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBResponse taskTableBuilder(List<MarketplaceProto.DBFullTask> taskList){
+        return MarketplaceProto.Message.DBResponse.newBuilder()
+                .setTaskTable(MarketplaceProto.Message.DBResponse.TaskTable.newBuilder()
+                        .addAllFullTask(taskList)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.DBFullSales dbFullSaleBuilder(int productId, String productName, String date, String quantity, String amount){
+        return MarketplaceProto.DBFullSales.newBuilder()
+                .setProductId(productId)
+                .setProductName(productName)
+                .setDate(date)
+                .setQuantity(quantity)
+                .setAmount(amount)
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBResponse salesTableBuilder(List<MarketplaceProto.DBFullSales> salesList){
+        return MarketplaceProto.Message.DBResponse.newBuilder()
+                .setSaleTable(MarketplaceProto.Message.DBResponse.SalesTable.newBuilder()
+                        .addAllFullSales(salesList)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.DBFullChanges dbFullChangeBuilder(int id, String productName, String changeType, String newValue, String userName){
+        return MarketplaceProto.DBFullChanges.newBuilder()
+                .setId(id)
+                .setProductName(productName)
+                .setChangeType(changeType)
+                .setNewValue(newValue)
+                .setUserName(userName)
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBResponse changeTableBuilder(List<MarketplaceProto.DBFullChanges> changeList){
+        return MarketplaceProto.Message.DBResponse.newBuilder()
+                .setChangeTable(MarketplaceProto.Message.DBResponse.ChangeTable.newBuilder()
+                        .addAllFullChange(changeList)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.DBFullLog dbFullChangeBuilder(String userName, String description, String actionType){
+        return MarketplaceProto.DBFullLog.newBuilder()
+                .setUserName(userName)
+                .setDescription(description)
+                .setActionType(actionType)
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBResponse logTableBuilder(List<MarketplaceProto.DBFullLog> logList){
+        return MarketplaceProto.Message.DBResponse.newBuilder()
+                .setLogTable(MarketplaceProto.Message.DBResponse.LogTable.newBuilder()
+                        .addAllFullLog(logList)
+                        .build())
+                .build();
+    }
+
+    //Создание сообщений по чату
 
     public static MarketplaceProto.Message chatMsgBuilder(MarketplaceProto.Message.ChatMessage chatMessage, int senderId, int receiverId) {
         return MarketplaceProto.Message.newBuilder()
