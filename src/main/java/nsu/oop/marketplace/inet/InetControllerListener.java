@@ -13,6 +13,10 @@ public interface InetControllerListener {
 
     void receiveChatMsg(MarketplaceProto.Message.ChatMessage chat, int messageSenderId);
 
+    void receiveDBRequestMsg(MarketplaceProto.Message.DBRequest dbRequest, int messageSenderId);
+
+    void receiveDBResponseMsg(MarketplaceProto.Message.DBResponse dbResponse, int messageSenderId);
+
     void notifyCoreAboutDisconnect(int userId);
 
 

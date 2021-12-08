@@ -92,6 +92,18 @@ public class UsersController implements UsersControllerForInet, Users {
     }
 
     @Override
+    public void sendDBRequestMessage(MarketplaceProto.Message.DBRequest request, int receiverId) {
+        MarketplaceProto.User receiver = getUserById(receiverId);
+        inetController.sendMessage(receiver, MessageBuilder.dbRequestMsgBuilder(request,nodeId,receiverId));
+    }
+
+    @Override
+    public void sendDBResponseMessage(MarketplaceProto.Message.DBResponse response, int receiverId) {
+        MarketplaceProto.User receiver = getUserById(receiverId);
+        inetController.sendMessage(receiver, MessageBuilder.dbResponseMsgBuilder(response,nodeId,receiverId));
+    }
+
+    @Override
     public int getNumberOfUsers() {
         return userList.size();
     }

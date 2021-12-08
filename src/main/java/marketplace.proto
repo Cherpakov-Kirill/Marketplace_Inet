@@ -5,116 +5,144 @@ option java_outer_classname = "MarketplaceProto";
 
 // Тип пользователя
 enum UserType {
-    UNAUTHENTICATED = 0; // Не прошедший аутентификацию пользователь
-    DIRECTOR = 1;  // Директор
-    ADMINISTRATOR = 2; // Администратор
-    MANAGER = 3; // Менеджер
+  UNAUTHENTICATED = 0; // Не прошедший аутентификацию пользователь
+  DIRECTOR = 1;  // Директор
+  ADMINISTRATOR = 2; // Администратор
+  MANAGER = 3; // Менеджер
 }
 
 // Пользователь
 message User {
-    required string username = 1;       // Имя пользователя
-    required int32 id = 2;          // Уникальный идентификатор пользователя в пределах игры
-    required string ip_address = 3; // IPv4 или IPv6 адрес пользователя в виде строки (отправитель не знает свой IP, поэтому указывает тут пустую строку)
-    required int32 port = 4;        // Порт UDP-сокета пользователя
-    optional UserType type = 5 [default = UNAUTHENTICATED]; // Тип пользователя
-    optional string firstName = 6 [default = "Name"]; // Тип пользователя
-    optional string secondName = 7 [default = "Fam."]; // Тип пользователя
+  required string username = 1;       // Имя пользователя
+  required int32 id = 2;          // Уникальный идентификатор пользователя в пределах игры
+  required string ip_address = 3; // IPv4 или IPv6 адрес пользователя в виде строки (отправитель не знает свой IP, поэтому указывает тут пустую строку)
+  required int32 port = 4;        // Порт UDP-сокета пользователя
+  optional UserType type = 5 [default = UNAUTHENTICATED]; // Тип пользователя
+  optional string firstName = 6 [default = "Name"]; // Тип пользователя
+  optional string secondName = 7 [default = "Fam."]; // Тип пользователя
 }
 
 // Небольшая конфиругация для всех пользователей одинаковая
 message SessionConfig {
-    optional int32 ping_delay_ms = 1 [default = 100];   // Задержка между отправкой ping-сообщений, в миллисекундах (от 1 до 10000)
-    optional int32 node_timeout_ms = 2 [default = 800]; // Таймаут, после которого считаем что узел отпал, в миллисекундах (от 1 до 10000)
-    required int32 serverPort = 3;                      // Unicast port сервера для приёма сообщений
+  optional int32 ping_delay_ms = 1 [default = 100];   // Задержка между отправкой ping-сообщений, в миллисекундах (от 1 до 10000)
+  optional int32 node_timeout_ms = 2 [default = 800]; // Таймаут, после которого считаем что узел отпал, в миллисекундах (от 1 до 10000)
+  required int32 serverPort = 3;                      // Unicast port сервера для приёма сообщений
 }
 
 message ChatUsers {
-    repeated string name = 1;        // Список всех пользователей чата
+  repeated string name = 1;       // Список всех пользователей чата
+}
+
+message DBFullProduct {// Полная информация по продукту из таблицы products
+  required int32 id = 1;
+  required string name = 2;
+  required string price = 3;
+  required string description = 4;
 }
 
 // Общий формат любого сообщения
 message Message {
-    // Говорим что мы живы с интервалом ping_delay_ms
-    message PingMsg {
-    }
-    // Подтверждение сообщения с таким же seq
-    message AckMsg {
-    }
-    // Уведомление о открытой сессии, регулярно отправляется multicast-ом
-    message AnnouncementMsg {
-        required SessionConfig config = 1;           // Параметры сессии
-    }
-    // Авторизация пользователя
-    message JoinMsg {
-        required string login = 1;      // Имя пользователя
-        required string password = 2;   // Пароль пользователя
-    }
-    // Ошибка операции
-    message ErrorMsg {
-        required string error_message = 1; // Строковое сообщение ошибки
-    }
+  // Говорим что мы живы с интервалом ping_delay_ms
+  message PingMsg {}
+  // Подтверждение сообщения с таким же seq
+  message AckMsg {}
+  // Уведомление о открытой сессии, регулярно отправляется multicast-ом
+  message AnnouncementMsg {
+    required SessionConfig config = 1;           // Параметры сессии
+  }
+  // Авторизация пользователя
+  message JoinMsg {
+    required string login = 1;      // Имя пользователя
+    required string password = 2;   // Пароль пользователя
+  }
+  // Ошибка операции
+  message ErrorMsg {
+    required string error_message = 1; // Строковое сообщение ошибки
+  }
 
-    // Смена типа пользователя
-    message UserInfoMsg {
-        required UserType type = 1;
-        required string firstName = 2;
-        required string secondName = 3;
-    }
+  // Смена типа пользователя
+  message UserInfoMsg {
+    required UserType type = 1;
+    required string firstName = 2;
+    required string secondName = 3;
+  }
 
-    message ChatMessage {
-        message JoinMsg{
-            required string name = 1;
-        }
+  message DBRequest{
+    message ProductTable{}
 
-        message EndMsg {
-            required string name = 1;
-        }
-
-        message PublicMsg {
-            required string senderName = 1;
-            required string message = 2;
-        }
-
-        message PrivateMsg {
-            required string senderName = 1;
-            required string receiverName = 2;
-            required string message = 3;
-        }
-
-        message UserListMsg {
-            required ChatUsers userList = 1;
-        }
-
-        message ErrorMsg {
-            required string error = 1;
-        }
-
-        // Тип сообщения
-        oneof Type {
-            JoinMsg join = 1;
-            EndMsg end = 2;
-            PublicMsg public = 3;
-            PrivateMsg private = 4;
-            UserListMsg list = 5;
-            ErrorMsg error = 6;
-        }
-    }
-
-    required int64 msg_seq = 1;     // Порядковый номер сообщения, уникален для отправителя в пределах сессии, монотонно возрастает
-    optional int32 sender_id = 2;   // ID узла-отправителя этого сообщения
-    optional int32 receiver_id = 3; // ID узла-получателя этого сообщения
 
     // Тип сообщения
     oneof Type {
-        PingMsg ping = 4;
-        AckMsg ack = 5;
-        AnnouncementMsg announcement = 6;
-        JoinMsg join = 7;
-        ErrorMsg error = 8;
-        UserInfoMsg user_info = 9;
-        ChatMessage chat = 10;
+      ProductTable product_table = 1;
     }
+  }
+
+  message DBResponse{
+    message ProductTable{
+      repeated DBFullProduct full_product = 1;
+    }
+
+    // Тип сообщения
+    oneof Type {
+      ProductTable product_table = 1;
+    }
+  }
+
+  message ChatMessage {
+    message JoinMsg{
+      required string name = 1;
+    }
+
+    message EndMsg {
+      required string name = 1;
+    }
+
+    message PublicMsg {
+      required string senderName = 1;
+      required string message = 2;
+    }
+
+    message PrivateMsg {
+      required string senderName = 1;
+      required string receiverName = 2;
+      required string message = 3;
+    }
+
+    message UserListMsg {
+      required ChatUsers userList = 1;
+    }
+
+    message ErrorMsg {
+      required string error = 1;
+    }
+
+    // Тип сообщения
+    oneof Type {
+      JoinMsg join = 1;
+      EndMsg end = 2;
+      PublicMsg public = 3;
+      PrivateMsg private = 4;
+      UserListMsg list = 5;
+      ErrorMsg error = 6;
+    }
+  }
+
+  required int64 msg_seq = 1;     // Порядковый номер сообщения, уникален для отправителя в пределах сессии, монотонно возрастает
+  optional int32 sender_id = 2;   // ID узла-отправителя этого сообщения
+  optional int32 receiver_id = 3; // ID узла-получателя этого сообщения
+
+  // Тип сообщения
+  oneof Type {
+    PingMsg ping = 4;
+    AckMsg ack = 5;
+    AnnouncementMsg announcement = 6;
+    JoinMsg join = 7;
+    ErrorMsg error = 8;
+    UserInfoMsg user_info = 9;
+    ChatMessage chat = 10;
+    DBRequest dbRequest = 11;
+    DBResponse dbResponse = 12;
+  }
 }
 
 

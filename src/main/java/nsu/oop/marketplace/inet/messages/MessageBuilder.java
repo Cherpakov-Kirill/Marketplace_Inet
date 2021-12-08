@@ -68,6 +68,33 @@ public class MessageBuilder {
                 .build();
     }
 
+    public static MarketplaceProto.Message dbRequestMsgBuilder(MarketplaceProto.Message.DBRequest request, int senderId, int receiverId) {
+        return MarketplaceProto.Message.newBuilder()
+                .setDbRequest(request)
+                .setMsgSeq(0)
+                .setSenderId(senderId)
+                .setReceiverId(receiverId)
+                .build();
+    }
+
+    public static MarketplaceProto.Message dbResponseMsgBuilder(MarketplaceProto.Message.DBResponse response, int senderId, int receiverId) {
+        return MarketplaceProto.Message.newBuilder()
+                .setDbResponse(response)
+                .setMsgSeq(0)
+                .setSenderId(senderId)
+                .setReceiverId(receiverId)
+                .build();
+    }
+
+    public static MarketplaceProto.DBFullProduct dbFullProductBuilder(int id, String name, String price, String description) {
+        return MarketplaceProto.DBFullProduct.newBuilder()
+                .setId(id)
+                .setName(name)
+                .setPrice(price)
+                .setDescription(description)
+                .build();
+    }
+
     public static MarketplaceProto.Message chatMsgBuilder(MarketplaceProto.Message.ChatMessage chatMessage, int senderId, int receiverId) {
         return MarketplaceProto.Message.newBuilder()
                 .setChat(chatMessage)
