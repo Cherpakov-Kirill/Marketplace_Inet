@@ -4660,6 +4660,17 @@ public final class MarketplaceProto {
      */
     com.google.protobuf.ByteString
         getTaskBytes();
+
+    /**
+     * <code>required bool done = 4;</code>
+     * @return Whether the done field is set.
+     */
+    boolean hasDone();
+    /**
+     * <code>required bool done = 4;</code>
+     * @return The done.
+     */
+    boolean getDone();
   }
   /**
    * <pre>
@@ -4728,6 +4739,11 @@ public final class MarketplaceProto {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
               task_ = bs;
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              done_ = input.readBool();
               break;
             }
             default: {
@@ -4898,6 +4914,25 @@ public final class MarketplaceProto {
       }
     }
 
+    public static final int DONE_FIELD_NUMBER = 4;
+    private boolean done_;
+    /**
+     * <code>required bool done = 4;</code>
+     * @return Whether the done field is set.
+     */
+    @java.lang.Override
+    public boolean hasDone() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>required bool done = 4;</code>
+     * @return The done.
+     */
+    @java.lang.Override
+    public boolean getDone() {
+      return done_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4917,6 +4952,10 @@ public final class MarketplaceProto {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!hasDone()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -4932,6 +4971,9 @@ public final class MarketplaceProto {
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, task_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeBool(4, done_);
       }
       unknownFields.writeTo(output);
     }
@@ -4951,6 +4993,10 @@ public final class MarketplaceProto {
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, task_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, done_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4982,6 +5028,11 @@ public final class MarketplaceProto {
         if (!getTask()
             .equals(other.getTask())) return false;
       }
+      if (hasDone() != other.hasDone()) return false;
+      if (hasDone()) {
+        if (getDone()
+            != other.getDone()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5004,6 +5055,11 @@ public final class MarketplaceProto {
       if (hasTask()) {
         hash = (37 * hash) + TASK_FIELD_NUMBER;
         hash = (53 * hash) + getTask().hashCode();
+      }
+      if (hasDone()) {
+        hash = (37 * hash) + DONE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getDone());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5148,6 +5204,8 @@ public final class MarketplaceProto {
         bitField0_ = (bitField0_ & ~0x00000002);
         task_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
+        done_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -5188,6 +5246,10 @@ public final class MarketplaceProto {
           to_bitField0_ |= 0x00000004;
         }
         result.task_ = task_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.done_ = done_;
+          to_bitField0_ |= 0x00000008;
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -5250,6 +5312,9 @@ public final class MarketplaceProto {
           task_ = other.task_;
           onChanged();
         }
+        if (other.hasDone()) {
+          setDone(other.getDone());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -5264,6 +5329,9 @@ public final class MarketplaceProto {
           return false;
         }
         if (!hasTask()) {
+          return false;
+        }
+        if (!hasDone()) {
           return false;
         }
         return true;
@@ -5532,6 +5600,45 @@ public final class MarketplaceProto {
   }
   bitField0_ |= 0x00000004;
         task_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean done_ ;
+      /**
+       * <code>required bool done = 4;</code>
+       * @return Whether the done field is set.
+       */
+      @java.lang.Override
+      public boolean hasDone() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>required bool done = 4;</code>
+       * @return The done.
+       */
+      @java.lang.Override
+      public boolean getDone() {
+        return done_;
+      }
+      /**
+       * <code>required bool done = 4;</code>
+       * @param value The done to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDone(boolean value) {
+        bitField0_ |= 0x00000008;
+        done_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required bool done = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDone() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        done_ = false;
         onChanged();
         return this;
       }
@@ -32226,81 +32333,82 @@ public final class MarketplaceProto {
       ":\003800\022\022\n\nserverPort\030\003 \002(\005\"\031\n\tChatUsers\022\014" +
       "\n\004name\030\001 \003(\t\"M\n\rDBFullProduct\022\n\n\002id\030\001 \002(" +
       "\005\022\014\n\004name\030\002 \002(\t\022\r\n\005price\030\003 \002(\t\022\023\n\013descri" +
-      "ption\030\004 \002(\t\"4\n\nDBFullTask\022\n\n\002id\030\001 \002(\005\022\014\n" +
-      "\004name\030\002 \002(\t\022\014\n\004task\030\003 \002(\t\"g\n\013DBFullSales" +
-      "\022\022\n\nproduct_id\030\001 \002(\005\022\024\n\014product_name\030\002 \002" +
-      "(\t\022\014\n\004date\030\003 \002(\t\022\020\n\010quantity\030\004 \002(\t\022\016\n\006am" +
-      "ount\030\005 \002(\t\"l\n\rDBFullChanges\022\n\n\002id\030\001 \002(\005\022" +
-      "\024\n\014product_name\030\002 \002(\t\022\023\n\013change_type\030\003 \002" +
-      "(\t\022\021\n\tnew_value\030\004 \002(\t\022\021\n\tuser_name\030\005 \002(\t" +
-      "\"H\n\tDBFullLog\022\021\n\tuser_name\030\001 \002(\t\022\023\n\013desc" +
-      "ription\030\002 \002(\t\022\023\n\013action_type\030\003 \002(\t\"\314\023\n\007M" +
-      "essage\022\017\n\007msg_seq\030\001 \002(\003\022\021\n\tsender_id\030\002 \001" +
-      "(\005\022\023\n\013receiver_id\030\003 \001(\005\022,\n\004ping\030\004 \001(\0132\034." +
-      "marketplace.Message.PingMsgH\000\022*\n\003ack\030\005 \001" +
-      "(\0132\033.marketplace.Message.AckMsgH\000\022<\n\014ann" +
-      "ouncement\030\006 \001(\0132$.marketplace.Message.An" +
-      "nouncementMsgH\000\022,\n\004join\030\007 \001(\0132\034.marketpl" +
-      "ace.Message.JoinMsgH\000\022.\n\005error\030\010 \001(\0132\035.m" +
-      "arketplace.Message.ErrorMsgH\000\0225\n\tuser_in" +
-      "fo\030\t \001(\0132 .marketplace.Message.UserInfoM" +
-      "sgH\000\0220\n\004chat\030\n \001(\0132 .marketplace.Message" +
-      ".ChatMessageH\000\0223\n\tdbRequest\030\013 \001(\0132\036.mark" +
-      "etplace.Message.DBRequestH\000\0225\n\ndbRespons" +
-      "e\030\014 \001(\0132\037.marketplace.Message.DBResponse" +
-      "H\000\032\t\n\007PingMsg\032\010\n\006AckMsg\032=\n\017AnnouncementM" +
-      "sg\022*\n\006config\030\001 \002(\0132\032.marketplace.Session" +
-      "Config\032*\n\007JoinMsg\022\r\n\005login\030\001 \002(\t\022\020\n\010pass" +
-      "word\030\002 \002(\t\032!\n\010ErrorMsg\022\025\n\rerror_message\030" +
-      "\001 \002(\t\032Y\n\013UserInfoMsg\022#\n\004type\030\001 \002(\0162\025.mar" +
-      "ketplace.UserType\022\021\n\tfirstName\030\002 \002(\t\022\022\n\n" +
-      "secondName\030\003 \002(\t\032\242\003\n\tDBRequest\022D\n\rproduc" +
-      "t_table\030\001 \001(\0132+.marketplace.Message.DBRe" +
-      "quest.ProductTableH\000\022>\n\ntask_table\030\002 \001(\013" +
-      "2(.marketplace.Message.DBRequest.TaskTab" +
-      "leH\000\022?\n\nsale_table\030\003 \001(\0132).marketplace.M" +
-      "essage.DBRequest.SalesTableH\000\022B\n\014change_" +
-      "table\030\004 \001(\0132*.marketplace.Message.DBRequ" +
-      "est.ChangeTableH\000\022<\n\tlog_table\030\005 \001(\0132\'.m" +
-      "arketplace.Message.DBRequest.LogTableH\000\032" +
-      "\016\n\014ProductTable\032\013\n\tTaskTable\032\014\n\nSalesTab" +
-      "le\032\r\n\013ChangeTable\032\n\n\010LogTableB\006\n\004Type\032\217\005" +
-      "\n\nDBResponse\022E\n\rproduct_table\030\001 \001(\0132,.ma" +
-      "rketplace.Message.DBResponse.ProductTabl" +
-      "eH\000\022?\n\ntask_table\030\002 \001(\0132).marketplace.Me" +
-      "ssage.DBResponse.TaskTableH\000\022@\n\nsale_tab" +
-      "le\030\003 \001(\0132*.marketplace.Message.DBRespons" +
-      "e.SalesTableH\000\022C\n\014change_table\030\004 \001(\0132+.m" +
-      "arketplace.Message.DBResponse.ChangeTabl" +
-      "eH\000\022=\n\tlog_table\030\005 \001(\0132(.marketplace.Mes" +
-      "sage.DBResponse.LogTableH\000\032@\n\014ProductTab" +
-      "le\0220\n\014full_product\030\001 \003(\0132\032.marketplace.D" +
-      "BFullProduct\0327\n\tTaskTable\022*\n\tfull_task\030\001" +
-      " \003(\0132\027.marketplace.DBFullTask\032:\n\nSalesTa" +
-      "ble\022,\n\nfull_sales\030\001 \003(\0132\030.marketplace.DB" +
-      "FullSales\032>\n\013ChangeTable\022/\n\013full_change\030" +
-      "\001 \003(\0132\032.marketplace.DBFullChanges\0324\n\010Log" +
-      "Table\022(\n\010full_log\030\001 \003(\0132\026.marketplace.DB" +
-      "FullLogB\006\n\004Type\032\377\004\n\013ChatMessage\0228\n\004join\030" +
-      "\001 \001(\0132(.marketplace.Message.ChatMessage." +
-      "JoinMsgH\000\0226\n\003end\030\002 \001(\0132\'.marketplace.Mes" +
-      "sage.ChatMessage.EndMsgH\000\022<\n\006public\030\003 \001(" +
-      "\0132*.marketplace.Message.ChatMessage.Publ" +
-      "icMsgH\000\022>\n\007private\030\004 \001(\0132+.marketplace.M" +
-      "essage.ChatMessage.PrivateMsgH\000\022<\n\004list\030" +
-      "\005 \001(\0132,.marketplace.Message.ChatMessage." +
-      "UserListMsgH\000\022:\n\005error\030\006 \001(\0132).marketpla" +
-      "ce.Message.ChatMessage.ErrorMsgH\000\032\027\n\007Joi" +
-      "nMsg\022\014\n\004name\030\001 \002(\t\032\026\n\006EndMsg\022\014\n\004name\030\001 \002" +
-      "(\t\0320\n\tPublicMsg\022\022\n\nsenderName\030\001 \002(\t\022\017\n\007m" +
-      "essage\030\002 \002(\t\032G\n\nPrivateMsg\022\022\n\nsenderName" +
-      "\030\001 \002(\t\022\024\n\014receiverName\030\002 \002(\t\022\017\n\007message\030" +
-      "\003 \002(\t\0327\n\013UserListMsg\022(\n\010userList\030\001 \002(\0132\026" +
-      ".marketplace.ChatUsers\032\031\n\010ErrorMsg\022\r\n\005er" +
-      "ror\030\001 \002(\tB\006\n\004TypeB\006\n\004Type*M\n\010UserType\022\023\n" +
-      "\017UNAUTHENTICATED\020\000\022\014\n\010DIRECTOR\020\001\022\021\n\rADMI" +
-      "NISTRATOR\020\002\022\013\n\007MANAGER\020\003B,\n\030nsu.oop.mark" +
-      "etplace.inetB\020MarketplaceProto"
+      "ption\030\004 \002(\t\"B\n\nDBFullTask\022\n\n\002id\030\001 \002(\005\022\014\n" +
+      "\004name\030\002 \002(\t\022\014\n\004task\030\003 \002(\t\022\014\n\004done\030\004 \002(\010\"" +
+      "g\n\013DBFullSales\022\022\n\nproduct_id\030\001 \002(\005\022\024\n\014pr" +
+      "oduct_name\030\002 \002(\t\022\014\n\004date\030\003 \002(\t\022\020\n\010quanti" +
+      "ty\030\004 \002(\t\022\016\n\006amount\030\005 \002(\t\"l\n\rDBFullChange" +
+      "s\022\n\n\002id\030\001 \002(\005\022\024\n\014product_name\030\002 \002(\t\022\023\n\013c" +
+      "hange_type\030\003 \002(\t\022\021\n\tnew_value\030\004 \002(\t\022\021\n\tu" +
+      "ser_name\030\005 \002(\t\"H\n\tDBFullLog\022\021\n\tuser_name" +
+      "\030\001 \002(\t\022\023\n\013description\030\002 \002(\t\022\023\n\013action_ty" +
+      "pe\030\003 \002(\t\"\314\023\n\007Message\022\017\n\007msg_seq\030\001 \002(\003\022\021\n" +
+      "\tsender_id\030\002 \001(\005\022\023\n\013receiver_id\030\003 \001(\005\022,\n" +
+      "\004ping\030\004 \001(\0132\034.marketplace.Message.PingMs" +
+      "gH\000\022*\n\003ack\030\005 \001(\0132\033.marketplace.Message.A" +
+      "ckMsgH\000\022<\n\014announcement\030\006 \001(\0132$.marketpl" +
+      "ace.Message.AnnouncementMsgH\000\022,\n\004join\030\007 " +
+      "\001(\0132\034.marketplace.Message.JoinMsgH\000\022.\n\005e" +
+      "rror\030\010 \001(\0132\035.marketplace.Message.ErrorMs" +
+      "gH\000\0225\n\tuser_info\030\t \001(\0132 .marketplace.Mes" +
+      "sage.UserInfoMsgH\000\0220\n\004chat\030\n \001(\0132 .marke" +
+      "tplace.Message.ChatMessageH\000\0223\n\tdbReques" +
+      "t\030\013 \001(\0132\036.marketplace.Message.DBRequestH" +
+      "\000\0225\n\ndbResponse\030\014 \001(\0132\037.marketplace.Mess" +
+      "age.DBResponseH\000\032\t\n\007PingMsg\032\010\n\006AckMsg\032=\n" +
+      "\017AnnouncementMsg\022*\n\006config\030\001 \002(\0132\032.marke" +
+      "tplace.SessionConfig\032*\n\007JoinMsg\022\r\n\005login" +
+      "\030\001 \002(\t\022\020\n\010password\030\002 \002(\t\032!\n\010ErrorMsg\022\025\n\r" +
+      "error_message\030\001 \002(\t\032Y\n\013UserInfoMsg\022#\n\004ty" +
+      "pe\030\001 \002(\0162\025.marketplace.UserType\022\021\n\tfirst" +
+      "Name\030\002 \002(\t\022\022\n\nsecondName\030\003 \002(\t\032\242\003\n\tDBReq" +
+      "uest\022D\n\rproduct_table\030\001 \001(\0132+.marketplac" +
+      "e.Message.DBRequest.ProductTableH\000\022>\n\nta" +
+      "sk_table\030\002 \001(\0132(.marketplace.Message.DBR" +
+      "equest.TaskTableH\000\022?\n\nsale_table\030\003 \001(\0132)" +
+      ".marketplace.Message.DBRequest.SalesTabl" +
+      "eH\000\022B\n\014change_table\030\004 \001(\0132*.marketplace." +
+      "Message.DBRequest.ChangeTableH\000\022<\n\tlog_t" +
+      "able\030\005 \001(\0132\'.marketplace.Message.DBReque" +
+      "st.LogTableH\000\032\016\n\014ProductTable\032\013\n\tTaskTab" +
+      "le\032\014\n\nSalesTable\032\r\n\013ChangeTable\032\n\n\010LogTa" +
+      "bleB\006\n\004Type\032\217\005\n\nDBResponse\022E\n\rproduct_ta" +
+      "ble\030\001 \001(\0132,.marketplace.Message.DBRespon" +
+      "se.ProductTableH\000\022?\n\ntask_table\030\002 \001(\0132)." +
+      "marketplace.Message.DBResponse.TaskTable" +
+      "H\000\022@\n\nsale_table\030\003 \001(\0132*.marketplace.Mes" +
+      "sage.DBResponse.SalesTableH\000\022C\n\014change_t" +
+      "able\030\004 \001(\0132+.marketplace.Message.DBRespo" +
+      "nse.ChangeTableH\000\022=\n\tlog_table\030\005 \001(\0132(.m" +
+      "arketplace.Message.DBResponse.LogTableH\000" +
+      "\032@\n\014ProductTable\0220\n\014full_product\030\001 \003(\0132\032" +
+      ".marketplace.DBFullProduct\0327\n\tTaskTable\022" +
+      "*\n\tfull_task\030\001 \003(\0132\027.marketplace.DBFullT" +
+      "ask\032:\n\nSalesTable\022,\n\nfull_sales\030\001 \003(\0132\030." +
+      "marketplace.DBFullSales\032>\n\013ChangeTable\022/" +
+      "\n\013full_change\030\001 \003(\0132\032.marketplace.DBFull" +
+      "Changes\0324\n\010LogTable\022(\n\010full_log\030\001 \003(\0132\026." +
+      "marketplace.DBFullLogB\006\n\004Type\032\377\004\n\013ChatMe" +
+      "ssage\0228\n\004join\030\001 \001(\0132(.marketplace.Messag" +
+      "e.ChatMessage.JoinMsgH\000\0226\n\003end\030\002 \001(\0132\'.m" +
+      "arketplace.Message.ChatMessage.EndMsgH\000\022" +
+      "<\n\006public\030\003 \001(\0132*.marketplace.Message.Ch" +
+      "atMessage.PublicMsgH\000\022>\n\007private\030\004 \001(\0132+" +
+      ".marketplace.Message.ChatMessage.Private" +
+      "MsgH\000\022<\n\004list\030\005 \001(\0132,.marketplace.Messag" +
+      "e.ChatMessage.UserListMsgH\000\022:\n\005error\030\006 \001" +
+      "(\0132).marketplace.Message.ChatMessage.Err" +
+      "orMsgH\000\032\027\n\007JoinMsg\022\014\n\004name\030\001 \002(\t\032\026\n\006EndM" +
+      "sg\022\014\n\004name\030\001 \002(\t\0320\n\tPublicMsg\022\022\n\nsenderN" +
+      "ame\030\001 \002(\t\022\017\n\007message\030\002 \002(\t\032G\n\nPrivateMsg" +
+      "\022\022\n\nsenderName\030\001 \002(\t\022\024\n\014receiverName\030\002 \002" +
+      "(\t\022\017\n\007message\030\003 \002(\t\0327\n\013UserListMsg\022(\n\010us" +
+      "erList\030\001 \002(\0132\026.marketplace.ChatUsers\032\031\n\010" +
+      "ErrorMsg\022\r\n\005error\030\001 \002(\tB\006\n\004TypeB\006\n\004Type*" +
+      "M\n\010UserType\022\023\n\017UNAUTHENTICATED\020\000\022\014\n\010DIRE" +
+      "CTOR\020\001\022\021\n\rADMINISTRATOR\020\002\022\013\n\007MANAGER\020\003B," +
+      "\n\030nsu.oop.marketplace.inetB\020MarketplaceP" +
+      "roto"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -32335,7 +32443,7 @@ public final class MarketplaceProto {
     internal_static_marketplace_DBFullTask_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_marketplace_DBFullTask_descriptor,
-        new java.lang.String[] { "Id", "Name", "Task", });
+        new java.lang.String[] { "Id", "Name", "Task", "Done", });
     internal_static_marketplace_DBFullSales_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_marketplace_DBFullSales_fieldAccessorTable = new

@@ -136,11 +136,12 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.DBFullTask dbFullTaskBuilder(int id, String name, String task){
+    public static MarketplaceProto.DBFullTask dbFullTaskBuilder(int id, String name, String task, boolean done){
         return MarketplaceProto.DBFullTask.newBuilder()
                 .setId(id)
                 .setName(name)
                 .setTask(task)
+                .setDone(done)
                 .build();
     }
 
