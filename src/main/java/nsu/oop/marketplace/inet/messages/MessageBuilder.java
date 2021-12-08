@@ -85,30 +85,27 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.Message dbResponseMsgBuilder(MarketplaceProto.Message.DBResponse response, int senderId, int receiverId) {
-        return MarketplaceProto.Message.newBuilder()
-                .setDbResponse(response)
-                .setMsgSeq(0)
-                .setSenderId(senderId)
-                .setReceiverId(receiverId)
+    public static MarketplaceProto.Message.DBRequest dbLogTableRequestMsgBuilder() {
+        return MarketplaceProto.Message.DBRequest.newBuilder()
+                .setLogTable(MarketplaceProto.Message.DBRequest.LogTable.newBuilder().build())
                 .build();
     }
 
-    public static MarketplaceProto.DBFullProduct dbFullProductBuilder(int id, String name, String price, String description) {
-        return MarketplaceProto.DBFullProduct.newBuilder()
-                .setId(id)
-                .setName(name)
-                .setPrice(price)
-                .setDescription(description)
+    public static MarketplaceProto.Message.DBRequest dbTaskTableRequestMsgBuilder() {
+        return MarketplaceProto.Message.DBRequest.newBuilder()
+                .setTaskTable(MarketplaceProto.Message.DBRequest.TaskTable.newBuilder().build())
                 .build();
     }
 
-    public static MarketplaceProto.Message dbRequestMsgBuilder(MarketplaceProto.Message.DBRequest request, int senderId, int receiverId) {
-        return MarketplaceProto.Message.newBuilder()
-                .setDbRequest(request)
-                .setMsgSeq(0)
-                .setSenderId(senderId)
-                .setReceiverId(receiverId)
+    public static MarketplaceProto.Message.DBRequest dbSalesTableRequestMsgBuilder() {
+        return MarketplaceProto.Message.DBRequest.newBuilder()
+                .setSaleTable(MarketplaceProto.Message.DBRequest.SalesTable.newBuilder().build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBRequest dbGlobalChangesTableRequestMsgBuilder() {
+        return MarketplaceProto.Message.DBRequest.newBuilder()
+                .setChangeTable(MarketplaceProto.Message.DBRequest.ChangeTable.newBuilder().build())
                 .build();
     }
 
@@ -191,7 +188,7 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.DBFullLog dbFullChangeBuilder(String userName, String description, String actionType){
+    public static MarketplaceProto.DBFullLog dbFullLogBuilder(String userName, String description, String actionType){
         return MarketplaceProto.DBFullLog.newBuilder()
                 .setUserName(userName)
                 .setDescription(description)
