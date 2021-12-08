@@ -77,6 +77,12 @@ public class MessageBuilder {
                 .build();
     }
 
+    public static MarketplaceProto.Message.DBRequest dbFullProductTableRequestMsgBuilder() {
+        return MarketplaceProto.Message.DBRequest.newBuilder()
+                .setProductTable(MarketplaceProto.Message.DBRequest.ProductTable.newBuilder().build())
+                .build();
+    }
+
     public static MarketplaceProto.Message dbResponseMsgBuilder(MarketplaceProto.Message.DBResponse response, int senderId, int receiverId) {
         return MarketplaceProto.Message.newBuilder()
                 .setDbResponse(response)
