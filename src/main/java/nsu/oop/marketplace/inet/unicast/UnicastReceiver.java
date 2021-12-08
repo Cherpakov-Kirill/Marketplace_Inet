@@ -78,7 +78,7 @@ public class UnicastReceiver extends Thread {
         try {
             System.out.println("Unicast Receiver started");
             while (!isInterrupted()) {
-                byte[] buffer = new byte[2048];
+                byte[] buffer = new byte[102400];
                 DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
                 socket.receive(packet);
                 //System.out.println("Received "+packet.getLength()+" bytes");
