@@ -26,16 +26,18 @@ public class UsersController implements UsersControllerForInet, Users {
     }
 
     @Override
-    public void addUser(int userId, String name, String ip, int port, MarketplaceProto.UserType type) {
+    public void addUser(int userId, String username, String ip, int port, MarketplaceProto.UserType type, String firstName, String secondName) {
         removeUnAuthUserByIPAndPort(ip,port);
         MarketplaceProto.User newPlayer;
         MarketplaceProto.User.Builder playerBuilder = MarketplaceProto.User
                 .newBuilder()
-                .setName(name)
+                .setUsername(username)
                 .setId(userId)
                 .setIpAddress(ip)
                 .setPort(port)
-                .setType(type);
+                .setType(type)
+                .setFirstName(firstName)
+                .setSecondName(secondName);
         newPlayer = playerBuilder.build();
         userList.add(newPlayer);
     }
@@ -78,9 +80,9 @@ public class UsersController implements UsersControllerForInet, Users {
     }
 
     @Override
-    public void sendChangeTypeMessage(int receiverId) {
+    public void sendUserInfoMessage(int receiverId) {
         MarketplaceProto.User receiver = getUserById(receiverId);
-        inetController.sendMessage(receiver, MessageBuilder.typeChangingMsgBuilder(receiver.getType(), nodeId, receiverId));
+        inetController.sendMessage(receiver, MessageBuilder.userInfoMsgBuilder(receiver.getType(), receiver.getFirstName(), receiver.getSecondName(), nodeId, receiverId));
     }
 
     @Override

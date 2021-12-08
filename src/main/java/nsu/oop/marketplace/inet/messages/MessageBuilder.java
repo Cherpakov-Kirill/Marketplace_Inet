@@ -55,10 +55,12 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.Message typeChangingMsgBuilder(MarketplaceProto.UserType receiverType, int senderId, int receiverId) {
+    public static MarketplaceProto.Message userInfoMsgBuilder(MarketplaceProto.UserType receiverType, String firstName, String secondName, int senderId, int receiverId) {
         return MarketplaceProto.Message.newBuilder()
-                .setTypeChange(MarketplaceProto.Message.TypeChangeMsg.newBuilder()
-                        .setReceiverType(receiverType)
+                .setUserInfo(MarketplaceProto.Message.UserInfoMsg.newBuilder()
+                        .setType(receiverType)
+                        .setFirstName(firstName)
+                        .setSecondName(secondName)
                         .build())
                 .setMsgSeq(0)
                 .setSenderId(senderId)

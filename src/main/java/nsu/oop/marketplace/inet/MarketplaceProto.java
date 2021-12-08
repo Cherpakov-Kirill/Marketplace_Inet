@@ -173,29 +173,29 @@ public final class MarketplaceProto {
      * Имя пользователя
      * </pre>
      *
-     * <code>required string name = 1;</code>
-     * @return Whether the name field is set.
+     * <code>required string username = 1;</code>
+     * @return Whether the username field is set.
      */
-    boolean hasName();
+    boolean hasUsername();
     /**
      * <pre>
      * Имя пользователя
      * </pre>
      *
-     * <code>required string name = 1;</code>
-     * @return The name.
+     * <code>required string username = 1;</code>
+     * @return The username.
      */
-    java.lang.String getName();
+    java.lang.String getUsername();
     /**
      * <pre>
      * Имя пользователя
      * </pre>
      *
-     * <code>required string name = 1;</code>
-     * @return The bytes for name.
+     * <code>required string username = 1;</code>
+     * @return The bytes for username.
      */
     com.google.protobuf.ByteString
-        getNameBytes();
+        getUsernameBytes();
 
     /**
      * <pre>
@@ -282,6 +282,64 @@ public final class MarketplaceProto {
      * @return The type.
      */
     nsu.oop.marketplace.inet.MarketplaceProto.UserType getType();
+
+    /**
+     * <pre>
+     * Тип пользователя
+     * </pre>
+     *
+     * <code>optional string firstName = 6 [default = "Name"];</code>
+     * @return Whether the firstName field is set.
+     */
+    boolean hasFirstName();
+    /**
+     * <pre>
+     * Тип пользователя
+     * </pre>
+     *
+     * <code>optional string firstName = 6 [default = "Name"];</code>
+     * @return The firstName.
+     */
+    java.lang.String getFirstName();
+    /**
+     * <pre>
+     * Тип пользователя
+     * </pre>
+     *
+     * <code>optional string firstName = 6 [default = "Name"];</code>
+     * @return The bytes for firstName.
+     */
+    com.google.protobuf.ByteString
+        getFirstNameBytes();
+
+    /**
+     * <pre>
+     * Тип пользователя
+     * </pre>
+     *
+     * <code>optional string secondName = 7 [default = "Fam."];</code>
+     * @return Whether the secondName field is set.
+     */
+    boolean hasSecondName();
+    /**
+     * <pre>
+     * Тип пользователя
+     * </pre>
+     *
+     * <code>optional string secondName = 7 [default = "Fam."];</code>
+     * @return The secondName.
+     */
+    java.lang.String getSecondName();
+    /**
+     * <pre>
+     * Тип пользователя
+     * </pre>
+     *
+     * <code>optional string secondName = 7 [default = "Fam."];</code>
+     * @return The bytes for secondName.
+     */
+    com.google.protobuf.ByteString
+        getSecondNameBytes();
   }
   /**
    * <pre>
@@ -300,9 +358,11 @@ public final class MarketplaceProto {
       super(builder);
     }
     private User() {
-      name_ = "";
+      username_ = "";
       ipAddress_ = "";
       type_ = 0;
+      firstName_ = "Name";
+      secondName_ = "Fam.";
     }
 
     @java.lang.Override
@@ -339,7 +399,7 @@ public final class MarketplaceProto {
             case 10: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              name_ = bs;
+              username_ = bs;
               break;
             }
             case 16: {
@@ -368,6 +428,18 @@ public final class MarketplaceProto {
                 bitField0_ |= 0x00000010;
                 type_ = rawValue;
               }
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000020;
+              firstName_ = bs;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000040;
+              secondName_ = bs;
               break;
             }
             default: {
@@ -403,18 +475,18 @@ public final class MarketplaceProto {
     }
 
     private int bitField0_;
-    public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    public static final int USERNAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object username_;
     /**
      * <pre>
      * Имя пользователя
      * </pre>
      *
-     * <code>required string name = 1;</code>
-     * @return Whether the name field is set.
+     * <code>required string username = 1;</code>
+     * @return Whether the username field is set.
      */
     @java.lang.Override
-    public boolean hasName() {
+    public boolean hasUsername() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -422,12 +494,12 @@ public final class MarketplaceProto {
      * Имя пользователя
      * </pre>
      *
-     * <code>required string name = 1;</code>
-     * @return The name.
+     * <code>required string username = 1;</code>
+     * @return The username.
      */
     @java.lang.Override
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -435,7 +507,7 @@ public final class MarketplaceProto {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          name_ = s;
+          username_ = s;
         }
         return s;
       }
@@ -445,18 +517,18 @@ public final class MarketplaceProto {
      * Имя пользователя
      * </pre>
      *
-     * <code>required string name = 1;</code>
-     * @return The bytes for name.
+     * <code>required string username = 1;</code>
+     * @return The bytes for username.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
+        getUsernameBytes() {
+      java.lang.Object ref = username_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        name_ = b;
+        username_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -604,6 +676,126 @@ public final class MarketplaceProto {
       return result == null ? nsu.oop.marketplace.inet.MarketplaceProto.UserType.UNAUTHENTICATED : result;
     }
 
+    public static final int FIRSTNAME_FIELD_NUMBER = 6;
+    private volatile java.lang.Object firstName_;
+    /**
+     * <pre>
+     * Тип пользователя
+     * </pre>
+     *
+     * <code>optional string firstName = 6 [default = "Name"];</code>
+     * @return Whether the firstName field is set.
+     */
+    @java.lang.Override
+    public boolean hasFirstName() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Тип пользователя
+     * </pre>
+     *
+     * <code>optional string firstName = 6 [default = "Name"];</code>
+     * @return The firstName.
+     */
+    @java.lang.Override
+    public java.lang.String getFirstName() {
+      java.lang.Object ref = firstName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          firstName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Тип пользователя
+     * </pre>
+     *
+     * <code>optional string firstName = 6 [default = "Name"];</code>
+     * @return The bytes for firstName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFirstNameBytes() {
+      java.lang.Object ref = firstName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        firstName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECONDNAME_FIELD_NUMBER = 7;
+    private volatile java.lang.Object secondName_;
+    /**
+     * <pre>
+     * Тип пользователя
+     * </pre>
+     *
+     * <code>optional string secondName = 7 [default = "Fam."];</code>
+     * @return Whether the secondName field is set.
+     */
+    @java.lang.Override
+    public boolean hasSecondName() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Тип пользователя
+     * </pre>
+     *
+     * <code>optional string secondName = 7 [default = "Fam."];</code>
+     * @return The secondName.
+     */
+    @java.lang.Override
+    public java.lang.String getSecondName() {
+      java.lang.Object ref = secondName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          secondName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Тип пользователя
+     * </pre>
+     *
+     * <code>optional string secondName = 7 [default = "Fam."];</code>
+     * @return The bytes for secondName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecondNameBytes() {
+      java.lang.Object ref = secondName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secondName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -611,7 +803,7 @@ public final class MarketplaceProto {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasName()) {
+      if (!hasUsername()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -635,7 +827,7 @@ public final class MarketplaceProto {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeInt32(2, id_);
@@ -649,6 +841,12 @@ public final class MarketplaceProto {
       if (((bitField0_ & 0x00000010) != 0)) {
         output.writeEnum(5, type_);
       }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, firstName_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, secondName_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -659,7 +857,7 @@ public final class MarketplaceProto {
 
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
@@ -676,6 +874,12 @@ public final class MarketplaceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, type_);
       }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, firstName_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, secondName_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -691,10 +895,10 @@ public final class MarketplaceProto {
       }
       nsu.oop.marketplace.inet.MarketplaceProto.User other = (nsu.oop.marketplace.inet.MarketplaceProto.User) obj;
 
-      if (hasName() != other.hasName()) return false;
-      if (hasName()) {
-        if (!getName()
-            .equals(other.getName())) return false;
+      if (hasUsername() != other.hasUsername()) return false;
+      if (hasUsername()) {
+        if (!getUsername()
+            .equals(other.getUsername())) return false;
       }
       if (hasId() != other.hasId()) return false;
       if (hasId()) {
@@ -715,6 +919,16 @@ public final class MarketplaceProto {
       if (hasType()) {
         if (type_ != other.type_) return false;
       }
+      if (hasFirstName() != other.hasFirstName()) return false;
+      if (hasFirstName()) {
+        if (!getFirstName()
+            .equals(other.getFirstName())) return false;
+      }
+      if (hasSecondName() != other.hasSecondName()) return false;
+      if (hasSecondName()) {
+        if (!getSecondName()
+            .equals(other.getSecondName())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -726,9 +940,9 @@ public final class MarketplaceProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasName()) {
-        hash = (37 * hash) + NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getName().hashCode();
+      if (hasUsername()) {
+        hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+        hash = (53 * hash) + getUsername().hashCode();
       }
       if (hasId()) {
         hash = (37 * hash) + ID_FIELD_NUMBER;
@@ -745,6 +959,14 @@ public final class MarketplaceProto {
       if (hasType()) {
         hash = (37 * hash) + TYPE_FIELD_NUMBER;
         hash = (53 * hash) + type_;
+      }
+      if (hasFirstName()) {
+        hash = (37 * hash) + FIRSTNAME_FIELD_NUMBER;
+        hash = (53 * hash) + getFirstName().hashCode();
+      }
+      if (hasSecondName()) {
+        hash = (37 * hash) + SECONDNAME_FIELD_NUMBER;
+        hash = (53 * hash) + getSecondName().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -883,7 +1105,7 @@ public final class MarketplaceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        name_ = "";
+        username_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         id_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -893,6 +1115,10 @@ public final class MarketplaceProto {
         bitField0_ = (bitField0_ & ~0x00000008);
         type_ = 0;
         bitField0_ = (bitField0_ & ~0x00000010);
+        firstName_ = "Name";
+        bitField0_ = (bitField0_ & ~0x00000020);
+        secondName_ = "Fam.";
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -924,7 +1150,7 @@ public final class MarketplaceProto {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.name_ = name_;
+        result.username_ = username_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.id_ = id_;
           to_bitField0_ |= 0x00000002;
@@ -941,6 +1167,14 @@ public final class MarketplaceProto {
           to_bitField0_ |= 0x00000010;
         }
         result.type_ = type_;
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.firstName_ = firstName_;
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.secondName_ = secondName_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -990,9 +1224,9 @@ public final class MarketplaceProto {
 
       public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.User other) {
         if (other == nsu.oop.marketplace.inet.MarketplaceProto.User.getDefaultInstance()) return this;
-        if (other.hasName()) {
+        if (other.hasUsername()) {
           bitField0_ |= 0x00000001;
-          name_ = other.name_;
+          username_ = other.username_;
           onChanged();
         }
         if (other.hasId()) {
@@ -1009,6 +1243,16 @@ public final class MarketplaceProto {
         if (other.hasType()) {
           setType(other.getType());
         }
+        if (other.hasFirstName()) {
+          bitField0_ |= 0x00000020;
+          firstName_ = other.firstName_;
+          onChanged();
+        }
+        if (other.hasSecondName()) {
+          bitField0_ |= 0x00000040;
+          secondName_ = other.secondName_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1016,7 +1260,7 @@ public final class MarketplaceProto {
 
       @java.lang.Override
       public final boolean isInitialized() {
-        if (!hasName()) {
+        if (!hasUsername()) {
           return false;
         }
         if (!hasId()) {
@@ -1051,16 +1295,16 @@ public final class MarketplaceProto {
       }
       private int bitField0_;
 
-      private java.lang.Object name_ = "";
+      private java.lang.Object username_ = "";
       /**
        * <pre>
        * Имя пользователя
        * </pre>
        *
-       * <code>required string name = 1;</code>
-       * @return Whether the name field is set.
+       * <code>required string username = 1;</code>
+       * @return Whether the username field is set.
        */
-      public boolean hasName() {
+      public boolean hasUsername() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
@@ -1068,17 +1312,17 @@ public final class MarketplaceProto {
        * Имя пользователя
        * </pre>
        *
-       * <code>required string name = 1;</code>
-       * @return The name.
+       * <code>required string username = 1;</code>
+       * @return The username.
        */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            name_ = s;
+            username_ = s;
           }
           return s;
         } else {
@@ -1090,17 +1334,17 @@ public final class MarketplaceProto {
        * Имя пользователя
        * </pre>
        *
-       * <code>required string name = 1;</code>
-       * @return The bytes for name.
+       * <code>required string username = 1;</code>
+       * @return The bytes for username.
        */
       public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
+          getUsernameBytes() {
+        java.lang.Object ref = username_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          name_ = b;
+          username_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -1111,17 +1355,17 @@ public final class MarketplaceProto {
        * Имя пользователя
        * </pre>
        *
-       * <code>required string name = 1;</code>
-       * @param value The name to set.
+       * <code>required string username = 1;</code>
+       * @param value The username to set.
        * @return This builder for chaining.
        */
-      public Builder setName(
+      public Builder setUsername(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        name_ = value;
+        username_ = value;
         onChanged();
         return this;
       }
@@ -1130,12 +1374,12 @@ public final class MarketplaceProto {
        * Имя пользователя
        * </pre>
        *
-       * <code>required string name = 1;</code>
+       * <code>required string username = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearName() {
+      public Builder clearUsername() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        name_ = getDefaultInstance().getName();
+        username_ = getDefaultInstance().getUsername();
         onChanged();
         return this;
       }
@@ -1144,17 +1388,17 @@ public final class MarketplaceProto {
        * Имя пользователя
        * </pre>
        *
-       * <code>required string name = 1;</code>
-       * @param value The bytes for name to set.
+       * <code>required string username = 1;</code>
+       * @param value The bytes for username to set.
        * @return This builder for chaining.
        */
-      public Builder setNameBytes(
+      public Builder setUsernameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        name_ = value;
+        username_ = value;
         onChanged();
         return this;
       }
@@ -1432,6 +1676,222 @@ public final class MarketplaceProto {
       public Builder clearType() {
         bitField0_ = (bitField0_ & ~0x00000010);
         type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object firstName_ = "Name";
+      /**
+       * <pre>
+       * Тип пользователя
+       * </pre>
+       *
+       * <code>optional string firstName = 6 [default = "Name"];</code>
+       * @return Whether the firstName field is set.
+       */
+      public boolean hasFirstName() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * Тип пользователя
+       * </pre>
+       *
+       * <code>optional string firstName = 6 [default = "Name"];</code>
+       * @return The firstName.
+       */
+      public java.lang.String getFirstName() {
+        java.lang.Object ref = firstName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            firstName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Тип пользователя
+       * </pre>
+       *
+       * <code>optional string firstName = 6 [default = "Name"];</code>
+       * @return The bytes for firstName.
+       */
+      public com.google.protobuf.ByteString
+          getFirstNameBytes() {
+        java.lang.Object ref = firstName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          firstName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Тип пользователя
+       * </pre>
+       *
+       * <code>optional string firstName = 6 [default = "Name"];</code>
+       * @param value The firstName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        firstName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Тип пользователя
+       * </pre>
+       *
+       * <code>optional string firstName = 6 [default = "Name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFirstName() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        firstName_ = getDefaultInstance().getFirstName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Тип пользователя
+       * </pre>
+       *
+       * <code>optional string firstName = 6 [default = "Name"];</code>
+       * @param value The bytes for firstName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirstNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        firstName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object secondName_ = "Fam.";
+      /**
+       * <pre>
+       * Тип пользователя
+       * </pre>
+       *
+       * <code>optional string secondName = 7 [default = "Fam."];</code>
+       * @return Whether the secondName field is set.
+       */
+      public boolean hasSecondName() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * Тип пользователя
+       * </pre>
+       *
+       * <code>optional string secondName = 7 [default = "Fam."];</code>
+       * @return The secondName.
+       */
+      public java.lang.String getSecondName() {
+        java.lang.Object ref = secondName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            secondName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Тип пользователя
+       * </pre>
+       *
+       * <code>optional string secondName = 7 [default = "Fam."];</code>
+       * @return The bytes for secondName.
+       */
+      public com.google.protobuf.ByteString
+          getSecondNameBytes() {
+        java.lang.Object ref = secondName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secondName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Тип пользователя
+       * </pre>
+       *
+       * <code>optional string secondName = 7 [default = "Fam."];</code>
+       * @param value The secondName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecondName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        secondName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Тип пользователя
+       * </pre>
+       *
+       * <code>optional string secondName = 7 [default = "Fam."];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecondName() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        secondName_ = getDefaultInstance().getSecondName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Тип пользователя
+       * </pre>
+       *
+       * <code>optional string secondName = 7 [default = "Fam."];</code>
+       * @param value The bytes for secondName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecondNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000040;
+        secondName_ = value;
         onChanged();
         return this;
       }
@@ -3164,19 +3624,19 @@ public final class MarketplaceProto {
     nsu.oop.marketplace.inet.MarketplaceProto.Message.ErrorMsgOrBuilder getErrorOrBuilder();
 
     /**
-     * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
-     * @return Whether the typeChange field is set.
+     * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
+     * @return Whether the userInfo field is set.
      */
-    boolean hasTypeChange();
+    boolean hasUserInfo();
     /**
-     * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
-     * @return The typeChange.
+     * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
+     * @return The userInfo.
      */
-    nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg getTypeChange();
+    nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg getUserInfo();
     /**
-     * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
+     * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
      */
-    nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsgOrBuilder getTypeChangeOrBuilder();
+    nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsgOrBuilder getUserInfoOrBuilder();
 
     /**
      * <code>.marketplace.Message.ChatMessage chat = 10;</code>
@@ -3331,14 +3791,14 @@ public final class MarketplaceProto {
               break;
             }
             case 74: {
-              nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.Builder subBuilder = null;
+              nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.Builder subBuilder = null;
               if (typeCase_ == 9) {
-                subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) type_).toBuilder();
+                subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg) type_).toBuilder();
               }
               type_ =
-                  input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.PARSER, extensionRegistry);
+                  input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) type_);
+                subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg) type_);
                 type_ = subBuilder.buildPartial();
               }
               typeCase_ = 9;
@@ -6531,46 +6991,82 @@ public final class MarketplaceProto {
 
     }
 
-    public interface TypeChangeMsgOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:marketplace.Message.TypeChangeMsg)
+    public interface UserInfoMsgOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:marketplace.Message.UserInfoMsg)
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional .marketplace.UserType receiver_type = 1;</code>
-       * @return Whether the receiverType field is set.
+       * <code>required .marketplace.UserType type = 1;</code>
+       * @return Whether the type field is set.
        */
-      boolean hasReceiverType();
+      boolean hasType();
       /**
-       * <code>optional .marketplace.UserType receiver_type = 1;</code>
-       * @return The receiverType.
+       * <code>required .marketplace.UserType type = 1;</code>
+       * @return The type.
        */
-      nsu.oop.marketplace.inet.MarketplaceProto.UserType getReceiverType();
+      nsu.oop.marketplace.inet.MarketplaceProto.UserType getType();
+
+      /**
+       * <code>required string firstName = 2;</code>
+       * @return Whether the firstName field is set.
+       */
+      boolean hasFirstName();
+      /**
+       * <code>required string firstName = 2;</code>
+       * @return The firstName.
+       */
+      java.lang.String getFirstName();
+      /**
+       * <code>required string firstName = 2;</code>
+       * @return The bytes for firstName.
+       */
+      com.google.protobuf.ByteString
+          getFirstNameBytes();
+
+      /**
+       * <code>required string secondName = 3;</code>
+       * @return Whether the secondName field is set.
+       */
+      boolean hasSecondName();
+      /**
+       * <code>required string secondName = 3;</code>
+       * @return The secondName.
+       */
+      java.lang.String getSecondName();
+      /**
+       * <code>required string secondName = 3;</code>
+       * @return The bytes for secondName.
+       */
+      com.google.protobuf.ByteString
+          getSecondNameBytes();
     }
     /**
      * <pre>
      * Смена типа пользователя
      * </pre>
      *
-     * Protobuf type {@code marketplace.Message.TypeChangeMsg}
+     * Protobuf type {@code marketplace.Message.UserInfoMsg}
      */
-    public static final class TypeChangeMsg extends
+    public static final class UserInfoMsg extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:marketplace.Message.TypeChangeMsg)
-        TypeChangeMsgOrBuilder {
+        // @@protoc_insertion_point(message_implements:marketplace.Message.UserInfoMsg)
+        UserInfoMsgOrBuilder {
     private static final long serialVersionUID = 0L;
-      // Use TypeChangeMsg.newBuilder() to construct.
-      private TypeChangeMsg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // Use UserInfoMsg.newBuilder() to construct.
+      private UserInfoMsg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-      private TypeChangeMsg() {
-        receiverType_ = 0;
+      private UserInfoMsg() {
+        type_ = 0;
+        firstName_ = "";
+        secondName_ = "";
       }
 
       @java.lang.Override
       @SuppressWarnings({"unused"})
       protected java.lang.Object newInstance(
           UnusedPrivateParameter unused) {
-        return new TypeChangeMsg();
+        return new UserInfoMsg();
       }
 
       @java.lang.Override
@@ -6578,7 +7074,7 @@ public final class MarketplaceProto {
       getUnknownFields() {
         return this.unknownFields;
       }
-      private TypeChangeMsg(
+      private UserInfoMsg(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -6605,8 +7101,20 @@ public final class MarketplaceProto {
                   unknownFields.mergeVarintField(1, rawValue);
                 } else {
                   bitField0_ |= 0x00000001;
-                  receiverType_ = rawValue;
+                  type_ = rawValue;
                 }
+                break;
+              }
+              case 18: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000002;
+                firstName_ = bs;
+                break;
+              }
+              case 26: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000004;
+                secondName_ = bs;
                 break;
               }
               default: {
@@ -6630,35 +7138,131 @@ public final class MarketplaceProto {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_TypeChangeMsg_descriptor;
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_UserInfoMsg_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_TypeChangeMsg_fieldAccessorTable
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_UserInfoMsg_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.Builder.class);
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.Builder.class);
       }
 
       private int bitField0_;
-      public static final int RECEIVER_TYPE_FIELD_NUMBER = 1;
-      private int receiverType_;
+      public static final int TYPE_FIELD_NUMBER = 1;
+      private int type_;
       /**
-       * <code>optional .marketplace.UserType receiver_type = 1;</code>
-       * @return Whether the receiverType field is set.
+       * <code>required .marketplace.UserType type = 1;</code>
+       * @return Whether the type field is set.
        */
-      @java.lang.Override public boolean hasReceiverType() {
+      @java.lang.Override public boolean hasType() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional .marketplace.UserType receiver_type = 1;</code>
-       * @return The receiverType.
+       * <code>required .marketplace.UserType type = 1;</code>
+       * @return The type.
        */
-      @java.lang.Override public nsu.oop.marketplace.inet.MarketplaceProto.UserType getReceiverType() {
+      @java.lang.Override public nsu.oop.marketplace.inet.MarketplaceProto.UserType getType() {
         @SuppressWarnings("deprecation")
-        nsu.oop.marketplace.inet.MarketplaceProto.UserType result = nsu.oop.marketplace.inet.MarketplaceProto.UserType.valueOf(receiverType_);
+        nsu.oop.marketplace.inet.MarketplaceProto.UserType result = nsu.oop.marketplace.inet.MarketplaceProto.UserType.valueOf(type_);
         return result == null ? nsu.oop.marketplace.inet.MarketplaceProto.UserType.UNAUTHENTICATED : result;
+      }
+
+      public static final int FIRSTNAME_FIELD_NUMBER = 2;
+      private volatile java.lang.Object firstName_;
+      /**
+       * <code>required string firstName = 2;</code>
+       * @return Whether the firstName field is set.
+       */
+      @java.lang.Override
+      public boolean hasFirstName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required string firstName = 2;</code>
+       * @return The firstName.
+       */
+      @java.lang.Override
+      public java.lang.String getFirstName() {
+        java.lang.Object ref = firstName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            firstName_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>required string firstName = 2;</code>
+       * @return The bytes for firstName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getFirstNameBytes() {
+        java.lang.Object ref = firstName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          firstName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int SECONDNAME_FIELD_NUMBER = 3;
+      private volatile java.lang.Object secondName_;
+      /**
+       * <code>required string secondName = 3;</code>
+       * @return Whether the secondName field is set.
+       */
+      @java.lang.Override
+      public boolean hasSecondName() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>required string secondName = 3;</code>
+       * @return The secondName.
+       */
+      @java.lang.Override
+      public java.lang.String getSecondName() {
+        java.lang.Object ref = secondName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            secondName_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>required string secondName = 3;</code>
+       * @return The bytes for secondName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSecondNameBytes() {
+        java.lang.Object ref = secondName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secondName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
 
       private byte memoizedIsInitialized = -1;
@@ -6668,6 +7272,18 @@ public final class MarketplaceProto {
         if (isInitialized == 1) return true;
         if (isInitialized == 0) return false;
 
+        if (!hasType()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+        if (!hasFirstName()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+        if (!hasSecondName()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
         memoizedIsInitialized = 1;
         return true;
       }
@@ -6676,7 +7292,13 @@ public final class MarketplaceProto {
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         if (((bitField0_ & 0x00000001) != 0)) {
-          output.writeEnum(1, receiverType_);
+          output.writeEnum(1, type_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, firstName_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, secondName_);
         }
         unknownFields.writeTo(output);
       }
@@ -6689,7 +7311,13 @@ public final class MarketplaceProto {
         size = 0;
         if (((bitField0_ & 0x00000001) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeEnumSize(1, receiverType_);
+            .computeEnumSize(1, type_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, firstName_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, secondName_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -6701,14 +7329,24 @@ public final class MarketplaceProto {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg)) {
+        if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg)) {
           return super.equals(obj);
         }
-        nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) obj;
+        nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg) obj;
 
-        if (hasReceiverType() != other.hasReceiverType()) return false;
-        if (hasReceiverType()) {
-          if (receiverType_ != other.receiverType_) return false;
+        if (hasType() != other.hasType()) return false;
+        if (hasType()) {
+          if (type_ != other.type_) return false;
+        }
+        if (hasFirstName() != other.hasFirstName()) return false;
+        if (hasFirstName()) {
+          if (!getFirstName()
+              .equals(other.getFirstName())) return false;
+        }
+        if (hasSecondName() != other.hasSecondName()) return false;
+        if (hasSecondName()) {
+          if (!getSecondName()
+              .equals(other.getSecondName())) return false;
         }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
@@ -6721,78 +7359,86 @@ public final class MarketplaceProto {
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        if (hasReceiverType()) {
-          hash = (37 * hash) + RECEIVER_TYPE_FIELD_NUMBER;
-          hash = (53 * hash) + receiverType_;
+        if (hasType()) {
+          hash = (37 * hash) + TYPE_FIELD_NUMBER;
+          hash = (53 * hash) + type_;
+        }
+        if (hasFirstName()) {
+          hash = (37 * hash) + FIRSTNAME_FIELD_NUMBER;
+          hash = (53 * hash) + getFirstName().hashCode();
+        }
+        if (hasSecondName()) {
+          hash = (37 * hash) + SECONDNAME_FIELD_NUMBER;
+          hash = (53 * hash) + getSecondName().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
       }
 
-      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg parseFrom(
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg parseFrom(
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg parseFrom(
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg parseFrom(
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg parseFrom(byte[] data)
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg parseFrom(
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg parseFrom(java.io.InputStream input)
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg parseFrom(
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg parseDelimitedFrom(java.io.InputStream input)
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg parseDelimitedFrom(
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg parseFrom(
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg parseFrom(
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -6805,7 +7451,7 @@ public final class MarketplaceProto {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg prototype) {
+      public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -6825,26 +7471,26 @@ public final class MarketplaceProto {
        * Смена типа пользователя
        * </pre>
        *
-       * Protobuf type {@code marketplace.Message.TypeChangeMsg}
+       * Protobuf type {@code marketplace.Message.UserInfoMsg}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:marketplace.Message.TypeChangeMsg)
-          nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsgOrBuilder {
+          // @@protoc_insertion_point(builder_implements:marketplace.Message.UserInfoMsg)
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsgOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_TypeChangeMsg_descriptor;
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_UserInfoMsg_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_TypeChangeMsg_fieldAccessorTable
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_UserInfoMsg_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.Builder.class);
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.Builder.class);
         }
 
-        // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.newBuilder()
+        // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -6862,25 +7508,29 @@ public final class MarketplaceProto {
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          receiverType_ = 0;
+          type_ = 0;
           bitField0_ = (bitField0_ & ~0x00000001);
+          firstName_ = "";
+          bitField0_ = (bitField0_ & ~0x00000002);
+          secondName_ = "";
+          bitField0_ = (bitField0_ & ~0x00000004);
           return this;
         }
 
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_TypeChangeMsg_descriptor;
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_UserInfoMsg_descriptor;
         }
 
         @java.lang.Override
-        public nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg getDefaultInstanceForType() {
-          return nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.getDefaultInstance();
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg getDefaultInstanceForType() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.getDefaultInstance();
         }
 
         @java.lang.Override
-        public nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg build() {
-          nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg result = buildPartial();
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg build() {
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -6888,14 +7538,22 @@ public final class MarketplaceProto {
         }
 
         @java.lang.Override
-        public nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg buildPartial() {
-          nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg(this);
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg buildPartial() {
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             to_bitField0_ |= 0x00000001;
           }
-          result.receiverType_ = receiverType_;
+          result.type_ = type_;
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.firstName_ = firstName_;
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.secondName_ = secondName_;
           result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
@@ -6935,18 +7593,28 @@ public final class MarketplaceProto {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) {
-            return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg)other);
+          if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg) {
+            return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg other) {
-          if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.getDefaultInstance()) return this;
-          if (other.hasReceiverType()) {
-            setReceiverType(other.getReceiverType());
+        public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg other) {
+          if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.getDefaultInstance()) return this;
+          if (other.hasType()) {
+            setType(other.getType());
+          }
+          if (other.hasFirstName()) {
+            bitField0_ |= 0x00000002;
+            firstName_ = other.firstName_;
+            onChanged();
+          }
+          if (other.hasSecondName()) {
+            bitField0_ |= 0x00000004;
+            secondName_ = other.secondName_;
+            onChanged();
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -6955,6 +7623,15 @@ public final class MarketplaceProto {
 
         @java.lang.Override
         public final boolean isInitialized() {
+          if (!hasType()) {
+            return false;
+          }
+          if (!hasFirstName()) {
+            return false;
+          }
+          if (!hasSecondName()) {
+            return false;
+          }
           return true;
         }
 
@@ -6963,11 +7640,11 @@ public final class MarketplaceProto {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg parsedMessage = null;
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) e.getUnfinishedMessage();
+            parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -6978,45 +7655,213 @@ public final class MarketplaceProto {
         }
         private int bitField0_;
 
-        private int receiverType_ = 0;
+        private int type_ = 0;
         /**
-         * <code>optional .marketplace.UserType receiver_type = 1;</code>
-         * @return Whether the receiverType field is set.
+         * <code>required .marketplace.UserType type = 1;</code>
+         * @return Whether the type field is set.
          */
-        @java.lang.Override public boolean hasReceiverType() {
+        @java.lang.Override public boolean hasType() {
           return ((bitField0_ & 0x00000001) != 0);
         }
         /**
-         * <code>optional .marketplace.UserType receiver_type = 1;</code>
-         * @return The receiverType.
+         * <code>required .marketplace.UserType type = 1;</code>
+         * @return The type.
          */
         @java.lang.Override
-        public nsu.oop.marketplace.inet.MarketplaceProto.UserType getReceiverType() {
+        public nsu.oop.marketplace.inet.MarketplaceProto.UserType getType() {
           @SuppressWarnings("deprecation")
-          nsu.oop.marketplace.inet.MarketplaceProto.UserType result = nsu.oop.marketplace.inet.MarketplaceProto.UserType.valueOf(receiverType_);
+          nsu.oop.marketplace.inet.MarketplaceProto.UserType result = nsu.oop.marketplace.inet.MarketplaceProto.UserType.valueOf(type_);
           return result == null ? nsu.oop.marketplace.inet.MarketplaceProto.UserType.UNAUTHENTICATED : result;
         }
         /**
-         * <code>optional .marketplace.UserType receiver_type = 1;</code>
-         * @param value The receiverType to set.
+         * <code>required .marketplace.UserType type = 1;</code>
+         * @param value The type to set.
          * @return This builder for chaining.
          */
-        public Builder setReceiverType(nsu.oop.marketplace.inet.MarketplaceProto.UserType value) {
+        public Builder setType(nsu.oop.marketplace.inet.MarketplaceProto.UserType value) {
           if (value == null) {
             throw new NullPointerException();
           }
           bitField0_ |= 0x00000001;
-          receiverType_ = value.getNumber();
+          type_ = value.getNumber();
           onChanged();
           return this;
         }
         /**
-         * <code>optional .marketplace.UserType receiver_type = 1;</code>
+         * <code>required .marketplace.UserType type = 1;</code>
          * @return This builder for chaining.
          */
-        public Builder clearReceiverType() {
+        public Builder clearType() {
           bitField0_ = (bitField0_ & ~0x00000001);
-          receiverType_ = 0;
+          type_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object firstName_ = "";
+        /**
+         * <code>required string firstName = 2;</code>
+         * @return Whether the firstName field is set.
+         */
+        public boolean hasFirstName() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>required string firstName = 2;</code>
+         * @return The firstName.
+         */
+        public java.lang.String getFirstName() {
+          java.lang.Object ref = firstName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              firstName_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>required string firstName = 2;</code>
+         * @return The bytes for firstName.
+         */
+        public com.google.protobuf.ByteString
+            getFirstNameBytes() {
+          java.lang.Object ref = firstName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            firstName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>required string firstName = 2;</code>
+         * @param value The firstName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFirstName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          firstName_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>required string firstName = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearFirstName() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          firstName_ = getDefaultInstance().getFirstName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>required string firstName = 2;</code>
+         * @param value The bytes for firstName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setFirstNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          firstName_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object secondName_ = "";
+        /**
+         * <code>required string secondName = 3;</code>
+         * @return Whether the secondName field is set.
+         */
+        public boolean hasSecondName() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <code>required string secondName = 3;</code>
+         * @return The secondName.
+         */
+        public java.lang.String getSecondName() {
+          java.lang.Object ref = secondName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              secondName_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>required string secondName = 3;</code>
+         * @return The bytes for secondName.
+         */
+        public com.google.protobuf.ByteString
+            getSecondNameBytes() {
+          java.lang.Object ref = secondName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            secondName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>required string secondName = 3;</code>
+         * @param value The secondName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSecondName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+          secondName_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>required string secondName = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSecondName() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          secondName_ = getDefaultInstance().getSecondName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>required string secondName = 3;</code>
+         * @param value The bytes for secondName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSecondNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+          secondName_ = value;
           onChanged();
           return this;
         }
@@ -7033,41 +7878,41 @@ public final class MarketplaceProto {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:marketplace.Message.TypeChangeMsg)
+        // @@protoc_insertion_point(builder_scope:marketplace.Message.UserInfoMsg)
       }
 
-      // @@protoc_insertion_point(class_scope:marketplace.Message.TypeChangeMsg)
-      private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:marketplace.Message.UserInfoMsg)
+      private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg();
+        DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg();
       }
 
-      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg getDefaultInstance() {
+      public static nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      @java.lang.Deprecated public static final com.google.protobuf.Parser<TypeChangeMsg>
-          PARSER = new com.google.protobuf.AbstractParser<TypeChangeMsg>() {
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<UserInfoMsg>
+          PARSER = new com.google.protobuf.AbstractParser<UserInfoMsg>() {
         @java.lang.Override
-        public TypeChangeMsg parsePartialFrom(
+        public UserInfoMsg parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new TypeChangeMsg(input, extensionRegistry);
+          return new UserInfoMsg(input, extensionRegistry);
         }
       };
 
-      public static com.google.protobuf.Parser<TypeChangeMsg> parser() {
+      public static com.google.protobuf.Parser<UserInfoMsg> parser() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Parser<TypeChangeMsg> getParserForType() {
+      public com.google.protobuf.Parser<UserInfoMsg> getParserForType() {
         return PARSER;
       }
 
       @java.lang.Override
-      public nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg getDefaultInstanceForType() {
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -13290,7 +14135,7 @@ public final class MarketplaceProto {
       ANNOUNCEMENT(6),
       JOIN(7),
       ERROR(8),
-      TYPE_CHANGE(9),
+      USER_INFO(9),
       CHAT(10),
       TYPE_NOT_SET(0);
       private final int value;
@@ -13314,7 +14159,7 @@ public final class MarketplaceProto {
           case 6: return ANNOUNCEMENT;
           case 7: return JOIN;
           case 8: return ERROR;
-          case 9: return TYPE_CHANGE;
+          case 9: return USER_INFO;
           case 10: return CHAT;
           case 0: return TYPE_NOT_SET;
           default: return null;
@@ -13567,35 +14412,35 @@ public final class MarketplaceProto {
       return nsu.oop.marketplace.inet.MarketplaceProto.Message.ErrorMsg.getDefaultInstance();
     }
 
-    public static final int TYPE_CHANGE_FIELD_NUMBER = 9;
+    public static final int USER_INFO_FIELD_NUMBER = 9;
     /**
-     * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
-     * @return Whether the typeChange field is set.
+     * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
+     * @return Whether the userInfo field is set.
      */
     @java.lang.Override
-    public boolean hasTypeChange() {
+    public boolean hasUserInfo() {
       return typeCase_ == 9;
     }
     /**
-     * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
-     * @return The typeChange.
+     * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
+     * @return The userInfo.
      */
     @java.lang.Override
-    public nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg getTypeChange() {
+    public nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg getUserInfo() {
       if (typeCase_ == 9) {
-         return (nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) type_;
+         return (nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg) type_;
       }
-      return nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.getDefaultInstance();
+      return nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.getDefaultInstance();
     }
     /**
-     * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
+     * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
      */
     @java.lang.Override
-    public nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsgOrBuilder getTypeChangeOrBuilder() {
+    public nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsgOrBuilder getUserInfoOrBuilder() {
       if (typeCase_ == 9) {
-         return (nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) type_;
+         return (nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg) type_;
       }
-      return nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.getDefaultInstance();
+      return nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.getDefaultInstance();
     }
 
     public static final int CHAT_FIELD_NUMBER = 10;
@@ -13658,6 +14503,12 @@ public final class MarketplaceProto {
           return false;
         }
       }
+      if (hasUserInfo()) {
+        if (!getUserInfo().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       if (hasChat()) {
         if (!getChat().isInitialized()) {
           memoizedIsInitialized = 0;
@@ -13696,7 +14547,7 @@ public final class MarketplaceProto {
         output.writeMessage(8, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ErrorMsg) type_);
       }
       if (typeCase_ == 9) {
-        output.writeMessage(9, (nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) type_);
+        output.writeMessage(9, (nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg) type_);
       }
       if (typeCase_ == 10) {
         output.writeMessage(10, (nsu.oop.marketplace.inet.MarketplaceProto.Message.ChatMessage) type_);
@@ -13744,7 +14595,7 @@ public final class MarketplaceProto {
       }
       if (typeCase_ == 9) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, (nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) type_);
+          .computeMessageSize(9, (nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg) type_);
       }
       if (typeCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
@@ -13803,8 +14654,8 @@ public final class MarketplaceProto {
               .equals(other.getError())) return false;
           break;
         case 9:
-          if (!getTypeChange()
-              .equals(other.getTypeChange())) return false;
+          if (!getUserInfo()
+              .equals(other.getUserInfo())) return false;
           break;
         case 10:
           if (!getChat()
@@ -13859,8 +14710,8 @@ public final class MarketplaceProto {
           hash = (53 * hash) + getError().hashCode();
           break;
         case 9:
-          hash = (37 * hash) + TYPE_CHANGE_FIELD_NUMBER;
-          hash = (53 * hash) + getTypeChange().hashCode();
+          hash = (37 * hash) + USER_INFO_FIELD_NUMBER;
+          hash = (53 * hash) + getUserInfo().hashCode();
           break;
         case 10:
           hash = (37 * hash) + CHAT_FIELD_NUMBER;
@@ -14090,10 +14941,10 @@ public final class MarketplaceProto {
           }
         }
         if (typeCase_ == 9) {
-          if (typeChangeBuilder_ == null) {
+          if (userInfoBuilder_ == null) {
             result.type_ = type_;
           } else {
-            result.type_ = typeChangeBuilder_.build();
+            result.type_ = userInfoBuilder_.build();
           }
         }
         if (typeCase_ == 10) {
@@ -14183,8 +15034,8 @@ public final class MarketplaceProto {
             mergeError(other.getError());
             break;
           }
-          case TYPE_CHANGE: {
-            mergeTypeChange(other.getTypeChange());
+          case USER_INFO: {
+            mergeUserInfo(other.getUserInfo());
             break;
           }
           case CHAT: {
@@ -14217,6 +15068,11 @@ public final class MarketplaceProto {
         }
         if (hasError()) {
           if (!getError().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasUserInfo()) {
+          if (!getUserInfo().isInitialized()) {
             return false;
           }
         }
@@ -15134,71 +15990,71 @@ public final class MarketplaceProto {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsgOrBuilder> typeChangeBuilder_;
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsgOrBuilder> userInfoBuilder_;
       /**
-       * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
-       * @return Whether the typeChange field is set.
+       * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
+       * @return Whether the userInfo field is set.
        */
       @java.lang.Override
-      public boolean hasTypeChange() {
+      public boolean hasUserInfo() {
         return typeCase_ == 9;
       }
       /**
-       * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
-       * @return The typeChange.
+       * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
+       * @return The userInfo.
        */
       @java.lang.Override
-      public nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg getTypeChange() {
-        if (typeChangeBuilder_ == null) {
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg getUserInfo() {
+        if (userInfoBuilder_ == null) {
           if (typeCase_ == 9) {
-            return (nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) type_;
+            return (nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg) type_;
           }
-          return nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.getDefaultInstance();
+          return nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.getDefaultInstance();
         } else {
           if (typeCase_ == 9) {
-            return typeChangeBuilder_.getMessage();
+            return userInfoBuilder_.getMessage();
           }
-          return nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.getDefaultInstance();
+          return nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.getDefaultInstance();
         }
       }
       /**
-       * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
+       * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
        */
-      public Builder setTypeChange(nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg value) {
-        if (typeChangeBuilder_ == null) {
+      public Builder setUserInfo(nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg value) {
+        if (userInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           type_ = value;
           onChanged();
         } else {
-          typeChangeBuilder_.setMessage(value);
+          userInfoBuilder_.setMessage(value);
         }
         typeCase_ = 9;
         return this;
       }
       /**
-       * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
+       * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
        */
-      public Builder setTypeChange(
-          nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.Builder builderForValue) {
-        if (typeChangeBuilder_ == null) {
+      public Builder setUserInfo(
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.Builder builderForValue) {
+        if (userInfoBuilder_ == null) {
           type_ = builderForValue.build();
           onChanged();
         } else {
-          typeChangeBuilder_.setMessage(builderForValue.build());
+          userInfoBuilder_.setMessage(builderForValue.build());
         }
         typeCase_ = 9;
         return this;
       }
       /**
-       * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
+       * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
        */
-      public Builder mergeTypeChange(nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg value) {
-        if (typeChangeBuilder_ == null) {
+      public Builder mergeUserInfo(nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg value) {
+        if (userInfoBuilder_ == null) {
           if (typeCase_ == 9 &&
-              type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.getDefaultInstance()) {
-            type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) type_)
+              type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.getDefaultInstance()) {
+            type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg) type_)
                 .mergeFrom(value).buildPartial();
           } else {
             type_ = value;
@@ -15206,18 +16062,18 @@ public final class MarketplaceProto {
           onChanged();
         } else {
           if (typeCase_ == 9) {
-            typeChangeBuilder_.mergeFrom(value);
+            userInfoBuilder_.mergeFrom(value);
           }
-          typeChangeBuilder_.setMessage(value);
+          userInfoBuilder_.setMessage(value);
         }
         typeCase_ = 9;
         return this;
       }
       /**
-       * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
+       * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
        */
-      public Builder clearTypeChange() {
-        if (typeChangeBuilder_ == null) {
+      public Builder clearUserInfo() {
+        if (userInfoBuilder_ == null) {
           if (typeCase_ == 9) {
             typeCase_ = 0;
             type_ = null;
@@ -15228,50 +16084,50 @@ public final class MarketplaceProto {
             typeCase_ = 0;
             type_ = null;
           }
-          typeChangeBuilder_.clear();
+          userInfoBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
+       * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
        */
-      public nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.Builder getTypeChangeBuilder() {
-        return getTypeChangeFieldBuilder().getBuilder();
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.Builder getUserInfoBuilder() {
+        return getUserInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
+       * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
        */
       @java.lang.Override
-      public nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsgOrBuilder getTypeChangeOrBuilder() {
-        if ((typeCase_ == 9) && (typeChangeBuilder_ != null)) {
-          return typeChangeBuilder_.getMessageOrBuilder();
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsgOrBuilder getUserInfoOrBuilder() {
+        if ((typeCase_ == 9) && (userInfoBuilder_ != null)) {
+          return userInfoBuilder_.getMessageOrBuilder();
         } else {
           if (typeCase_ == 9) {
-            return (nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) type_;
+            return (nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg) type_;
           }
-          return nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.getDefaultInstance();
+          return nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.getDefaultInstance();
         }
       }
       /**
-       * <code>.marketplace.Message.TypeChangeMsg type_change = 9;</code>
+       * <code>.marketplace.Message.UserInfoMsg user_info = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsgOrBuilder> 
-          getTypeChangeFieldBuilder() {
-        if (typeChangeBuilder_ == null) {
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsgOrBuilder> 
+          getUserInfoFieldBuilder() {
+        if (userInfoBuilder_ == null) {
           if (!(typeCase_ == 9)) {
-            type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.getDefaultInstance();
+            type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.getDefaultInstance();
           }
-          typeChangeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsgOrBuilder>(
-                  (nsu.oop.marketplace.inet.MarketplaceProto.Message.TypeChangeMsg) type_,
+          userInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg, nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsgOrBuilder>(
+                  (nsu.oop.marketplace.inet.MarketplaceProto.Message.UserInfoMsg) type_,
                   getParentForChildren(),
                   isClean());
           type_ = null;
         }
         typeCase_ = 9;
         onChanged();;
-        return typeChangeBuilder_;
+        return userInfoBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -15513,10 +16369,10 @@ public final class MarketplaceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_marketplace_Message_ErrorMsg_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_marketplace_Message_TypeChangeMsg_descriptor;
+    internal_static_marketplace_Message_UserInfoMsg_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_marketplace_Message_TypeChangeMsg_fieldAccessorTable;
+      internal_static_marketplace_Message_UserInfoMsg_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_marketplace_Message_ChatMessage_descriptor;
   private static final 
@@ -15561,30 +16417,32 @@ public final class MarketplaceProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021marketplace.proto\022\013marketplace\"x\n\004User" +
-      "\022\014\n\004name\030\001 \002(\t\022\n\n\002id\030\002 \002(\005\022\022\n\nip_address" +
-      "\030\003 \002(\t\022\014\n\004port\030\004 \002(\005\0224\n\004type\030\005 \001(\0162\025.mar" +
-      "ketplace.UserType:\017UNAUTHENTICATED\"]\n\rSe" +
-      "ssionConfig\022\032\n\rping_delay_ms\030\001 \001(\005:\003100\022" +
-      "\034\n\017node_timeout_ms\030\002 \001(\005:\003800\022\022\n\nserverP" +
-      "ort\030\003 \002(\005\"\031\n\tChatUsers\022\014\n\004name\030\001 \003(\t\"\221\n\n" +
-      "\007Message\022\017\n\007msg_seq\030\001 \002(\003\022\021\n\tsender_id\030\002" +
-      " \001(\005\022\023\n\013receiver_id\030\003 \001(\005\022,\n\004ping\030\004 \001(\0132" +
-      "\034.marketplace.Message.PingMsgH\000\022*\n\003ack\030\005" +
-      " \001(\0132\033.marketplace.Message.AckMsgH\000\022<\n\014a" +
-      "nnouncement\030\006 \001(\0132$.marketplace.Message." +
-      "AnnouncementMsgH\000\022,\n\004join\030\007 \001(\0132\034.market" +
-      "place.Message.JoinMsgH\000\022.\n\005error\030\010 \001(\0132\035" +
-      ".marketplace.Message.ErrorMsgH\000\0229\n\013type_" +
-      "change\030\t \001(\0132\".marketplace.Message.TypeC" +
-      "hangeMsgH\000\0220\n\004chat\030\n \001(\0132 .marketplace.M" +
-      "essage.ChatMessageH\000\032\t\n\007PingMsg\032\010\n\006AckMs" +
-      "g\032=\n\017AnnouncementMsg\022*\n\006config\030\001 \002(\0132\032.m" +
-      "arketplace.SessionConfig\032*\n\007JoinMsg\022\r\n\005l" +
-      "ogin\030\001 \002(\t\022\020\n\010password\030\002 \002(\t\032!\n\010ErrorMsg" +
-      "\022\025\n\rerror_message\030\001 \002(\t\032=\n\rTypeChangeMsg" +
-      "\022,\n\rreceiver_type\030\001 \001(\0162\025.marketplace.Us" +
-      "erType\032\377\004\n\013ChatMessage\0228\n\004join\030\001 \001(\0132(.m" +
+      "\n\021marketplace.proto\022\013marketplace\"\257\001\n\004Use" +
+      "r\022\020\n\010username\030\001 \002(\t\022\n\n\002id\030\002 \002(\005\022\022\n\nip_ad" +
+      "dress\030\003 \002(\t\022\014\n\004port\030\004 \002(\005\0224\n\004type\030\005 \001(\0162" +
+      "\025.marketplace.UserType:\017UNAUTHENTICATED\022" +
+      "\027\n\tfirstName\030\006 \001(\t:\004Name\022\030\n\nsecondName\030\007" +
+      " \001(\t:\004Fam.\"]\n\rSessionConfig\022\032\n\rping_dela" +
+      "y_ms\030\001 \001(\005:\003100\022\034\n\017node_timeout_ms\030\002 \001(\005" +
+      ":\003800\022\022\n\nserverPort\030\003 \002(\005\"\031\n\tChatUsers\022\014" +
+      "\n\004name\030\001 \003(\t\"\251\n\n\007Message\022\017\n\007msg_seq\030\001 \002(" +
+      "\003\022\021\n\tsender_id\030\002 \001(\005\022\023\n\013receiver_id\030\003 \001(" +
+      "\005\022,\n\004ping\030\004 \001(\0132\034.marketplace.Message.Pi" +
+      "ngMsgH\000\022*\n\003ack\030\005 \001(\0132\033.marketplace.Messa" +
+      "ge.AckMsgH\000\022<\n\014announcement\030\006 \001(\0132$.mark" +
+      "etplace.Message.AnnouncementMsgH\000\022,\n\004joi" +
+      "n\030\007 \001(\0132\034.marketplace.Message.JoinMsgH\000\022" +
+      ".\n\005error\030\010 \001(\0132\035.marketplace.Message.Err" +
+      "orMsgH\000\0225\n\tuser_info\030\t \001(\0132 .marketplace" +
+      ".Message.UserInfoMsgH\000\0220\n\004chat\030\n \001(\0132 .m" +
+      "arketplace.Message.ChatMessageH\000\032\t\n\007Ping" +
+      "Msg\032\010\n\006AckMsg\032=\n\017AnnouncementMsg\022*\n\006conf" +
+      "ig\030\001 \002(\0132\032.marketplace.SessionConfig\032*\n\007" +
+      "JoinMsg\022\r\n\005login\030\001 \002(\t\022\020\n\010password\030\002 \002(\t" +
+      "\032!\n\010ErrorMsg\022\025\n\rerror_message\030\001 \002(\t\032Y\n\013U" +
+      "serInfoMsg\022#\n\004type\030\001 \002(\0162\025.marketplace.U" +
+      "serType\022\021\n\tfirstName\030\002 \002(\t\022\022\n\nsecondName" +
+      "\030\003 \002(\t\032\377\004\n\013ChatMessage\0228\n\004join\030\001 \001(\0132(.m" +
       "arketplace.Message.ChatMessage.JoinMsgH\000" +
       "\0226\n\003end\030\002 \001(\0132\'.marketplace.Message.Chat" +
       "Message.EndMsgH\000\022<\n\006public\030\003 \001(\0132*.marke" +
@@ -15614,7 +16472,7 @@ public final class MarketplaceProto {
     internal_static_marketplace_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_marketplace_User_descriptor,
-        new java.lang.String[] { "Name", "Id", "IpAddress", "Port", "Type", });
+        new java.lang.String[] { "Username", "Id", "IpAddress", "Port", "Type", "FirstName", "SecondName", });
     internal_static_marketplace_SessionConfig_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_marketplace_SessionConfig_fieldAccessorTable = new
@@ -15632,7 +16490,7 @@ public final class MarketplaceProto {
     internal_static_marketplace_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_marketplace_Message_descriptor,
-        new java.lang.String[] { "MsgSeq", "SenderId", "ReceiverId", "Ping", "Ack", "Announcement", "Join", "Error", "TypeChange", "Chat", "Type", });
+        new java.lang.String[] { "MsgSeq", "SenderId", "ReceiverId", "Ping", "Ack", "Announcement", "Join", "Error", "UserInfo", "Chat", "Type", });
     internal_static_marketplace_Message_PingMsg_descriptor =
       internal_static_marketplace_Message_descriptor.getNestedTypes().get(0);
     internal_static_marketplace_Message_PingMsg_fieldAccessorTable = new
@@ -15663,12 +16521,12 @@ public final class MarketplaceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_marketplace_Message_ErrorMsg_descriptor,
         new java.lang.String[] { "ErrorMessage", });
-    internal_static_marketplace_Message_TypeChangeMsg_descriptor =
+    internal_static_marketplace_Message_UserInfoMsg_descriptor =
       internal_static_marketplace_Message_descriptor.getNestedTypes().get(5);
-    internal_static_marketplace_Message_TypeChangeMsg_fieldAccessorTable = new
+    internal_static_marketplace_Message_UserInfoMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_marketplace_Message_TypeChangeMsg_descriptor,
-        new java.lang.String[] { "ReceiverType", });
+        internal_static_marketplace_Message_UserInfoMsg_descriptor,
+        new java.lang.String[] { "Type", "FirstName", "SecondName", });
     internal_static_marketplace_Message_ChatMessage_descriptor =
       internal_static_marketplace_Message_descriptor.getNestedTypes().get(6);
     internal_static_marketplace_Message_ChatMessage_fieldAccessorTable = new

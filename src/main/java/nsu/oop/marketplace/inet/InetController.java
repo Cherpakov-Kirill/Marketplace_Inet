@@ -148,7 +148,7 @@ public class InetController implements Inet, MulticastPublisherListener, Multica
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        users.sendChangeTypeMessage(userId);
+        users.sendUserInfoMessage(userId);
     }
 
     @Override
@@ -157,8 +157,8 @@ public class InetController implements Inet, MulticastPublisherListener, Multica
     }
 
     @Override
-    public void receiveTypeChangeMsg(MarketplaceProto.Message.TypeChangeMsg typeChangeMsg, int receiverId) {
-        listener.launchClientCore(receiverId, typeChangeMsg.getReceiverType());
+    public void receiveUserInfoMsg(MarketplaceProto.Message.UserInfoMsg userInfoMsg, int receiverId) {
+        listener.receiveUserInfoMsg(receiverId, userInfoMsg.getType(), userInfoMsg.getFirstName(), userInfoMsg.getSecondName());
     }
 
     @Override

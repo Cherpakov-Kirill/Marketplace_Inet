@@ -13,11 +13,13 @@ enum UserType {
 
 // Пользователь
 message User {
-    required string name = 1;       // Имя пользователя
+    required string username = 1;       // Имя пользователя
     required int32 id = 2;          // Уникальный идентификатор пользователя в пределах игры
     required string ip_address = 3; // IPv4 или IPv6 адрес пользователя в виде строки (отправитель не знает свой IP, поэтому указывает тут пустую строку)
     required int32 port = 4;        // Порт UDP-сокета пользователя
     optional UserType type = 5 [default = UNAUTHENTICATED]; // Тип пользователя
+    optional string firstName = 6 [default = "Name"]; // Тип пользователя
+    optional string secondName = 7 [default = "Fam."]; // Тип пользователя
 }
 
 // Небольшая конфиругация для всех пользователей одинаковая
@@ -54,8 +56,10 @@ message Message {
     }
 
     // Смена типа пользователя
-    message TypeChangeMsg {
-        optional UserType receiver_type = 1;
+    message UserInfoMsg {
+        required UserType type = 1;
+        required string firstName = 2;
+        required string secondName = 3;
     }
 
     message ChatMessage {
@@ -108,7 +112,7 @@ message Message {
         AnnouncementMsg announcement = 6;
         JoinMsg join = 7;
         ErrorMsg error = 8;
-        TypeChangeMsg type_change = 9;
+        UserInfoMsg user_info = 9;
         ChatMessage chat = 10;
     }
 }
