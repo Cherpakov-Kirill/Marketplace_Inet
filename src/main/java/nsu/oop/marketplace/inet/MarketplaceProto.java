@@ -4592,6 +4592,4701 @@ public final class MarketplaceProto {
 
   }
 
+  public interface DBFullTaskOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:marketplace.DBFullTask)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     *понял что нужен id для дальнейшего удаления задания из таблицы
+     * </pre>
+     *
+     * <code>required int32 id = 1;</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <pre>
+     *понял что нужен id для дальнейшего удаления задания из таблицы
+     * </pre>
+     *
+     * <code>required int32 id = 1;</code>
+     * @return The id.
+     */
+    int getId();
+
+    /**
+     * <pre>
+     *полное имя исполнителя
+     * </pre>
+     *
+     * <code>required string name = 2;</code>
+     * @return Whether the name field is set.
+     */
+    boolean hasName();
+    /**
+     * <pre>
+     *полное имя исполнителя
+     * </pre>
+     *
+     * <code>required string name = 2;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     *полное имя исполнителя
+     * </pre>
+     *
+     * <code>required string name = 2;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>required string task = 3;</code>
+     * @return Whether the task field is set.
+     */
+    boolean hasTask();
+    /**
+     * <code>required string task = 3;</code>
+     * @return The task.
+     */
+    java.lang.String getTask();
+    /**
+     * <code>required string task = 3;</code>
+     * @return The bytes for task.
+     */
+    com.google.protobuf.ByteString
+        getTaskBytes();
+  }
+  /**
+   * <pre>
+   * Полная информация по продукту из таблицы products
+   * </pre>
+   *
+   * Protobuf type {@code marketplace.DBFullTask}
+   */
+  public static final class DBFullTask extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:marketplace.DBFullTask)
+      DBFullTaskOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DBFullTask.newBuilder() to construct.
+    private DBFullTask(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DBFullTask() {
+      name_ = "";
+      task_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DBFullTask();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DBFullTask(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              id_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              name_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              task_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullTask_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullTask_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.class, nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
+    /**
+     * <pre>
+     *понял что нужен id для дальнейшего удаления задания из таблицы
+     * </pre>
+     *
+     * <code>required int32 id = 1;</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     *понял что нужен id для дальнейшего удаления задания из таблицы
+     * </pre>
+     *
+     * <code>required int32 id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public int getId() {
+      return id_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     *полное имя исполнителя
+     * </pre>
+     *
+     * <code>required string name = 2;</code>
+     * @return Whether the name field is set.
+     */
+    @java.lang.Override
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     *полное имя исполнителя
+     * </pre>
+     *
+     * <code>required string name = 2;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *полное имя исполнителя
+     * </pre>
+     *
+     * <code>required string name = 2;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TASK_FIELD_NUMBER = 3;
+    private volatile java.lang.Object task_;
+    /**
+     * <code>required string task = 3;</code>
+     * @return Whether the task field is set.
+     */
+    @java.lang.Override
+    public boolean hasTask() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>required string task = 3;</code>
+     * @return The task.
+     */
+    @java.lang.Override
+    public java.lang.String getTask() {
+      java.lang.Object ref = task_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          task_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string task = 3;</code>
+     * @return The bytes for task.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTaskBytes() {
+      java.lang.Object ref = task_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        task_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasTask()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt32(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, task_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, task_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask)) {
+        return super.equals(obj);
+      }
+      nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask other = (nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask) obj;
+
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (getId()
+            != other.getId()) return false;
+      }
+      if (hasName() != other.hasName()) return false;
+      if (hasName()) {
+        if (!getName()
+            .equals(other.getName())) return false;
+      }
+      if (hasTask() != other.hasTask()) return false;
+      if (hasTask()) {
+        if (!getTask()
+            .equals(other.getTask())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId();
+      }
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (hasTask()) {
+        hash = (37 * hash) + TASK_FIELD_NUMBER;
+        hash = (53 * hash) + getTask().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Полная информация по продукту из таблицы products
+     * </pre>
+     *
+     * Protobuf type {@code marketplace.DBFullTask}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:marketplace.DBFullTask)
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullTaskOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullTask_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullTask_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.class, nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.Builder.class);
+      }
+
+      // Construct using nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        task_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullTask_descriptor;
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask getDefaultInstanceForType() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask build() {
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask buildPartial() {
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask result = new nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.task_ = task_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask) {
+          return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask other) {
+        if (other == nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        if (other.hasName()) {
+          bitField0_ |= 0x00000002;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasTask()) {
+          bitField0_ |= 0x00000004;
+          task_ = other.task_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasId()) {
+          return false;
+        }
+        if (!hasName()) {
+          return false;
+        }
+        if (!hasTask()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int id_ ;
+      /**
+       * <pre>
+       *понял что нужен id для дальнейшего удаления задания из таблицы
+       * </pre>
+       *
+       * <code>required int32 id = 1;</code>
+       * @return Whether the id field is set.
+       */
+      @java.lang.Override
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       *понял что нужен id для дальнейшего удаления задания из таблицы
+       * </pre>
+       *
+       * <code>required int32 id = 1;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       *понял что нужен id для дальнейшего удаления задания из таблицы
+       * </pre>
+       *
+       * <code>required int32 id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(int value) {
+        bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *понял что нужен id для дальнейшего удаления задания из таблицы
+       * </pre>
+       *
+       * <code>required int32 id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       *полное имя исполнителя
+       * </pre>
+       *
+       * <code>required string name = 2;</code>
+       * @return Whether the name field is set.
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       *полное имя исполнителя
+       * </pre>
+       *
+       * <code>required string name = 2;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *полное имя исполнителя
+       * </pre>
+       *
+       * <code>required string name = 2;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *полное имя исполнителя
+       * </pre>
+       *
+       * <code>required string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *полное имя исполнителя
+       * </pre>
+       *
+       * <code>required string name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *полное имя исполнителя
+       * </pre>
+       *
+       * <code>required string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object task_ = "";
+      /**
+       * <code>required string task = 3;</code>
+       * @return Whether the task field is set.
+       */
+      public boolean hasTask() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>required string task = 3;</code>
+       * @return The task.
+       */
+      public java.lang.String getTask() {
+        java.lang.Object ref = task_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            task_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string task = 3;</code>
+       * @return The bytes for task.
+       */
+      public com.google.protobuf.ByteString
+          getTaskBytes() {
+        java.lang.Object ref = task_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          task_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string task = 3;</code>
+       * @param value The task to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTask(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        task_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string task = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTask() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        task_ = getDefaultInstance().getTask();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string task = 3;</code>
+       * @param value The bytes for task to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaskBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        task_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:marketplace.DBFullTask)
+    }
+
+    // @@protoc_insertion_point(class_scope:marketplace.DBFullTask)
+    private static final nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask();
+    }
+
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<DBFullTask>
+        PARSER = new com.google.protobuf.AbstractParser<DBFullTask>() {
+      @java.lang.Override
+      public DBFullTask parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DBFullTask(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DBFullTask> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DBFullTask> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DBFullSalesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:marketplace.DBFullSales)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 product_id = 1;</code>
+     * @return Whether the productId field is set.
+     */
+    boolean hasProductId();
+    /**
+     * <code>required int32 product_id = 1;</code>
+     * @return The productId.
+     */
+    int getProductId();
+
+    /**
+     * <code>required string product_name = 2;</code>
+     * @return Whether the productName field is set.
+     */
+    boolean hasProductName();
+    /**
+     * <code>required string product_name = 2;</code>
+     * @return The productName.
+     */
+    java.lang.String getProductName();
+    /**
+     * <code>required string product_name = 2;</code>
+     * @return The bytes for productName.
+     */
+    com.google.protobuf.ByteString
+        getProductNameBytes();
+
+    /**
+     * <pre>
+     *дату продажи
+     * </pre>
+     *
+     * <code>required string date = 3;</code>
+     * @return Whether the date field is set.
+     */
+    boolean hasDate();
+    /**
+     * <pre>
+     *дату продажи
+     * </pre>
+     *
+     * <code>required string date = 3;</code>
+     * @return The date.
+     */
+    java.lang.String getDate();
+    /**
+     * <pre>
+     *дату продажи
+     * </pre>
+     *
+     * <code>required string date = 3;</code>
+     * @return The bytes for date.
+     */
+    com.google.protobuf.ByteString
+        getDateBytes();
+
+    /**
+     * <code>required string quantity = 4;</code>
+     * @return Whether the quantity field is set.
+     */
+    boolean hasQuantity();
+    /**
+     * <code>required string quantity = 4;</code>
+     * @return The quantity.
+     */
+    java.lang.String getQuantity();
+    /**
+     * <code>required string quantity = 4;</code>
+     * @return The bytes for quantity.
+     */
+    com.google.protobuf.ByteString
+        getQuantityBytes();
+
+    /**
+     * <pre>
+     *общая сумма на которую был продан товар(quantity * product_price)
+     * </pre>
+     *
+     * <code>required string amount = 5;</code>
+     * @return Whether the amount field is set.
+     */
+    boolean hasAmount();
+    /**
+     * <pre>
+     *общая сумма на которую был продан товар(quantity * product_price)
+     * </pre>
+     *
+     * <code>required string amount = 5;</code>
+     * @return The amount.
+     */
+    java.lang.String getAmount();
+    /**
+     * <pre>
+     *общая сумма на которую был продан товар(quantity * product_price)
+     * </pre>
+     *
+     * <code>required string amount = 5;</code>
+     * @return The bytes for amount.
+     */
+    com.google.protobuf.ByteString
+        getAmountBytes();
+  }
+  /**
+   * <pre>
+   * Полная информация по продукту из таблицы sales
+   * </pre>
+   *
+   * Protobuf type {@code marketplace.DBFullSales}
+   */
+  public static final class DBFullSales extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:marketplace.DBFullSales)
+      DBFullSalesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DBFullSales.newBuilder() to construct.
+    private DBFullSales(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DBFullSales() {
+      productName_ = "";
+      date_ = "";
+      quantity_ = "";
+      amount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DBFullSales();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DBFullSales(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              productId_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              productName_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              date_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              quantity_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              amount_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullSales_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullSales_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.class, nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PRODUCT_ID_FIELD_NUMBER = 1;
+    private int productId_;
+    /**
+     * <code>required int32 product_id = 1;</code>
+     * @return Whether the productId field is set.
+     */
+    @java.lang.Override
+    public boolean hasProductId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required int32 product_id = 1;</code>
+     * @return The productId.
+     */
+    @java.lang.Override
+    public int getProductId() {
+      return productId_;
+    }
+
+    public static final int PRODUCT_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object productName_;
+    /**
+     * <code>required string product_name = 2;</code>
+     * @return Whether the productName field is set.
+     */
+    @java.lang.Override
+    public boolean hasProductName() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required string product_name = 2;</code>
+     * @return The productName.
+     */
+    @java.lang.Override
+    public java.lang.String getProductName() {
+      java.lang.Object ref = productName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          productName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string product_name = 2;</code>
+     * @return The bytes for productName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProductNameBytes() {
+      java.lang.Object ref = productName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        productName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object date_;
+    /**
+     * <pre>
+     *дату продажи
+     * </pre>
+     *
+     * <code>required string date = 3;</code>
+     * @return Whether the date field is set.
+     */
+    @java.lang.Override
+    public boolean hasDate() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     *дату продажи
+     * </pre>
+     *
+     * <code>required string date = 3;</code>
+     * @return The date.
+     */
+    @java.lang.Override
+    public java.lang.String getDate() {
+      java.lang.Object ref = date_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          date_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *дату продажи
+     * </pre>
+     *
+     * <code>required string date = 3;</code>
+     * @return The bytes for date.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDateBytes() {
+      java.lang.Object ref = date_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        date_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUANTITY_FIELD_NUMBER = 4;
+    private volatile java.lang.Object quantity_;
+    /**
+     * <code>required string quantity = 4;</code>
+     * @return Whether the quantity field is set.
+     */
+    @java.lang.Override
+    public boolean hasQuantity() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>required string quantity = 4;</code>
+     * @return The quantity.
+     */
+    @java.lang.Override
+    public java.lang.String getQuantity() {
+      java.lang.Object ref = quantity_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          quantity_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string quantity = 4;</code>
+     * @return The bytes for quantity.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQuantityBytes() {
+      java.lang.Object ref = quantity_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        quantity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 5;
+    private volatile java.lang.Object amount_;
+    /**
+     * <pre>
+     *общая сумма на которую был продан товар(quantity * product_price)
+     * </pre>
+     *
+     * <code>required string amount = 5;</code>
+     * @return Whether the amount field is set.
+     */
+    @java.lang.Override
+    public boolean hasAmount() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     *общая сумма на которую был продан товар(quantity * product_price)
+     * </pre>
+     *
+     * <code>required string amount = 5;</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public java.lang.String getAmount() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          amount_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *общая сумма на которую был продан товар(quantity * product_price)
+     * </pre>
+     *
+     * <code>required string amount = 5;</code>
+     * @return The bytes for amount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAmountBytes() {
+      java.lang.Object ref = amount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        amount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasProductId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasProductName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDate()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasQuantity()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasAmount()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt32(1, productId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, productName_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, date_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, quantity_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, amount_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, productId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, productName_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, date_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, quantity_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, amount_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales)) {
+        return super.equals(obj);
+      }
+      nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales other = (nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales) obj;
+
+      if (hasProductId() != other.hasProductId()) return false;
+      if (hasProductId()) {
+        if (getProductId()
+            != other.getProductId()) return false;
+      }
+      if (hasProductName() != other.hasProductName()) return false;
+      if (hasProductName()) {
+        if (!getProductName()
+            .equals(other.getProductName())) return false;
+      }
+      if (hasDate() != other.hasDate()) return false;
+      if (hasDate()) {
+        if (!getDate()
+            .equals(other.getDate())) return false;
+      }
+      if (hasQuantity() != other.hasQuantity()) return false;
+      if (hasQuantity()) {
+        if (!getQuantity()
+            .equals(other.getQuantity())) return false;
+      }
+      if (hasAmount() != other.hasAmount()) return false;
+      if (hasAmount()) {
+        if (!getAmount()
+            .equals(other.getAmount())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasProductId()) {
+        hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getProductId();
+      }
+      if (hasProductName()) {
+        hash = (37 * hash) + PRODUCT_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getProductName().hashCode();
+      }
+      if (hasDate()) {
+        hash = (37 * hash) + DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getDate().hashCode();
+      }
+      if (hasQuantity()) {
+        hash = (37 * hash) + QUANTITY_FIELD_NUMBER;
+        hash = (53 * hash) + getQuantity().hashCode();
+      }
+      if (hasAmount()) {
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAmount().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Полная информация по продукту из таблицы sales
+     * </pre>
+     *
+     * Protobuf type {@code marketplace.DBFullSales}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:marketplace.DBFullSales)
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullSalesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullSales_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullSales_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.class, nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.Builder.class);
+      }
+
+      // Construct using nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        productId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        productName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        date_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        quantity_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        amount_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullSales_descriptor;
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales getDefaultInstanceForType() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales build() {
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales buildPartial() {
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales result = new nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.productId_ = productId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.productName_ = productName_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.date_ = date_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.quantity_ = quantity_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.amount_ = amount_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales) {
+          return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales other) {
+        if (other == nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.getDefaultInstance()) return this;
+        if (other.hasProductId()) {
+          setProductId(other.getProductId());
+        }
+        if (other.hasProductName()) {
+          bitField0_ |= 0x00000002;
+          productName_ = other.productName_;
+          onChanged();
+        }
+        if (other.hasDate()) {
+          bitField0_ |= 0x00000004;
+          date_ = other.date_;
+          onChanged();
+        }
+        if (other.hasQuantity()) {
+          bitField0_ |= 0x00000008;
+          quantity_ = other.quantity_;
+          onChanged();
+        }
+        if (other.hasAmount()) {
+          bitField0_ |= 0x00000010;
+          amount_ = other.amount_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasProductId()) {
+          return false;
+        }
+        if (!hasProductName()) {
+          return false;
+        }
+        if (!hasDate()) {
+          return false;
+        }
+        if (!hasQuantity()) {
+          return false;
+        }
+        if (!hasAmount()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int productId_ ;
+      /**
+       * <code>required int32 product_id = 1;</code>
+       * @return Whether the productId field is set.
+       */
+      @java.lang.Override
+      public boolean hasProductId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required int32 product_id = 1;</code>
+       * @return The productId.
+       */
+      @java.lang.Override
+      public int getProductId() {
+        return productId_;
+      }
+      /**
+       * <code>required int32 product_id = 1;</code>
+       * @param value The productId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductId(int value) {
+        bitField0_ |= 0x00000001;
+        productId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 product_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProductId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        productId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object productName_ = "";
+      /**
+       * <code>required string product_name = 2;</code>
+       * @return Whether the productName field is set.
+       */
+      public boolean hasProductName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required string product_name = 2;</code>
+       * @return The productName.
+       */
+      public java.lang.String getProductName() {
+        java.lang.Object ref = productName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            productName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string product_name = 2;</code>
+       * @return The bytes for productName.
+       */
+      public com.google.protobuf.ByteString
+          getProductNameBytes() {
+        java.lang.Object ref = productName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          productName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string product_name = 2;</code>
+       * @param value The productName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        productName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string product_name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProductName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        productName_ = getDefaultInstance().getProductName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string product_name = 2;</code>
+       * @param value The bytes for productName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        productName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object date_ = "";
+      /**
+       * <pre>
+       *дату продажи
+       * </pre>
+       *
+       * <code>required string date = 3;</code>
+       * @return Whether the date field is set.
+       */
+      public boolean hasDate() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       *дату продажи
+       * </pre>
+       *
+       * <code>required string date = 3;</code>
+       * @return The date.
+       */
+      public java.lang.String getDate() {
+        java.lang.Object ref = date_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            date_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *дату продажи
+       * </pre>
+       *
+       * <code>required string date = 3;</code>
+       * @return The bytes for date.
+       */
+      public com.google.protobuf.ByteString
+          getDateBytes() {
+        java.lang.Object ref = date_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          date_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *дату продажи
+       * </pre>
+       *
+       * <code>required string date = 3;</code>
+       * @param value The date to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        date_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *дату продажи
+       * </pre>
+       *
+       * <code>required string date = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDate() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        date_ = getDefaultInstance().getDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *дату продажи
+       * </pre>
+       *
+       * <code>required string date = 3;</code>
+       * @param value The bytes for date to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        date_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object quantity_ = "";
+      /**
+       * <code>required string quantity = 4;</code>
+       * @return Whether the quantity field is set.
+       */
+      public boolean hasQuantity() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>required string quantity = 4;</code>
+       * @return The quantity.
+       */
+      public java.lang.String getQuantity() {
+        java.lang.Object ref = quantity_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            quantity_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string quantity = 4;</code>
+       * @return The bytes for quantity.
+       */
+      public com.google.protobuf.ByteString
+          getQuantityBytes() {
+        java.lang.Object ref = quantity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quantity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string quantity = 4;</code>
+       * @param value The quantity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuantity(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        quantity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string quantity = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuantity() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        quantity_ = getDefaultInstance().getQuantity();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string quantity = 4;</code>
+       * @param value The bytes for quantity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuantityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        quantity_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object amount_ = "";
+      /**
+       * <pre>
+       *общая сумма на которую был продан товар(quantity * product_price)
+       * </pre>
+       *
+       * <code>required string amount = 5;</code>
+       * @return Whether the amount field is set.
+       */
+      public boolean hasAmount() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       *общая сумма на которую был продан товар(quantity * product_price)
+       * </pre>
+       *
+       * <code>required string amount = 5;</code>
+       * @return The amount.
+       */
+      public java.lang.String getAmount() {
+        java.lang.Object ref = amount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            amount_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *общая сумма на которую был продан товар(quantity * product_price)
+       * </pre>
+       *
+       * <code>required string amount = 5;</code>
+       * @return The bytes for amount.
+       */
+      public com.google.protobuf.ByteString
+          getAmountBytes() {
+        java.lang.Object ref = amount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          amount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *общая сумма на которую был продан товар(quantity * product_price)
+       * </pre>
+       *
+       * <code>required string amount = 5;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        amount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *общая сумма на которую был продан товар(quantity * product_price)
+       * </pre>
+       *
+       * <code>required string amount = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        amount_ = getDefaultInstance().getAmount();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *общая сумма на которую был продан товар(quantity * product_price)
+       * </pre>
+       *
+       * <code>required string amount = 5;</code>
+       * @param value The bytes for amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        amount_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:marketplace.DBFullSales)
+    }
+
+    // @@protoc_insertion_point(class_scope:marketplace.DBFullSales)
+    private static final nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales();
+    }
+
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<DBFullSales>
+        PARSER = new com.google.protobuf.AbstractParser<DBFullSales>() {
+      @java.lang.Override
+      public DBFullSales parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DBFullSales(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DBFullSales> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DBFullSales> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DBFullChangesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:marketplace.DBFullChanges)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     *id изменения чтобы потом можно было его принять
+     * </pre>
+     *
+     * <code>required int32 id = 1;</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <pre>
+     *id изменения чтобы потом можно было его принять
+     * </pre>
+     *
+     * <code>required int32 id = 1;</code>
+     * @return The id.
+     */
+    int getId();
+
+    /**
+     * <code>required string product_name = 2;</code>
+     * @return Whether the productName field is set.
+     */
+    boolean hasProductName();
+    /**
+     * <code>required string product_name = 2;</code>
+     * @return The productName.
+     */
+    java.lang.String getProductName();
+    /**
+     * <code>required string product_name = 2;</code>
+     * @return The bytes for productName.
+     */
+    com.google.protobuf.ByteString
+        getProductNameBytes();
+
+    /**
+     * <code>required string change_type = 3;</code>
+     * @return Whether the changeType field is set.
+     */
+    boolean hasChangeType();
+    /**
+     * <code>required string change_type = 3;</code>
+     * @return The changeType.
+     */
+    java.lang.String getChangeType();
+    /**
+     * <code>required string change_type = 3;</code>
+     * @return The bytes for changeType.
+     */
+    com.google.protobuf.ByteString
+        getChangeTypeBytes();
+
+    /**
+     * <code>required string new_value = 4;</code>
+     * @return Whether the newValue field is set.
+     */
+    boolean hasNewValue();
+    /**
+     * <code>required string new_value = 4;</code>
+     * @return The newValue.
+     */
+    java.lang.String getNewValue();
+    /**
+     * <code>required string new_value = 4;</code>
+     * @return The bytes for newValue.
+     */
+    com.google.protobuf.ByteString
+        getNewValueBytes();
+
+    /**
+     * <code>required string user_name = 5;</code>
+     * @return Whether the userName field is set.
+     */
+    boolean hasUserName();
+    /**
+     * <code>required string user_name = 5;</code>
+     * @return The userName.
+     */
+    java.lang.String getUserName();
+    /**
+     * <code>required string user_name = 5;</code>
+     * @return The bytes for userName.
+     */
+    com.google.protobuf.ByteString
+        getUserNameBytes();
+  }
+  /**
+   * Protobuf type {@code marketplace.DBFullChanges}
+   */
+  public static final class DBFullChanges extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:marketplace.DBFullChanges)
+      DBFullChangesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DBFullChanges.newBuilder() to construct.
+    private DBFullChanges(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DBFullChanges() {
+      productName_ = "";
+      changeType_ = "";
+      newValue_ = "";
+      userName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DBFullChanges();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DBFullChanges(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              bitField0_ |= 0x00000001;
+              id_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              productName_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              changeType_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              newValue_ = bs;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              userName_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullChanges_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullChanges_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.class, nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
+    /**
+     * <pre>
+     *id изменения чтобы потом можно было его принять
+     * </pre>
+     *
+     * <code>required int32 id = 1;</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     *id изменения чтобы потом можно было его принять
+     * </pre>
+     *
+     * <code>required int32 id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public int getId() {
+      return id_;
+    }
+
+    public static final int PRODUCT_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object productName_;
+    /**
+     * <code>required string product_name = 2;</code>
+     * @return Whether the productName field is set.
+     */
+    @java.lang.Override
+    public boolean hasProductName() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required string product_name = 2;</code>
+     * @return The productName.
+     */
+    @java.lang.Override
+    public java.lang.String getProductName() {
+      java.lang.Object ref = productName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          productName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string product_name = 2;</code>
+     * @return The bytes for productName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProductNameBytes() {
+      java.lang.Object ref = productName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        productName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHANGE_TYPE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object changeType_;
+    /**
+     * <code>required string change_type = 3;</code>
+     * @return Whether the changeType field is set.
+     */
+    @java.lang.Override
+    public boolean hasChangeType() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>required string change_type = 3;</code>
+     * @return The changeType.
+     */
+    @java.lang.Override
+    public java.lang.String getChangeType() {
+      java.lang.Object ref = changeType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          changeType_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string change_type = 3;</code>
+     * @return The bytes for changeType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChangeTypeBytes() {
+      java.lang.Object ref = changeType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        changeType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_VALUE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object newValue_;
+    /**
+     * <code>required string new_value = 4;</code>
+     * @return Whether the newValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasNewValue() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>required string new_value = 4;</code>
+     * @return The newValue.
+     */
+    @java.lang.Override
+    public java.lang.String getNewValue() {
+      java.lang.Object ref = newValue_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          newValue_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string new_value = 4;</code>
+     * @return The bytes for newValue.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewValueBytes() {
+      java.lang.Object ref = newValue_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newValue_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USER_NAME_FIELD_NUMBER = 5;
+    private volatile java.lang.Object userName_;
+    /**
+     * <code>required string user_name = 5;</code>
+     * @return Whether the userName field is set.
+     */
+    @java.lang.Override
+    public boolean hasUserName() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>required string user_name = 5;</code>
+     * @return The userName.
+     */
+    @java.lang.Override
+    public java.lang.String getUserName() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          userName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string user_name = 5;</code>
+     * @return The bytes for userName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserNameBytes() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasId()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasProductName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasChangeType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasNewValue()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasUserName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeInt32(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, productName_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, changeType_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, newValue_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, userName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, productName_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, changeType_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, newValue_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, userName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges)) {
+        return super.equals(obj);
+      }
+      nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges other = (nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges) obj;
+
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (getId()
+            != other.getId()) return false;
+      }
+      if (hasProductName() != other.hasProductName()) return false;
+      if (hasProductName()) {
+        if (!getProductName()
+            .equals(other.getProductName())) return false;
+      }
+      if (hasChangeType() != other.hasChangeType()) return false;
+      if (hasChangeType()) {
+        if (!getChangeType()
+            .equals(other.getChangeType())) return false;
+      }
+      if (hasNewValue() != other.hasNewValue()) return false;
+      if (hasNewValue()) {
+        if (!getNewValue()
+            .equals(other.getNewValue())) return false;
+      }
+      if (hasUserName() != other.hasUserName()) return false;
+      if (hasUserName()) {
+        if (!getUserName()
+            .equals(other.getUserName())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId();
+      }
+      if (hasProductName()) {
+        hash = (37 * hash) + PRODUCT_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getProductName().hashCode();
+      }
+      if (hasChangeType()) {
+        hash = (37 * hash) + CHANGE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getChangeType().hashCode();
+      }
+      if (hasNewValue()) {
+        hash = (37 * hash) + NEW_VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getNewValue().hashCode();
+      }
+      if (hasUserName()) {
+        hash = (37 * hash) + USER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getUserName().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code marketplace.DBFullChanges}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:marketplace.DBFullChanges)
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullChangesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullChanges_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullChanges_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.class, nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.Builder.class);
+      }
+
+      // Construct using nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        productName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        changeType_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        newValue_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        userName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullChanges_descriptor;
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges getDefaultInstanceForType() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges build() {
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges buildPartial() {
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges result = new nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.productName_ = productName_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.changeType_ = changeType_;
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.newValue_ = newValue_;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.userName_ = userName_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges) {
+          return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges other) {
+        if (other == nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        if (other.hasProductName()) {
+          bitField0_ |= 0x00000002;
+          productName_ = other.productName_;
+          onChanged();
+        }
+        if (other.hasChangeType()) {
+          bitField0_ |= 0x00000004;
+          changeType_ = other.changeType_;
+          onChanged();
+        }
+        if (other.hasNewValue()) {
+          bitField0_ |= 0x00000008;
+          newValue_ = other.newValue_;
+          onChanged();
+        }
+        if (other.hasUserName()) {
+          bitField0_ |= 0x00000010;
+          userName_ = other.userName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasId()) {
+          return false;
+        }
+        if (!hasProductName()) {
+          return false;
+        }
+        if (!hasChangeType()) {
+          return false;
+        }
+        if (!hasNewValue()) {
+          return false;
+        }
+        if (!hasUserName()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int id_ ;
+      /**
+       * <pre>
+       *id изменения чтобы потом можно было его принять
+       * </pre>
+       *
+       * <code>required int32 id = 1;</code>
+       * @return Whether the id field is set.
+       */
+      @java.lang.Override
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       *id изменения чтобы потом можно было его принять
+       * </pre>
+       *
+       * <code>required int32 id = 1;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       *id изменения чтобы потом можно было его принять
+       * </pre>
+       *
+       * <code>required int32 id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(int value) {
+        bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *id изменения чтобы потом можно было его принять
+       * </pre>
+       *
+       * <code>required int32 id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object productName_ = "";
+      /**
+       * <code>required string product_name = 2;</code>
+       * @return Whether the productName field is set.
+       */
+      public boolean hasProductName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required string product_name = 2;</code>
+       * @return The productName.
+       */
+      public java.lang.String getProductName() {
+        java.lang.Object ref = productName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            productName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string product_name = 2;</code>
+       * @return The bytes for productName.
+       */
+      public com.google.protobuf.ByteString
+          getProductNameBytes() {
+        java.lang.Object ref = productName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          productName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string product_name = 2;</code>
+       * @param value The productName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        productName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string product_name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProductName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        productName_ = getDefaultInstance().getProductName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string product_name = 2;</code>
+       * @param value The bytes for productName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        productName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object changeType_ = "";
+      /**
+       * <code>required string change_type = 3;</code>
+       * @return Whether the changeType field is set.
+       */
+      public boolean hasChangeType() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>required string change_type = 3;</code>
+       * @return The changeType.
+       */
+      public java.lang.String getChangeType() {
+        java.lang.Object ref = changeType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            changeType_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string change_type = 3;</code>
+       * @return The bytes for changeType.
+       */
+      public com.google.protobuf.ByteString
+          getChangeTypeBytes() {
+        java.lang.Object ref = changeType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          changeType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string change_type = 3;</code>
+       * @param value The changeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChangeType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        changeType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string change_type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChangeType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        changeType_ = getDefaultInstance().getChangeType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string change_type = 3;</code>
+       * @param value The bytes for changeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChangeTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        changeType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newValue_ = "";
+      /**
+       * <code>required string new_value = 4;</code>
+       * @return Whether the newValue field is set.
+       */
+      public boolean hasNewValue() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>required string new_value = 4;</code>
+       * @return The newValue.
+       */
+      public java.lang.String getNewValue() {
+        java.lang.Object ref = newValue_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            newValue_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string new_value = 4;</code>
+       * @return The bytes for newValue.
+       */
+      public com.google.protobuf.ByteString
+          getNewValueBytes() {
+        java.lang.Object ref = newValue_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newValue_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string new_value = 4;</code>
+       * @param value The newValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        newValue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string new_value = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewValue() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        newValue_ = getDefaultInstance().getNewValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string new_value = 4;</code>
+       * @param value The bytes for newValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        newValue_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object userName_ = "";
+      /**
+       * <code>required string user_name = 5;</code>
+       * @return Whether the userName field is set.
+       */
+      public boolean hasUserName() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>required string user_name = 5;</code>
+       * @return The userName.
+       */
+      public java.lang.String getUserName() {
+        java.lang.Object ref = userName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            userName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string user_name = 5;</code>
+       * @return The bytes for userName.
+       */
+      public com.google.protobuf.ByteString
+          getUserNameBytes() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string user_name = 5;</code>
+       * @param value The userName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        userName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string user_name = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserName() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        userName_ = getDefaultInstance().getUserName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string user_name = 5;</code>
+       * @param value The bytes for userName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        userName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:marketplace.DBFullChanges)
+    }
+
+    // @@protoc_insertion_point(class_scope:marketplace.DBFullChanges)
+    private static final nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges();
+    }
+
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<DBFullChanges>
+        PARSER = new com.google.protobuf.AbstractParser<DBFullChanges>() {
+      @java.lang.Override
+      public DBFullChanges parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DBFullChanges(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DBFullChanges> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DBFullChanges> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DBFullLogOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:marketplace.DBFullLog)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string user_name = 1;</code>
+     * @return Whether the userName field is set.
+     */
+    boolean hasUserName();
+    /**
+     * <code>required string user_name = 1;</code>
+     * @return The userName.
+     */
+    java.lang.String getUserName();
+    /**
+     * <code>required string user_name = 1;</code>
+     * @return The bytes for userName.
+     */
+    com.google.protobuf.ByteString
+        getUserNameBytes();
+
+    /**
+     * <code>required string description = 2;</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <code>required string description = 2;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>required string description = 2;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>required string action_type = 3;</code>
+     * @return Whether the actionType field is set.
+     */
+    boolean hasActionType();
+    /**
+     * <code>required string action_type = 3;</code>
+     * @return The actionType.
+     */
+    java.lang.String getActionType();
+    /**
+     * <code>required string action_type = 3;</code>
+     * @return The bytes for actionType.
+     */
+    com.google.protobuf.ByteString
+        getActionTypeBytes();
+  }
+  /**
+   * Protobuf type {@code marketplace.DBFullLog}
+   */
+  public static final class DBFullLog extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:marketplace.DBFullLog)
+      DBFullLogOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DBFullLog.newBuilder() to construct.
+    private DBFullLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DBFullLog() {
+      userName_ = "";
+      description_ = "";
+      actionType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DBFullLog();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DBFullLog(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              userName_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              description_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              actionType_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullLog_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullLog_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.class, nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int USER_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object userName_;
+    /**
+     * <code>required string user_name = 1;</code>
+     * @return Whether the userName field is set.
+     */
+    @java.lang.Override
+    public boolean hasUserName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required string user_name = 1;</code>
+     * @return The userName.
+     */
+    @java.lang.Override
+    public java.lang.String getUserName() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          userName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string user_name = 1;</code>
+     * @return The bytes for userName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserNameBytes() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>required string description = 2;</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required string description = 2;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          description_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string description = 2;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACTION_TYPE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object actionType_;
+    /**
+     * <code>required string action_type = 3;</code>
+     * @return Whether the actionType field is set.
+     */
+    @java.lang.Override
+    public boolean hasActionType() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>required string action_type = 3;</code>
+     * @return The actionType.
+     */
+    @java.lang.Override
+    public java.lang.String getActionType() {
+      java.lang.Object ref = actionType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          actionType_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string action_type = 3;</code>
+     * @return The bytes for actionType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionTypeBytes() {
+      java.lang.Object ref = actionType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        actionType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasUserName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDescription()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasActionType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, actionType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, actionType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog)) {
+        return super.equals(obj);
+      }
+      nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog other = (nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog) obj;
+
+      if (hasUserName() != other.hasUserName()) return false;
+      if (hasUserName()) {
+        if (!getUserName()
+            .equals(other.getUserName())) return false;
+      }
+      if (hasDescription() != other.hasDescription()) return false;
+      if (hasDescription()) {
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+      }
+      if (hasActionType() != other.hasActionType()) return false;
+      if (hasActionType()) {
+        if (!getActionType()
+            .equals(other.getActionType())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasUserName()) {
+        hash = (37 * hash) + USER_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getUserName().hashCode();
+      }
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
+      }
+      if (hasActionType()) {
+        hash = (37 * hash) + ACTION_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getActionType().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code marketplace.DBFullLog}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:marketplace.DBFullLog)
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullLogOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullLog_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullLog_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.class, nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.Builder.class);
+      }
+
+      // Construct using nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        userName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        description_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        actionType_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_DBFullLog_descriptor;
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog getDefaultInstanceForType() {
+        return nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog build() {
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog buildPartial() {
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog result = new nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.userName_ = userName_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.description_ = description_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.actionType_ = actionType_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog) {
+          return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog other) {
+        if (other == nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.getDefaultInstance()) return this;
+        if (other.hasUserName()) {
+          bitField0_ |= 0x00000001;
+          userName_ = other.userName_;
+          onChanged();
+        }
+        if (other.hasDescription()) {
+          bitField0_ |= 0x00000002;
+          description_ = other.description_;
+          onChanged();
+        }
+        if (other.hasActionType()) {
+          bitField0_ |= 0x00000004;
+          actionType_ = other.actionType_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasUserName()) {
+          return false;
+        }
+        if (!hasDescription()) {
+          return false;
+        }
+        if (!hasActionType()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object userName_ = "";
+      /**
+       * <code>required string user_name = 1;</code>
+       * @return Whether the userName field is set.
+       */
+      public boolean hasUserName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required string user_name = 1;</code>
+       * @return The userName.
+       */
+      public java.lang.String getUserName() {
+        java.lang.Object ref = userName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            userName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string user_name = 1;</code>
+       * @return The bytes for userName.
+       */
+      public com.google.protobuf.ByteString
+          getUserNameBytes() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string user_name = 1;</code>
+       * @param value The userName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        userName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string user_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        userName_ = getDefaultInstance().getUserName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string user_name = 1;</code>
+       * @param value The bytes for userName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        userName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>required string description = 2;</code>
+       * @return Whether the description field is set.
+       */
+      public boolean hasDescription() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required string description = 2;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            description_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string description = 2;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string description = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object actionType_ = "";
+      /**
+       * <code>required string action_type = 3;</code>
+       * @return Whether the actionType field is set.
+       */
+      public boolean hasActionType() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>required string action_type = 3;</code>
+       * @return The actionType.
+       */
+      public java.lang.String getActionType() {
+        java.lang.Object ref = actionType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            actionType_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string action_type = 3;</code>
+       * @return The bytes for actionType.
+       */
+      public com.google.protobuf.ByteString
+          getActionTypeBytes() {
+        java.lang.Object ref = actionType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          actionType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string action_type = 3;</code>
+       * @param value The actionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        actionType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string action_type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActionType() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        actionType_ = getDefaultInstance().getActionType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string action_type = 3;</code>
+       * @param value The bytes for actionType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        actionType_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:marketplace.DBFullLog)
+    }
+
+    // @@protoc_insertion_point(class_scope:marketplace.DBFullLog)
+    private static final nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog();
+    }
+
+    public static nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<DBFullLog>
+        PARSER = new com.google.protobuf.AbstractParser<DBFullLog>() {
+      @java.lang.Override
+      public DBFullLog parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DBFullLog(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DBFullLog> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DBFullLog> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface MessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:marketplace.Message)
       com.google.protobuf.MessageOrBuilder {
@@ -9100,6 +13795,66 @@ public final class MarketplaceProto {
        */
       nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ProductTableOrBuilder getProductTableOrBuilder();
 
+      /**
+       * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+       * @return Whether the taskTable field is set.
+       */
+      boolean hasTaskTable();
+      /**
+       * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+       * @return The taskTable.
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable getTaskTable();
+      /**
+       * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTableOrBuilder getTaskTableOrBuilder();
+
+      /**
+       * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+       * @return Whether the saleTable field is set.
+       */
+      boolean hasSaleTable();
+      /**
+       * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+       * @return The saleTable.
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable getSaleTable();
+      /**
+       * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTableOrBuilder getSaleTableOrBuilder();
+
+      /**
+       * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+       * @return Whether the changeTable field is set.
+       */
+      boolean hasChangeTable();
+      /**
+       * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+       * @return The changeTable.
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable getChangeTable();
+      /**
+       * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTableOrBuilder getChangeTableOrBuilder();
+
+      /**
+       * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+       * @return Whether the logTable field is set.
+       */
+      boolean hasLogTable();
+      /**
+       * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+       * @return The logTable.
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable getLogTable();
+      /**
+       * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTableOrBuilder getLogTableOrBuilder();
+
       public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TypeCase getTypeCase();
     }
     /**
@@ -9160,6 +13915,62 @@ public final class MarketplaceProto {
                   type_ = subBuilder.buildPartial();
                 }
                 typeCase_ = 1;
+                break;
+              }
+              case 18: {
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.Builder subBuilder = null;
+                if (typeCase_ == 2) {
+                  subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 2;
+                break;
+              }
+              case 26: {
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.Builder subBuilder = null;
+                if (typeCase_ == 3) {
+                  subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 3;
+                break;
+              }
+              case 34: {
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.Builder subBuilder = null;
+                if (typeCase_ == 4) {
+                  subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 4;
+                break;
+              }
+              case 42: {
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.Builder subBuilder = null;
+                if (typeCase_ == 5) {
+                  subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 5;
                 break;
               }
               default: {
@@ -9612,6 +14423,1678 @@ public final class MarketplaceProto {
 
       }
 
+      public interface TaskTableOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:marketplace.Message.DBRequest.TaskTable)
+          com.google.protobuf.MessageOrBuilder {
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.DBRequest.TaskTable}
+       */
+      public static final class TaskTable extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:marketplace.Message.DBRequest.TaskTable)
+          TaskTableOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use TaskTable.newBuilder() to construct.
+        private TaskTable(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private TaskTable() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new TaskTable();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private TaskTable(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_TaskTable_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_TaskTable_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.Builder.class);
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable)) {
+            return super.equals(obj);
+          }
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable) obj;
+
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code marketplace.Message.DBRequest.TaskTable}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:marketplace.Message.DBRequest.TaskTable)
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTableOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_TaskTable_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_TaskTable_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.Builder.class);
+          }
+
+          // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_TaskTable_descriptor;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable getDefaultInstanceForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable build() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable buildPartial() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable(this);
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable) {
+              return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable other) {
+            if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.getDefaultInstance()) return this;
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:marketplace.Message.DBRequest.TaskTable)
+        }
+
+        // @@protoc_insertion_point(class_scope:marketplace.Message.DBRequest.TaskTable)
+        private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable();
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<TaskTable>
+            PARSER = new com.google.protobuf.AbstractParser<TaskTable>() {
+          @java.lang.Override
+          public TaskTable parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new TaskTable(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<TaskTable> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<TaskTable> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface SalesTableOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:marketplace.Message.DBRequest.SalesTable)
+          com.google.protobuf.MessageOrBuilder {
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.DBRequest.SalesTable}
+       */
+      public static final class SalesTable extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:marketplace.Message.DBRequest.SalesTable)
+          SalesTableOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use SalesTable.newBuilder() to construct.
+        private SalesTable(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private SalesTable() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new SalesTable();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private SalesTable(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_SalesTable_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_SalesTable_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.Builder.class);
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable)) {
+            return super.equals(obj);
+          }
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable) obj;
+
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code marketplace.Message.DBRequest.SalesTable}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:marketplace.Message.DBRequest.SalesTable)
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTableOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_SalesTable_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_SalesTable_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.Builder.class);
+          }
+
+          // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_SalesTable_descriptor;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable getDefaultInstanceForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable build() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable buildPartial() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable(this);
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable) {
+              return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable other) {
+            if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.getDefaultInstance()) return this;
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:marketplace.Message.DBRequest.SalesTable)
+        }
+
+        // @@protoc_insertion_point(class_scope:marketplace.Message.DBRequest.SalesTable)
+        private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable();
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<SalesTable>
+            PARSER = new com.google.protobuf.AbstractParser<SalesTable>() {
+          @java.lang.Override
+          public SalesTable parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new SalesTable(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<SalesTable> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<SalesTable> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface ChangeTableOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:marketplace.Message.DBRequest.ChangeTable)
+          com.google.protobuf.MessageOrBuilder {
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.DBRequest.ChangeTable}
+       */
+      public static final class ChangeTable extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:marketplace.Message.DBRequest.ChangeTable)
+          ChangeTableOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use ChangeTable.newBuilder() to construct.
+        private ChangeTable(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private ChangeTable() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new ChangeTable();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private ChangeTable(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_ChangeTable_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_ChangeTable_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.Builder.class);
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable)) {
+            return super.equals(obj);
+          }
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable) obj;
+
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code marketplace.Message.DBRequest.ChangeTable}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:marketplace.Message.DBRequest.ChangeTable)
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTableOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_ChangeTable_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_ChangeTable_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.Builder.class);
+          }
+
+          // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_ChangeTable_descriptor;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable getDefaultInstanceForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable build() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable buildPartial() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable(this);
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable) {
+              return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable other) {
+            if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.getDefaultInstance()) return this;
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:marketplace.Message.DBRequest.ChangeTable)
+        }
+
+        // @@protoc_insertion_point(class_scope:marketplace.Message.DBRequest.ChangeTable)
+        private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable();
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<ChangeTable>
+            PARSER = new com.google.protobuf.AbstractParser<ChangeTable>() {
+          @java.lang.Override
+          public ChangeTable parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new ChangeTable(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<ChangeTable> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<ChangeTable> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface LogTableOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:marketplace.Message.DBRequest.LogTable)
+          com.google.protobuf.MessageOrBuilder {
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.DBRequest.LogTable}
+       */
+      public static final class LogTable extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:marketplace.Message.DBRequest.LogTable)
+          LogTableOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use LogTable.newBuilder() to construct.
+        private LogTable(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private LogTable() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new LogTable();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private LogTable(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_LogTable_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_LogTable_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.Builder.class);
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable)) {
+            return super.equals(obj);
+          }
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable) obj;
+
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code marketplace.Message.DBRequest.LogTable}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:marketplace.Message.DBRequest.LogTable)
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTableOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_LogTable_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_LogTable_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.Builder.class);
+          }
+
+          // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBRequest_LogTable_descriptor;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable getDefaultInstanceForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable build() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable buildPartial() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable(this);
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable) {
+              return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable other) {
+            if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.getDefaultInstance()) return this;
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:marketplace.Message.DBRequest.LogTable)
+        }
+
+        // @@protoc_insertion_point(class_scope:marketplace.Message.DBRequest.LogTable)
+        private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable();
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<LogTable>
+            PARSER = new com.google.protobuf.AbstractParser<LogTable>() {
+          @java.lang.Override
+          public LogTable parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new LogTable(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<LogTable> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<LogTable> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
       private int bitField0_;
       private int typeCase_ = 0;
       private java.lang.Object type_;
@@ -9619,6 +16102,10 @@ public final class MarketplaceProto {
           implements com.google.protobuf.Internal.EnumLite,
               com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         PRODUCT_TABLE(1),
+        TASK_TABLE(2),
+        SALE_TABLE(3),
+        CHANGE_TABLE(4),
+        LOG_TABLE(5),
         TYPE_NOT_SET(0);
         private final int value;
         private TypeCase(int value) {
@@ -9637,6 +16124,10 @@ public final class MarketplaceProto {
         public static TypeCase forNumber(int value) {
           switch (value) {
             case 1: return PRODUCT_TABLE;
+            case 2: return TASK_TABLE;
+            case 3: return SALE_TABLE;
+            case 4: return CHANGE_TABLE;
+            case 5: return LOG_TABLE;
             case 0: return TYPE_NOT_SET;
             default: return null;
           }
@@ -9683,6 +16174,130 @@ public final class MarketplaceProto {
         return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ProductTable.getDefaultInstance();
       }
 
+      public static final int TASK_TABLE_FIELD_NUMBER = 2;
+      /**
+       * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+       * @return Whether the taskTable field is set.
+       */
+      @java.lang.Override
+      public boolean hasTaskTable() {
+        return typeCase_ == 2;
+      }
+      /**
+       * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+       * @return The taskTable.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable getTaskTable() {
+        if (typeCase_ == 2) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.getDefaultInstance();
+      }
+      /**
+       * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTableOrBuilder getTaskTableOrBuilder() {
+        if (typeCase_ == 2) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.getDefaultInstance();
+      }
+
+      public static final int SALE_TABLE_FIELD_NUMBER = 3;
+      /**
+       * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+       * @return Whether the saleTable field is set.
+       */
+      @java.lang.Override
+      public boolean hasSaleTable() {
+        return typeCase_ == 3;
+      }
+      /**
+       * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+       * @return The saleTable.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable getSaleTable() {
+        if (typeCase_ == 3) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.getDefaultInstance();
+      }
+      /**
+       * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTableOrBuilder getSaleTableOrBuilder() {
+        if (typeCase_ == 3) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.getDefaultInstance();
+      }
+
+      public static final int CHANGE_TABLE_FIELD_NUMBER = 4;
+      /**
+       * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+       * @return Whether the changeTable field is set.
+       */
+      @java.lang.Override
+      public boolean hasChangeTable() {
+        return typeCase_ == 4;
+      }
+      /**
+       * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+       * @return The changeTable.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable getChangeTable() {
+        if (typeCase_ == 4) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.getDefaultInstance();
+      }
+      /**
+       * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTableOrBuilder getChangeTableOrBuilder() {
+        if (typeCase_ == 4) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.getDefaultInstance();
+      }
+
+      public static final int LOG_TABLE_FIELD_NUMBER = 5;
+      /**
+       * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+       * @return Whether the logTable field is set.
+       */
+      @java.lang.Override
+      public boolean hasLogTable() {
+        return typeCase_ == 5;
+      }
+      /**
+       * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+       * @return The logTable.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable getLogTable() {
+        if (typeCase_ == 5) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.getDefaultInstance();
+      }
+      /**
+       * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTableOrBuilder getLogTableOrBuilder() {
+        if (typeCase_ == 5) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -9700,6 +16315,18 @@ public final class MarketplaceProto {
         if (typeCase_ == 1) {
           output.writeMessage(1, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ProductTable) type_);
         }
+        if (typeCase_ == 2) {
+          output.writeMessage(2, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable) type_);
+        }
+        if (typeCase_ == 3) {
+          output.writeMessage(3, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable) type_);
+        }
+        if (typeCase_ == 4) {
+          output.writeMessage(4, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable) type_);
+        }
+        if (typeCase_ == 5) {
+          output.writeMessage(5, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable) type_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -9712,6 +16339,22 @@ public final class MarketplaceProto {
         if (typeCase_ == 1) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ProductTable) type_);
+        }
+        if (typeCase_ == 2) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable) type_);
+        }
+        if (typeCase_ == 3) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable) type_);
+        }
+        if (typeCase_ == 4) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable) type_);
+        }
+        if (typeCase_ == 5) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable) type_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -9734,6 +16377,22 @@ public final class MarketplaceProto {
             if (!getProductTable()
                 .equals(other.getProductTable())) return false;
             break;
+          case 2:
+            if (!getTaskTable()
+                .equals(other.getTaskTable())) return false;
+            break;
+          case 3:
+            if (!getSaleTable()
+                .equals(other.getSaleTable())) return false;
+            break;
+          case 4:
+            if (!getChangeTable()
+                .equals(other.getChangeTable())) return false;
+            break;
+          case 5:
+            if (!getLogTable()
+                .equals(other.getLogTable())) return false;
+            break;
           case 0:
           default:
         }
@@ -9752,6 +16411,22 @@ public final class MarketplaceProto {
           case 1:
             hash = (37 * hash) + PRODUCT_TABLE_FIELD_NUMBER;
             hash = (53 * hash) + getProductTable().hashCode();
+            break;
+          case 2:
+            hash = (37 * hash) + TASK_TABLE_FIELD_NUMBER;
+            hash = (53 * hash) + getTaskTable().hashCode();
+            break;
+          case 3:
+            hash = (37 * hash) + SALE_TABLE_FIELD_NUMBER;
+            hash = (53 * hash) + getSaleTable().hashCode();
+            break;
+          case 4:
+            hash = (37 * hash) + CHANGE_TABLE_FIELD_NUMBER;
+            hash = (53 * hash) + getChangeTable().hashCode();
+            break;
+          case 5:
+            hash = (37 * hash) + LOG_TABLE_FIELD_NUMBER;
+            hash = (53 * hash) + getLogTable().hashCode();
             break;
           case 0:
           default:
@@ -9926,6 +16601,34 @@ public final class MarketplaceProto {
               result.type_ = productTableBuilder_.build();
             }
           }
+          if (typeCase_ == 2) {
+            if (taskTableBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = taskTableBuilder_.build();
+            }
+          }
+          if (typeCase_ == 3) {
+            if (saleTableBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = saleTableBuilder_.build();
+            }
+          }
+          if (typeCase_ == 4) {
+            if (changeTableBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = changeTableBuilder_.build();
+            }
+          }
+          if (typeCase_ == 5) {
+            if (logTableBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = logTableBuilder_.build();
+            }
+          }
           result.bitField0_ = to_bitField0_;
           result.typeCase_ = typeCase_;
           onBuilt();
@@ -9979,6 +16682,22 @@ public final class MarketplaceProto {
           switch (other.getTypeCase()) {
             case PRODUCT_TABLE: {
               mergeProductTable(other.getProductTable());
+              break;
+            }
+            case TASK_TABLE: {
+              mergeTaskTable(other.getTaskTable());
+              break;
+            }
+            case SALE_TABLE: {
+              mergeSaleTable(other.getSaleTable());
+              break;
+            }
+            case CHANGE_TABLE: {
+              mergeChangeTable(other.getChangeTable());
+              break;
+            }
+            case LOG_TABLE: {
+              mergeLogTable(other.getLogTable());
               break;
             }
             case TYPE_NOT_SET: {
@@ -10170,6 +16889,570 @@ public final class MarketplaceProto {
           onChanged();;
           return productTableBuilder_;
         }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTableOrBuilder> taskTableBuilder_;
+        /**
+         * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+         * @return Whether the taskTable field is set.
+         */
+        @java.lang.Override
+        public boolean hasTaskTable() {
+          return typeCase_ == 2;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+         * @return The taskTable.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable getTaskTable() {
+          if (taskTableBuilder_ == null) {
+            if (typeCase_ == 2) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.getDefaultInstance();
+          } else {
+            if (typeCase_ == 2) {
+              return taskTableBuilder_.getMessage();
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+         */
+        public Builder setTaskTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable value) {
+          if (taskTableBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            taskTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+         */
+        public Builder setTaskTable(
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.Builder builderForValue) {
+          if (taskTableBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            taskTableBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+         */
+        public Builder mergeTaskTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable value) {
+          if (taskTableBuilder_ == null) {
+            if (typeCase_ == 2 &&
+                type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.getDefaultInstance()) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 2) {
+              taskTableBuilder_.mergeFrom(value);
+            }
+            taskTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+         */
+        public Builder clearTaskTable() {
+          if (taskTableBuilder_ == null) {
+            if (typeCase_ == 2) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 2) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            taskTableBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+         */
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.Builder getTaskTableBuilder() {
+          return getTaskTableFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTableOrBuilder getTaskTableOrBuilder() {
+          if ((typeCase_ == 2) && (taskTableBuilder_ != null)) {
+            return taskTableBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 2) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.TaskTable task_table = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTableOrBuilder> 
+            getTaskTableFieldBuilder() {
+          if (taskTableBuilder_ == null) {
+            if (!(typeCase_ == 2)) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.getDefaultInstance();
+            }
+            taskTableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTableOrBuilder>(
+                    (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.TaskTable) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 2;
+          onChanged();;
+          return taskTableBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTableOrBuilder> saleTableBuilder_;
+        /**
+         * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+         * @return Whether the saleTable field is set.
+         */
+        @java.lang.Override
+        public boolean hasSaleTable() {
+          return typeCase_ == 3;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+         * @return The saleTable.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable getSaleTable() {
+          if (saleTableBuilder_ == null) {
+            if (typeCase_ == 3) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.getDefaultInstance();
+          } else {
+            if (typeCase_ == 3) {
+              return saleTableBuilder_.getMessage();
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+         */
+        public Builder setSaleTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable value) {
+          if (saleTableBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            saleTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+         */
+        public Builder setSaleTable(
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.Builder builderForValue) {
+          if (saleTableBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            saleTableBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+         */
+        public Builder mergeSaleTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable value) {
+          if (saleTableBuilder_ == null) {
+            if (typeCase_ == 3 &&
+                type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.getDefaultInstance()) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 3) {
+              saleTableBuilder_.mergeFrom(value);
+            }
+            saleTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+         */
+        public Builder clearSaleTable() {
+          if (saleTableBuilder_ == null) {
+            if (typeCase_ == 3) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 3) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            saleTableBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+         */
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.Builder getSaleTableBuilder() {
+          return getSaleTableFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTableOrBuilder getSaleTableOrBuilder() {
+          if ((typeCase_ == 3) && (saleTableBuilder_ != null)) {
+            return saleTableBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 3) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.SalesTable sale_table = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTableOrBuilder> 
+            getSaleTableFieldBuilder() {
+          if (saleTableBuilder_ == null) {
+            if (!(typeCase_ == 3)) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.getDefaultInstance();
+            }
+            saleTableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTableOrBuilder>(
+                    (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.SalesTable) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 3;
+          onChanged();;
+          return saleTableBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTableOrBuilder> changeTableBuilder_;
+        /**
+         * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+         * @return Whether the changeTable field is set.
+         */
+        @java.lang.Override
+        public boolean hasChangeTable() {
+          return typeCase_ == 4;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+         * @return The changeTable.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable getChangeTable() {
+          if (changeTableBuilder_ == null) {
+            if (typeCase_ == 4) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.getDefaultInstance();
+          } else {
+            if (typeCase_ == 4) {
+              return changeTableBuilder_.getMessage();
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+         */
+        public Builder setChangeTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable value) {
+          if (changeTableBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            changeTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 4;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+         */
+        public Builder setChangeTable(
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.Builder builderForValue) {
+          if (changeTableBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            changeTableBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 4;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+         */
+        public Builder mergeChangeTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable value) {
+          if (changeTableBuilder_ == null) {
+            if (typeCase_ == 4 &&
+                type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.getDefaultInstance()) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 4) {
+              changeTableBuilder_.mergeFrom(value);
+            }
+            changeTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 4;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+         */
+        public Builder clearChangeTable() {
+          if (changeTableBuilder_ == null) {
+            if (typeCase_ == 4) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 4) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            changeTableBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+         */
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.Builder getChangeTableBuilder() {
+          return getChangeTableFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTableOrBuilder getChangeTableOrBuilder() {
+          if ((typeCase_ == 4) && (changeTableBuilder_ != null)) {
+            return changeTableBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 4) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.ChangeTable change_table = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTableOrBuilder> 
+            getChangeTableFieldBuilder() {
+          if (changeTableBuilder_ == null) {
+            if (!(typeCase_ == 4)) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.getDefaultInstance();
+            }
+            changeTableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTableOrBuilder>(
+                    (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.ChangeTable) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 4;
+          onChanged();;
+          return changeTableBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTableOrBuilder> logTableBuilder_;
+        /**
+         * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+         * @return Whether the logTable field is set.
+         */
+        @java.lang.Override
+        public boolean hasLogTable() {
+          return typeCase_ == 5;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+         * @return The logTable.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable getLogTable() {
+          if (logTableBuilder_ == null) {
+            if (typeCase_ == 5) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.getDefaultInstance();
+          } else {
+            if (typeCase_ == 5) {
+              return logTableBuilder_.getMessage();
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+         */
+        public Builder setLogTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable value) {
+          if (logTableBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            logTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+         */
+        public Builder setLogTable(
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.Builder builderForValue) {
+          if (logTableBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            logTableBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+         */
+        public Builder mergeLogTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable value) {
+          if (logTableBuilder_ == null) {
+            if (typeCase_ == 5 &&
+                type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.getDefaultInstance()) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 5) {
+              logTableBuilder_.mergeFrom(value);
+            }
+            logTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+         */
+        public Builder clearLogTable() {
+          if (logTableBuilder_ == null) {
+            if (typeCase_ == 5) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 5) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            logTableBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+         */
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.Builder getLogTableBuilder() {
+          return getLogTableFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTableOrBuilder getLogTableOrBuilder() {
+          if ((typeCase_ == 5) && (logTableBuilder_ != null)) {
+            return logTableBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 5) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBRequest.LogTable log_table = 5;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTableOrBuilder> 
+            getLogTableFieldBuilder() {
+          if (logTableBuilder_ == null) {
+            if (!(typeCase_ == 5)) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.getDefaultInstance();
+            }
+            logTableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTableOrBuilder>(
+                    (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBRequest.LogTable) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 5;
+          onChanged();;
+          return logTableBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10242,6 +17525,66 @@ public final class MarketplaceProto {
        */
       nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ProductTableOrBuilder getProductTableOrBuilder();
 
+      /**
+       * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+       * @return Whether the taskTable field is set.
+       */
+      boolean hasTaskTable();
+      /**
+       * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+       * @return The taskTable.
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable getTaskTable();
+      /**
+       * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTableOrBuilder getTaskTableOrBuilder();
+
+      /**
+       * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+       * @return Whether the saleTable field is set.
+       */
+      boolean hasSaleTable();
+      /**
+       * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+       * @return The saleTable.
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable getSaleTable();
+      /**
+       * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTableOrBuilder getSaleTableOrBuilder();
+
+      /**
+       * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+       * @return Whether the changeTable field is set.
+       */
+      boolean hasChangeTable();
+      /**
+       * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+       * @return The changeTable.
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable getChangeTable();
+      /**
+       * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTableOrBuilder getChangeTableOrBuilder();
+
+      /**
+       * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+       * @return Whether the logTable field is set.
+       */
+      boolean hasLogTable();
+      /**
+       * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+       * @return The logTable.
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable getLogTable();
+      /**
+       * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+       */
+      nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTableOrBuilder getLogTableOrBuilder();
+
       public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TypeCase getTypeCase();
     }
     /**
@@ -10302,6 +17645,62 @@ public final class MarketplaceProto {
                   type_ = subBuilder.buildPartial();
                 }
                 typeCase_ = 1;
+                break;
+              }
+              case 18: {
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.Builder subBuilder = null;
+                if (typeCase_ == 2) {
+                  subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 2;
+                break;
+              }
+              case 26: {
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.Builder subBuilder = null;
+                if (typeCase_ == 3) {
+                  subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 3;
+                break;
+              }
+              case 34: {
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.Builder subBuilder = null;
+                if (typeCase_ == 4) {
+                  subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 4;
+                break;
+              }
+              case 42: {
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.Builder subBuilder = null;
+                if (typeCase_ == 5) {
+                  subBuilder = ((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable) type_).toBuilder();
+                }
+                type_ =
+                    input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable) type_);
+                  type_ = subBuilder.buildPartial();
+                }
+                typeCase_ = 5;
                 break;
               }
               default: {
@@ -11140,6 +18539,3222 @@ public final class MarketplaceProto {
 
       }
 
+      public interface TaskTableOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:marketplace.Message.DBResponse.TaskTable)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+         */
+        java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask> 
+            getFullTaskList();
+        /**
+         * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+         */
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask getFullTask(int index);
+        /**
+         * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+         */
+        int getFullTaskCount();
+        /**
+         * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+         */
+        java.util.List<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullTaskOrBuilder> 
+            getFullTaskOrBuilderList();
+        /**
+         * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+         */
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullTaskOrBuilder getFullTaskOrBuilder(
+            int index);
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.DBResponse.TaskTable}
+       */
+      public static final class TaskTable extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:marketplace.Message.DBResponse.TaskTable)
+          TaskTableOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use TaskTable.newBuilder() to construct.
+        private TaskTable(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private TaskTable() {
+          fullTask_ = java.util.Collections.emptyList();
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new TaskTable();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private TaskTable(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                    fullTask_ = new java.util.ArrayList<nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask>();
+                    mutable_bitField0_ |= 0x00000001;
+                  }
+                  fullTask_.add(
+                      input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.PARSER, extensionRegistry));
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            if (((mutable_bitField0_ & 0x00000001) != 0)) {
+              fullTask_ = java.util.Collections.unmodifiableList(fullTask_);
+            }
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_TaskTable_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_TaskTable_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.Builder.class);
+        }
+
+        public static final int FULL_TASK_FIELD_NUMBER = 1;
+        private java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask> fullTask_;
+        /**
+         * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+         */
+        @java.lang.Override
+        public java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask> getFullTaskList() {
+          return fullTask_;
+        }
+        /**
+         * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+         */
+        @java.lang.Override
+        public java.util.List<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullTaskOrBuilder> 
+            getFullTaskOrBuilderList() {
+          return fullTask_;
+        }
+        /**
+         * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+         */
+        @java.lang.Override
+        public int getFullTaskCount() {
+          return fullTask_.size();
+        }
+        /**
+         * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask getFullTask(int index) {
+          return fullTask_.get(index);
+        }
+        /**
+         * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.DBFullTaskOrBuilder getFullTaskOrBuilder(
+            int index) {
+          return fullTask_.get(index);
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          for (int i = 0; i < getFullTaskCount(); i++) {
+            if (!getFullTask(i).isInitialized()) {
+              memoizedIsInitialized = 0;
+              return false;
+            }
+          }
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          for (int i = 0; i < fullTask_.size(); i++) {
+            output.writeMessage(1, fullTask_.get(i));
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          for (int i = 0; i < fullTask_.size(); i++) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(1, fullTask_.get(i));
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable)) {
+            return super.equals(obj);
+          }
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable) obj;
+
+          if (!getFullTaskList()
+              .equals(other.getFullTaskList())) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (getFullTaskCount() > 0) {
+            hash = (37 * hash) + FULL_TASK_FIELD_NUMBER;
+            hash = (53 * hash) + getFullTaskList().hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code marketplace.Message.DBResponse.TaskTable}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:marketplace.Message.DBResponse.TaskTable)
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTableOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_TaskTable_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_TaskTable_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.Builder.class);
+          }
+
+          // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+              getFullTaskFieldBuilder();
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            if (fullTaskBuilder_ == null) {
+              fullTask_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              fullTaskBuilder_.clear();
+            }
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_TaskTable_descriptor;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable getDefaultInstanceForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable build() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable buildPartial() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable(this);
+            int from_bitField0_ = bitField0_;
+            if (fullTaskBuilder_ == null) {
+              if (((bitField0_ & 0x00000001) != 0)) {
+                fullTask_ = java.util.Collections.unmodifiableList(fullTask_);
+                bitField0_ = (bitField0_ & ~0x00000001);
+              }
+              result.fullTask_ = fullTask_;
+            } else {
+              result.fullTask_ = fullTaskBuilder_.build();
+            }
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable) {
+              return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable other) {
+            if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.getDefaultInstance()) return this;
+            if (fullTaskBuilder_ == null) {
+              if (!other.fullTask_.isEmpty()) {
+                if (fullTask_.isEmpty()) {
+                  fullTask_ = other.fullTask_;
+                  bitField0_ = (bitField0_ & ~0x00000001);
+                } else {
+                  ensureFullTaskIsMutable();
+                  fullTask_.addAll(other.fullTask_);
+                }
+                onChanged();
+              }
+            } else {
+              if (!other.fullTask_.isEmpty()) {
+                if (fullTaskBuilder_.isEmpty()) {
+                  fullTaskBuilder_.dispose();
+                  fullTaskBuilder_ = null;
+                  fullTask_ = other.fullTask_;
+                  bitField0_ = (bitField0_ & ~0x00000001);
+                  fullTaskBuilder_ = 
+                    com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                       getFullTaskFieldBuilder() : null;
+                } else {
+                  fullTaskBuilder_.addAllMessages(other.fullTask_);
+                }
+              }
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            for (int i = 0; i < getFullTaskCount(); i++) {
+              if (!getFullTask(i).isInitialized()) {
+                return false;
+              }
+            }
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask> fullTask_ =
+            java.util.Collections.emptyList();
+          private void ensureFullTaskIsMutable() {
+            if (!((bitField0_ & 0x00000001) != 0)) {
+              fullTask_ = new java.util.ArrayList<nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask>(fullTask_);
+              bitField0_ |= 0x00000001;
+             }
+          }
+
+          private com.google.protobuf.RepeatedFieldBuilderV3<
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask, nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.Builder, nsu.oop.marketplace.inet.MarketplaceProto.DBFullTaskOrBuilder> fullTaskBuilder_;
+
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask> getFullTaskList() {
+            if (fullTaskBuilder_ == null) {
+              return java.util.Collections.unmodifiableList(fullTask_);
+            } else {
+              return fullTaskBuilder_.getMessageList();
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public int getFullTaskCount() {
+            if (fullTaskBuilder_ == null) {
+              return fullTask_.size();
+            } else {
+              return fullTaskBuilder_.getCount();
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask getFullTask(int index) {
+            if (fullTaskBuilder_ == null) {
+              return fullTask_.get(index);
+            } else {
+              return fullTaskBuilder_.getMessage(index);
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public Builder setFullTask(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask value) {
+            if (fullTaskBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureFullTaskIsMutable();
+              fullTask_.set(index, value);
+              onChanged();
+            } else {
+              fullTaskBuilder_.setMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public Builder setFullTask(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.Builder builderForValue) {
+            if (fullTaskBuilder_ == null) {
+              ensureFullTaskIsMutable();
+              fullTask_.set(index, builderForValue.build());
+              onChanged();
+            } else {
+              fullTaskBuilder_.setMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public Builder addFullTask(nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask value) {
+            if (fullTaskBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureFullTaskIsMutable();
+              fullTask_.add(value);
+              onChanged();
+            } else {
+              fullTaskBuilder_.addMessage(value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public Builder addFullTask(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask value) {
+            if (fullTaskBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureFullTaskIsMutable();
+              fullTask_.add(index, value);
+              onChanged();
+            } else {
+              fullTaskBuilder_.addMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public Builder addFullTask(
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.Builder builderForValue) {
+            if (fullTaskBuilder_ == null) {
+              ensureFullTaskIsMutable();
+              fullTask_.add(builderForValue.build());
+              onChanged();
+            } else {
+              fullTaskBuilder_.addMessage(builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public Builder addFullTask(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.Builder builderForValue) {
+            if (fullTaskBuilder_ == null) {
+              ensureFullTaskIsMutable();
+              fullTask_.add(index, builderForValue.build());
+              onChanged();
+            } else {
+              fullTaskBuilder_.addMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public Builder addAllFullTask(
+              java.lang.Iterable<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask> values) {
+            if (fullTaskBuilder_ == null) {
+              ensureFullTaskIsMutable();
+              com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, fullTask_);
+              onChanged();
+            } else {
+              fullTaskBuilder_.addAllMessages(values);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public Builder clearFullTask() {
+            if (fullTaskBuilder_ == null) {
+              fullTask_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00000001);
+              onChanged();
+            } else {
+              fullTaskBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public Builder removeFullTask(int index) {
+            if (fullTaskBuilder_ == null) {
+              ensureFullTaskIsMutable();
+              fullTask_.remove(index);
+              onChanged();
+            } else {
+              fullTaskBuilder_.remove(index);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.Builder getFullTaskBuilder(
+              int index) {
+            return getFullTaskFieldBuilder().getBuilder(index);
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullTaskOrBuilder getFullTaskOrBuilder(
+              int index) {
+            if (fullTaskBuilder_ == null) {
+              return fullTask_.get(index);  } else {
+              return fullTaskBuilder_.getMessageOrBuilder(index);
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public java.util.List<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullTaskOrBuilder> 
+               getFullTaskOrBuilderList() {
+            if (fullTaskBuilder_ != null) {
+              return fullTaskBuilder_.getMessageOrBuilderList();
+            } else {
+              return java.util.Collections.unmodifiableList(fullTask_);
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.Builder addFullTaskBuilder() {
+            return getFullTaskFieldBuilder().addBuilder(
+                nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.Builder addFullTaskBuilder(
+              int index) {
+            return getFullTaskFieldBuilder().addBuilder(
+                index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .marketplace.DBFullTask full_task = 1;</code>
+           */
+          public java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.Builder> 
+               getFullTaskBuilderList() {
+            return getFullTaskFieldBuilder().getBuilderList();
+          }
+          private com.google.protobuf.RepeatedFieldBuilderV3<
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask, nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.Builder, nsu.oop.marketplace.inet.MarketplaceProto.DBFullTaskOrBuilder> 
+              getFullTaskFieldBuilder() {
+            if (fullTaskBuilder_ == null) {
+              fullTaskBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                  nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask, nsu.oop.marketplace.inet.MarketplaceProto.DBFullTask.Builder, nsu.oop.marketplace.inet.MarketplaceProto.DBFullTaskOrBuilder>(
+                      fullTask_,
+                      ((bitField0_ & 0x00000001) != 0),
+                      getParentForChildren(),
+                      isClean());
+              fullTask_ = null;
+            }
+            return fullTaskBuilder_;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:marketplace.Message.DBResponse.TaskTable)
+        }
+
+        // @@protoc_insertion_point(class_scope:marketplace.Message.DBResponse.TaskTable)
+        private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable();
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<TaskTable>
+            PARSER = new com.google.protobuf.AbstractParser<TaskTable>() {
+          @java.lang.Override
+          public TaskTable parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new TaskTable(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<TaskTable> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<TaskTable> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface SalesTableOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:marketplace.Message.DBResponse.SalesTable)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+         */
+        java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales> 
+            getFullSalesList();
+        /**
+         * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+         */
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales getFullSales(int index);
+        /**
+         * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+         */
+        int getFullSalesCount();
+        /**
+         * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+         */
+        java.util.List<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullSalesOrBuilder> 
+            getFullSalesOrBuilderList();
+        /**
+         * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+         */
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullSalesOrBuilder getFullSalesOrBuilder(
+            int index);
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.DBResponse.SalesTable}
+       */
+      public static final class SalesTable extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:marketplace.Message.DBResponse.SalesTable)
+          SalesTableOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use SalesTable.newBuilder() to construct.
+        private SalesTable(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private SalesTable() {
+          fullSales_ = java.util.Collections.emptyList();
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new SalesTable();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private SalesTable(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                    fullSales_ = new java.util.ArrayList<nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales>();
+                    mutable_bitField0_ |= 0x00000001;
+                  }
+                  fullSales_.add(
+                      input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.PARSER, extensionRegistry));
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            if (((mutable_bitField0_ & 0x00000001) != 0)) {
+              fullSales_ = java.util.Collections.unmodifiableList(fullSales_);
+            }
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_SalesTable_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_SalesTable_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.Builder.class);
+        }
+
+        public static final int FULL_SALES_FIELD_NUMBER = 1;
+        private java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales> fullSales_;
+        /**
+         * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+         */
+        @java.lang.Override
+        public java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales> getFullSalesList() {
+          return fullSales_;
+        }
+        /**
+         * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+         */
+        @java.lang.Override
+        public java.util.List<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullSalesOrBuilder> 
+            getFullSalesOrBuilderList() {
+          return fullSales_;
+        }
+        /**
+         * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+         */
+        @java.lang.Override
+        public int getFullSalesCount() {
+          return fullSales_.size();
+        }
+        /**
+         * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales getFullSales(int index) {
+          return fullSales_.get(index);
+        }
+        /**
+         * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.DBFullSalesOrBuilder getFullSalesOrBuilder(
+            int index) {
+          return fullSales_.get(index);
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          for (int i = 0; i < getFullSalesCount(); i++) {
+            if (!getFullSales(i).isInitialized()) {
+              memoizedIsInitialized = 0;
+              return false;
+            }
+          }
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          for (int i = 0; i < fullSales_.size(); i++) {
+            output.writeMessage(1, fullSales_.get(i));
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          for (int i = 0; i < fullSales_.size(); i++) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(1, fullSales_.get(i));
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable)) {
+            return super.equals(obj);
+          }
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable) obj;
+
+          if (!getFullSalesList()
+              .equals(other.getFullSalesList())) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (getFullSalesCount() > 0) {
+            hash = (37 * hash) + FULL_SALES_FIELD_NUMBER;
+            hash = (53 * hash) + getFullSalesList().hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code marketplace.Message.DBResponse.SalesTable}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:marketplace.Message.DBResponse.SalesTable)
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTableOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_SalesTable_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_SalesTable_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.Builder.class);
+          }
+
+          // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+              getFullSalesFieldBuilder();
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            if (fullSalesBuilder_ == null) {
+              fullSales_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              fullSalesBuilder_.clear();
+            }
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_SalesTable_descriptor;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable getDefaultInstanceForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable build() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable buildPartial() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable(this);
+            int from_bitField0_ = bitField0_;
+            if (fullSalesBuilder_ == null) {
+              if (((bitField0_ & 0x00000001) != 0)) {
+                fullSales_ = java.util.Collections.unmodifiableList(fullSales_);
+                bitField0_ = (bitField0_ & ~0x00000001);
+              }
+              result.fullSales_ = fullSales_;
+            } else {
+              result.fullSales_ = fullSalesBuilder_.build();
+            }
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable) {
+              return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable other) {
+            if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.getDefaultInstance()) return this;
+            if (fullSalesBuilder_ == null) {
+              if (!other.fullSales_.isEmpty()) {
+                if (fullSales_.isEmpty()) {
+                  fullSales_ = other.fullSales_;
+                  bitField0_ = (bitField0_ & ~0x00000001);
+                } else {
+                  ensureFullSalesIsMutable();
+                  fullSales_.addAll(other.fullSales_);
+                }
+                onChanged();
+              }
+            } else {
+              if (!other.fullSales_.isEmpty()) {
+                if (fullSalesBuilder_.isEmpty()) {
+                  fullSalesBuilder_.dispose();
+                  fullSalesBuilder_ = null;
+                  fullSales_ = other.fullSales_;
+                  bitField0_ = (bitField0_ & ~0x00000001);
+                  fullSalesBuilder_ = 
+                    com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                       getFullSalesFieldBuilder() : null;
+                } else {
+                  fullSalesBuilder_.addAllMessages(other.fullSales_);
+                }
+              }
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            for (int i = 0; i < getFullSalesCount(); i++) {
+              if (!getFullSales(i).isInitialized()) {
+                return false;
+              }
+            }
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales> fullSales_ =
+            java.util.Collections.emptyList();
+          private void ensureFullSalesIsMutable() {
+            if (!((bitField0_ & 0x00000001) != 0)) {
+              fullSales_ = new java.util.ArrayList<nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales>(fullSales_);
+              bitField0_ |= 0x00000001;
+             }
+          }
+
+          private com.google.protobuf.RepeatedFieldBuilderV3<
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales, nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.Builder, nsu.oop.marketplace.inet.MarketplaceProto.DBFullSalesOrBuilder> fullSalesBuilder_;
+
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales> getFullSalesList() {
+            if (fullSalesBuilder_ == null) {
+              return java.util.Collections.unmodifiableList(fullSales_);
+            } else {
+              return fullSalesBuilder_.getMessageList();
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public int getFullSalesCount() {
+            if (fullSalesBuilder_ == null) {
+              return fullSales_.size();
+            } else {
+              return fullSalesBuilder_.getCount();
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales getFullSales(int index) {
+            if (fullSalesBuilder_ == null) {
+              return fullSales_.get(index);
+            } else {
+              return fullSalesBuilder_.getMessage(index);
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public Builder setFullSales(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales value) {
+            if (fullSalesBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureFullSalesIsMutable();
+              fullSales_.set(index, value);
+              onChanged();
+            } else {
+              fullSalesBuilder_.setMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public Builder setFullSales(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.Builder builderForValue) {
+            if (fullSalesBuilder_ == null) {
+              ensureFullSalesIsMutable();
+              fullSales_.set(index, builderForValue.build());
+              onChanged();
+            } else {
+              fullSalesBuilder_.setMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public Builder addFullSales(nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales value) {
+            if (fullSalesBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureFullSalesIsMutable();
+              fullSales_.add(value);
+              onChanged();
+            } else {
+              fullSalesBuilder_.addMessage(value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public Builder addFullSales(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales value) {
+            if (fullSalesBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureFullSalesIsMutable();
+              fullSales_.add(index, value);
+              onChanged();
+            } else {
+              fullSalesBuilder_.addMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public Builder addFullSales(
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.Builder builderForValue) {
+            if (fullSalesBuilder_ == null) {
+              ensureFullSalesIsMutable();
+              fullSales_.add(builderForValue.build());
+              onChanged();
+            } else {
+              fullSalesBuilder_.addMessage(builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public Builder addFullSales(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.Builder builderForValue) {
+            if (fullSalesBuilder_ == null) {
+              ensureFullSalesIsMutable();
+              fullSales_.add(index, builderForValue.build());
+              onChanged();
+            } else {
+              fullSalesBuilder_.addMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public Builder addAllFullSales(
+              java.lang.Iterable<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales> values) {
+            if (fullSalesBuilder_ == null) {
+              ensureFullSalesIsMutable();
+              com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, fullSales_);
+              onChanged();
+            } else {
+              fullSalesBuilder_.addAllMessages(values);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public Builder clearFullSales() {
+            if (fullSalesBuilder_ == null) {
+              fullSales_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00000001);
+              onChanged();
+            } else {
+              fullSalesBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public Builder removeFullSales(int index) {
+            if (fullSalesBuilder_ == null) {
+              ensureFullSalesIsMutable();
+              fullSales_.remove(index);
+              onChanged();
+            } else {
+              fullSalesBuilder_.remove(index);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.Builder getFullSalesBuilder(
+              int index) {
+            return getFullSalesFieldBuilder().getBuilder(index);
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullSalesOrBuilder getFullSalesOrBuilder(
+              int index) {
+            if (fullSalesBuilder_ == null) {
+              return fullSales_.get(index);  } else {
+              return fullSalesBuilder_.getMessageOrBuilder(index);
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public java.util.List<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullSalesOrBuilder> 
+               getFullSalesOrBuilderList() {
+            if (fullSalesBuilder_ != null) {
+              return fullSalesBuilder_.getMessageOrBuilderList();
+            } else {
+              return java.util.Collections.unmodifiableList(fullSales_);
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.Builder addFullSalesBuilder() {
+            return getFullSalesFieldBuilder().addBuilder(
+                nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.Builder addFullSalesBuilder(
+              int index) {
+            return getFullSalesFieldBuilder().addBuilder(
+                index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .marketplace.DBFullSales full_sales = 1;</code>
+           */
+          public java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.Builder> 
+               getFullSalesBuilderList() {
+            return getFullSalesFieldBuilder().getBuilderList();
+          }
+          private com.google.protobuf.RepeatedFieldBuilderV3<
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales, nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.Builder, nsu.oop.marketplace.inet.MarketplaceProto.DBFullSalesOrBuilder> 
+              getFullSalesFieldBuilder() {
+            if (fullSalesBuilder_ == null) {
+              fullSalesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                  nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales, nsu.oop.marketplace.inet.MarketplaceProto.DBFullSales.Builder, nsu.oop.marketplace.inet.MarketplaceProto.DBFullSalesOrBuilder>(
+                      fullSales_,
+                      ((bitField0_ & 0x00000001) != 0),
+                      getParentForChildren(),
+                      isClean());
+              fullSales_ = null;
+            }
+            return fullSalesBuilder_;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:marketplace.Message.DBResponse.SalesTable)
+        }
+
+        // @@protoc_insertion_point(class_scope:marketplace.Message.DBResponse.SalesTable)
+        private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable();
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<SalesTable>
+            PARSER = new com.google.protobuf.AbstractParser<SalesTable>() {
+          @java.lang.Override
+          public SalesTable parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new SalesTable(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<SalesTable> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<SalesTable> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface ChangeTableOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:marketplace.Message.DBResponse.ChangeTable)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+         */
+        java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges> 
+            getFullChangeList();
+        /**
+         * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+         */
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges getFullChange(int index);
+        /**
+         * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+         */
+        int getFullChangeCount();
+        /**
+         * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+         */
+        java.util.List<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullChangesOrBuilder> 
+            getFullChangeOrBuilderList();
+        /**
+         * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+         */
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullChangesOrBuilder getFullChangeOrBuilder(
+            int index);
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.DBResponse.ChangeTable}
+       */
+      public static final class ChangeTable extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:marketplace.Message.DBResponse.ChangeTable)
+          ChangeTableOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use ChangeTable.newBuilder() to construct.
+        private ChangeTable(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private ChangeTable() {
+          fullChange_ = java.util.Collections.emptyList();
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new ChangeTable();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private ChangeTable(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                    fullChange_ = new java.util.ArrayList<nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges>();
+                    mutable_bitField0_ |= 0x00000001;
+                  }
+                  fullChange_.add(
+                      input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.PARSER, extensionRegistry));
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            if (((mutable_bitField0_ & 0x00000001) != 0)) {
+              fullChange_ = java.util.Collections.unmodifiableList(fullChange_);
+            }
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_ChangeTable_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_ChangeTable_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.Builder.class);
+        }
+
+        public static final int FULL_CHANGE_FIELD_NUMBER = 1;
+        private java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges> fullChange_;
+        /**
+         * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+         */
+        @java.lang.Override
+        public java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges> getFullChangeList() {
+          return fullChange_;
+        }
+        /**
+         * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+         */
+        @java.lang.Override
+        public java.util.List<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullChangesOrBuilder> 
+            getFullChangeOrBuilderList() {
+          return fullChange_;
+        }
+        /**
+         * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+         */
+        @java.lang.Override
+        public int getFullChangeCount() {
+          return fullChange_.size();
+        }
+        /**
+         * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges getFullChange(int index) {
+          return fullChange_.get(index);
+        }
+        /**
+         * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.DBFullChangesOrBuilder getFullChangeOrBuilder(
+            int index) {
+          return fullChange_.get(index);
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          for (int i = 0; i < getFullChangeCount(); i++) {
+            if (!getFullChange(i).isInitialized()) {
+              memoizedIsInitialized = 0;
+              return false;
+            }
+          }
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          for (int i = 0; i < fullChange_.size(); i++) {
+            output.writeMessage(1, fullChange_.get(i));
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          for (int i = 0; i < fullChange_.size(); i++) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(1, fullChange_.get(i));
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable)) {
+            return super.equals(obj);
+          }
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable) obj;
+
+          if (!getFullChangeList()
+              .equals(other.getFullChangeList())) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (getFullChangeCount() > 0) {
+            hash = (37 * hash) + FULL_CHANGE_FIELD_NUMBER;
+            hash = (53 * hash) + getFullChangeList().hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code marketplace.Message.DBResponse.ChangeTable}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:marketplace.Message.DBResponse.ChangeTable)
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTableOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_ChangeTable_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_ChangeTable_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.Builder.class);
+          }
+
+          // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+              getFullChangeFieldBuilder();
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            if (fullChangeBuilder_ == null) {
+              fullChange_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              fullChangeBuilder_.clear();
+            }
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_ChangeTable_descriptor;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable getDefaultInstanceForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable build() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable buildPartial() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable(this);
+            int from_bitField0_ = bitField0_;
+            if (fullChangeBuilder_ == null) {
+              if (((bitField0_ & 0x00000001) != 0)) {
+                fullChange_ = java.util.Collections.unmodifiableList(fullChange_);
+                bitField0_ = (bitField0_ & ~0x00000001);
+              }
+              result.fullChange_ = fullChange_;
+            } else {
+              result.fullChange_ = fullChangeBuilder_.build();
+            }
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable) {
+              return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable other) {
+            if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.getDefaultInstance()) return this;
+            if (fullChangeBuilder_ == null) {
+              if (!other.fullChange_.isEmpty()) {
+                if (fullChange_.isEmpty()) {
+                  fullChange_ = other.fullChange_;
+                  bitField0_ = (bitField0_ & ~0x00000001);
+                } else {
+                  ensureFullChangeIsMutable();
+                  fullChange_.addAll(other.fullChange_);
+                }
+                onChanged();
+              }
+            } else {
+              if (!other.fullChange_.isEmpty()) {
+                if (fullChangeBuilder_.isEmpty()) {
+                  fullChangeBuilder_.dispose();
+                  fullChangeBuilder_ = null;
+                  fullChange_ = other.fullChange_;
+                  bitField0_ = (bitField0_ & ~0x00000001);
+                  fullChangeBuilder_ = 
+                    com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                       getFullChangeFieldBuilder() : null;
+                } else {
+                  fullChangeBuilder_.addAllMessages(other.fullChange_);
+                }
+              }
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            for (int i = 0; i < getFullChangeCount(); i++) {
+              if (!getFullChange(i).isInitialized()) {
+                return false;
+              }
+            }
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges> fullChange_ =
+            java.util.Collections.emptyList();
+          private void ensureFullChangeIsMutable() {
+            if (!((bitField0_ & 0x00000001) != 0)) {
+              fullChange_ = new java.util.ArrayList<nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges>(fullChange_);
+              bitField0_ |= 0x00000001;
+             }
+          }
+
+          private com.google.protobuf.RepeatedFieldBuilderV3<
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges, nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.Builder, nsu.oop.marketplace.inet.MarketplaceProto.DBFullChangesOrBuilder> fullChangeBuilder_;
+
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges> getFullChangeList() {
+            if (fullChangeBuilder_ == null) {
+              return java.util.Collections.unmodifiableList(fullChange_);
+            } else {
+              return fullChangeBuilder_.getMessageList();
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public int getFullChangeCount() {
+            if (fullChangeBuilder_ == null) {
+              return fullChange_.size();
+            } else {
+              return fullChangeBuilder_.getCount();
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges getFullChange(int index) {
+            if (fullChangeBuilder_ == null) {
+              return fullChange_.get(index);
+            } else {
+              return fullChangeBuilder_.getMessage(index);
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public Builder setFullChange(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges value) {
+            if (fullChangeBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureFullChangeIsMutable();
+              fullChange_.set(index, value);
+              onChanged();
+            } else {
+              fullChangeBuilder_.setMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public Builder setFullChange(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.Builder builderForValue) {
+            if (fullChangeBuilder_ == null) {
+              ensureFullChangeIsMutable();
+              fullChange_.set(index, builderForValue.build());
+              onChanged();
+            } else {
+              fullChangeBuilder_.setMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public Builder addFullChange(nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges value) {
+            if (fullChangeBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureFullChangeIsMutable();
+              fullChange_.add(value);
+              onChanged();
+            } else {
+              fullChangeBuilder_.addMessage(value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public Builder addFullChange(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges value) {
+            if (fullChangeBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureFullChangeIsMutable();
+              fullChange_.add(index, value);
+              onChanged();
+            } else {
+              fullChangeBuilder_.addMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public Builder addFullChange(
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.Builder builderForValue) {
+            if (fullChangeBuilder_ == null) {
+              ensureFullChangeIsMutable();
+              fullChange_.add(builderForValue.build());
+              onChanged();
+            } else {
+              fullChangeBuilder_.addMessage(builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public Builder addFullChange(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.Builder builderForValue) {
+            if (fullChangeBuilder_ == null) {
+              ensureFullChangeIsMutable();
+              fullChange_.add(index, builderForValue.build());
+              onChanged();
+            } else {
+              fullChangeBuilder_.addMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public Builder addAllFullChange(
+              java.lang.Iterable<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges> values) {
+            if (fullChangeBuilder_ == null) {
+              ensureFullChangeIsMutable();
+              com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, fullChange_);
+              onChanged();
+            } else {
+              fullChangeBuilder_.addAllMessages(values);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public Builder clearFullChange() {
+            if (fullChangeBuilder_ == null) {
+              fullChange_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00000001);
+              onChanged();
+            } else {
+              fullChangeBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public Builder removeFullChange(int index) {
+            if (fullChangeBuilder_ == null) {
+              ensureFullChangeIsMutable();
+              fullChange_.remove(index);
+              onChanged();
+            } else {
+              fullChangeBuilder_.remove(index);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.Builder getFullChangeBuilder(
+              int index) {
+            return getFullChangeFieldBuilder().getBuilder(index);
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullChangesOrBuilder getFullChangeOrBuilder(
+              int index) {
+            if (fullChangeBuilder_ == null) {
+              return fullChange_.get(index);  } else {
+              return fullChangeBuilder_.getMessageOrBuilder(index);
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public java.util.List<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullChangesOrBuilder> 
+               getFullChangeOrBuilderList() {
+            if (fullChangeBuilder_ != null) {
+              return fullChangeBuilder_.getMessageOrBuilderList();
+            } else {
+              return java.util.Collections.unmodifiableList(fullChange_);
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.Builder addFullChangeBuilder() {
+            return getFullChangeFieldBuilder().addBuilder(
+                nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.Builder addFullChangeBuilder(
+              int index) {
+            return getFullChangeFieldBuilder().addBuilder(
+                index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .marketplace.DBFullChanges full_change = 1;</code>
+           */
+          public java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.Builder> 
+               getFullChangeBuilderList() {
+            return getFullChangeFieldBuilder().getBuilderList();
+          }
+          private com.google.protobuf.RepeatedFieldBuilderV3<
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges, nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.Builder, nsu.oop.marketplace.inet.MarketplaceProto.DBFullChangesOrBuilder> 
+              getFullChangeFieldBuilder() {
+            if (fullChangeBuilder_ == null) {
+              fullChangeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                  nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges, nsu.oop.marketplace.inet.MarketplaceProto.DBFullChanges.Builder, nsu.oop.marketplace.inet.MarketplaceProto.DBFullChangesOrBuilder>(
+                      fullChange_,
+                      ((bitField0_ & 0x00000001) != 0),
+                      getParentForChildren(),
+                      isClean());
+              fullChange_ = null;
+            }
+            return fullChangeBuilder_;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:marketplace.Message.DBResponse.ChangeTable)
+        }
+
+        // @@protoc_insertion_point(class_scope:marketplace.Message.DBResponse.ChangeTable)
+        private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable();
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<ChangeTable>
+            PARSER = new com.google.protobuf.AbstractParser<ChangeTable>() {
+          @java.lang.Override
+          public ChangeTable parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new ChangeTable(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<ChangeTable> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<ChangeTable> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      public interface LogTableOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:marketplace.Message.DBResponse.LogTable)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+         */
+        java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog> 
+            getFullLogList();
+        /**
+         * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+         */
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog getFullLog(int index);
+        /**
+         * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+         */
+        int getFullLogCount();
+        /**
+         * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+         */
+        java.util.List<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullLogOrBuilder> 
+            getFullLogOrBuilderList();
+        /**
+         * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+         */
+        nsu.oop.marketplace.inet.MarketplaceProto.DBFullLogOrBuilder getFullLogOrBuilder(
+            int index);
+      }
+      /**
+       * Protobuf type {@code marketplace.Message.DBResponse.LogTable}
+       */
+      public static final class LogTable extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:marketplace.Message.DBResponse.LogTable)
+          LogTableOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use LogTable.newBuilder() to construct.
+        private LogTable(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private LogTable() {
+          fullLog_ = java.util.Collections.emptyList();
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new LogTable();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private LogTable(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                    fullLog_ = new java.util.ArrayList<nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog>();
+                    mutable_bitField0_ |= 0x00000001;
+                  }
+                  fullLog_.add(
+                      input.readMessage(nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.PARSER, extensionRegistry));
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            if (((mutable_bitField0_ & 0x00000001) != 0)) {
+              fullLog_ = java.util.Collections.unmodifiableList(fullLog_);
+            }
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_LogTable_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_LogTable_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.Builder.class);
+        }
+
+        public static final int FULL_LOG_FIELD_NUMBER = 1;
+        private java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog> fullLog_;
+        /**
+         * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+         */
+        @java.lang.Override
+        public java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog> getFullLogList() {
+          return fullLog_;
+        }
+        /**
+         * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+         */
+        @java.lang.Override
+        public java.util.List<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullLogOrBuilder> 
+            getFullLogOrBuilderList() {
+          return fullLog_;
+        }
+        /**
+         * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+         */
+        @java.lang.Override
+        public int getFullLogCount() {
+          return fullLog_.size();
+        }
+        /**
+         * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog getFullLog(int index) {
+          return fullLog_.get(index);
+        }
+        /**
+         * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.DBFullLogOrBuilder getFullLogOrBuilder(
+            int index) {
+          return fullLog_.get(index);
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          for (int i = 0; i < getFullLogCount(); i++) {
+            if (!getFullLog(i).isInitialized()) {
+              memoizedIsInitialized = 0;
+              return false;
+            }
+          }
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          for (int i = 0; i < fullLog_.size(); i++) {
+            output.writeMessage(1, fullLog_.get(i));
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          for (int i = 0; i < fullLog_.size(); i++) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(1, fullLog_.get(i));
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable)) {
+            return super.equals(obj);
+          }
+          nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable other = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable) obj;
+
+          if (!getFullLogList()
+              .equals(other.getFullLogList())) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          if (getFullLogCount() > 0) {
+            hash = (37 * hash) + FULL_LOG_FIELD_NUMBER;
+            hash = (53 * hash) + getFullLogList().hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code marketplace.Message.DBResponse.LogTable}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:marketplace.Message.DBResponse.LogTable)
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTableOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_LogTable_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_LogTable_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.class, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.Builder.class);
+          }
+
+          // Construct using nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+              getFullLogFieldBuilder();
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            if (fullLogBuilder_ == null) {
+              fullLog_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              fullLogBuilder_.clear();
+            }
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.internal_static_marketplace_Message_DBResponse_LogTable_descriptor;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable getDefaultInstanceForType() {
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable build() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable buildPartial() {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable result = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable(this);
+            int from_bitField0_ = bitField0_;
+            if (fullLogBuilder_ == null) {
+              if (((bitField0_ & 0x00000001) != 0)) {
+                fullLog_ = java.util.Collections.unmodifiableList(fullLog_);
+                bitField0_ = (bitField0_ & ~0x00000001);
+              }
+              result.fullLog_ = fullLog_;
+            } else {
+              result.fullLog_ = fullLogBuilder_.build();
+            }
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable) {
+              return mergeFrom((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable other) {
+            if (other == nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.getDefaultInstance()) return this;
+            if (fullLogBuilder_ == null) {
+              if (!other.fullLog_.isEmpty()) {
+                if (fullLog_.isEmpty()) {
+                  fullLog_ = other.fullLog_;
+                  bitField0_ = (bitField0_ & ~0x00000001);
+                } else {
+                  ensureFullLogIsMutable();
+                  fullLog_.addAll(other.fullLog_);
+                }
+                onChanged();
+              }
+            } else {
+              if (!other.fullLog_.isEmpty()) {
+                if (fullLogBuilder_.isEmpty()) {
+                  fullLogBuilder_.dispose();
+                  fullLogBuilder_ = null;
+                  fullLog_ = other.fullLog_;
+                  bitField0_ = (bitField0_ & ~0x00000001);
+                  fullLogBuilder_ = 
+                    com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                       getFullLogFieldBuilder() : null;
+                } else {
+                  fullLogBuilder_.addAllMessages(other.fullLog_);
+                }
+              }
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            for (int i = 0; i < getFullLogCount(); i++) {
+              if (!getFullLog(i).isInitialized()) {
+                return false;
+              }
+            }
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog> fullLog_ =
+            java.util.Collections.emptyList();
+          private void ensureFullLogIsMutable() {
+            if (!((bitField0_ & 0x00000001) != 0)) {
+              fullLog_ = new java.util.ArrayList<nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog>(fullLog_);
+              bitField0_ |= 0x00000001;
+             }
+          }
+
+          private com.google.protobuf.RepeatedFieldBuilderV3<
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog, nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.Builder, nsu.oop.marketplace.inet.MarketplaceProto.DBFullLogOrBuilder> fullLogBuilder_;
+
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog> getFullLogList() {
+            if (fullLogBuilder_ == null) {
+              return java.util.Collections.unmodifiableList(fullLog_);
+            } else {
+              return fullLogBuilder_.getMessageList();
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public int getFullLogCount() {
+            if (fullLogBuilder_ == null) {
+              return fullLog_.size();
+            } else {
+              return fullLogBuilder_.getCount();
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog getFullLog(int index) {
+            if (fullLogBuilder_ == null) {
+              return fullLog_.get(index);
+            } else {
+              return fullLogBuilder_.getMessage(index);
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public Builder setFullLog(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog value) {
+            if (fullLogBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureFullLogIsMutable();
+              fullLog_.set(index, value);
+              onChanged();
+            } else {
+              fullLogBuilder_.setMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public Builder setFullLog(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.Builder builderForValue) {
+            if (fullLogBuilder_ == null) {
+              ensureFullLogIsMutable();
+              fullLog_.set(index, builderForValue.build());
+              onChanged();
+            } else {
+              fullLogBuilder_.setMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public Builder addFullLog(nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog value) {
+            if (fullLogBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureFullLogIsMutable();
+              fullLog_.add(value);
+              onChanged();
+            } else {
+              fullLogBuilder_.addMessage(value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public Builder addFullLog(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog value) {
+            if (fullLogBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureFullLogIsMutable();
+              fullLog_.add(index, value);
+              onChanged();
+            } else {
+              fullLogBuilder_.addMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public Builder addFullLog(
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.Builder builderForValue) {
+            if (fullLogBuilder_ == null) {
+              ensureFullLogIsMutable();
+              fullLog_.add(builderForValue.build());
+              onChanged();
+            } else {
+              fullLogBuilder_.addMessage(builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public Builder addFullLog(
+              int index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.Builder builderForValue) {
+            if (fullLogBuilder_ == null) {
+              ensureFullLogIsMutable();
+              fullLog_.add(index, builderForValue.build());
+              onChanged();
+            } else {
+              fullLogBuilder_.addMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public Builder addAllFullLog(
+              java.lang.Iterable<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog> values) {
+            if (fullLogBuilder_ == null) {
+              ensureFullLogIsMutable();
+              com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, fullLog_);
+              onChanged();
+            } else {
+              fullLogBuilder_.addAllMessages(values);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public Builder clearFullLog() {
+            if (fullLogBuilder_ == null) {
+              fullLog_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00000001);
+              onChanged();
+            } else {
+              fullLogBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public Builder removeFullLog(int index) {
+            if (fullLogBuilder_ == null) {
+              ensureFullLogIsMutable();
+              fullLog_.remove(index);
+              onChanged();
+            } else {
+              fullLogBuilder_.remove(index);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.Builder getFullLogBuilder(
+              int index) {
+            return getFullLogFieldBuilder().getBuilder(index);
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullLogOrBuilder getFullLogOrBuilder(
+              int index) {
+            if (fullLogBuilder_ == null) {
+              return fullLog_.get(index);  } else {
+              return fullLogBuilder_.getMessageOrBuilder(index);
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public java.util.List<? extends nsu.oop.marketplace.inet.MarketplaceProto.DBFullLogOrBuilder> 
+               getFullLogOrBuilderList() {
+            if (fullLogBuilder_ != null) {
+              return fullLogBuilder_.getMessageOrBuilderList();
+            } else {
+              return java.util.Collections.unmodifiableList(fullLog_);
+            }
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.Builder addFullLogBuilder() {
+            return getFullLogFieldBuilder().addBuilder(
+                nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.Builder addFullLogBuilder(
+              int index) {
+            return getFullLogFieldBuilder().addBuilder(
+                index, nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .marketplace.DBFullLog full_log = 1;</code>
+           */
+          public java.util.List<nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.Builder> 
+               getFullLogBuilderList() {
+            return getFullLogFieldBuilder().getBuilderList();
+          }
+          private com.google.protobuf.RepeatedFieldBuilderV3<
+              nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog, nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.Builder, nsu.oop.marketplace.inet.MarketplaceProto.DBFullLogOrBuilder> 
+              getFullLogFieldBuilder() {
+            if (fullLogBuilder_ == null) {
+              fullLogBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                  nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog, nsu.oop.marketplace.inet.MarketplaceProto.DBFullLog.Builder, nsu.oop.marketplace.inet.MarketplaceProto.DBFullLogOrBuilder>(
+                      fullLog_,
+                      ((bitField0_ & 0x00000001) != 0),
+                      getParentForChildren(),
+                      isClean());
+              fullLog_ = null;
+            }
+            return fullLogBuilder_;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:marketplace.Message.DBResponse.LogTable)
+        }
+
+        // @@protoc_insertion_point(class_scope:marketplace.Message.DBResponse.LogTable)
+        private static final nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable();
+        }
+
+        public static nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        @java.lang.Deprecated public static final com.google.protobuf.Parser<LogTable>
+            PARSER = new com.google.protobuf.AbstractParser<LogTable>() {
+          @java.lang.Override
+          public LogTable parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new LogTable(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<LogTable> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<LogTable> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
       private int bitField0_;
       private int typeCase_ = 0;
       private java.lang.Object type_;
@@ -11147,6 +21762,10 @@ public final class MarketplaceProto {
           implements com.google.protobuf.Internal.EnumLite,
               com.google.protobuf.AbstractMessage.InternalOneOfEnum {
         PRODUCT_TABLE(1),
+        TASK_TABLE(2),
+        SALE_TABLE(3),
+        CHANGE_TABLE(4),
+        LOG_TABLE(5),
         TYPE_NOT_SET(0);
         private final int value;
         private TypeCase(int value) {
@@ -11165,6 +21784,10 @@ public final class MarketplaceProto {
         public static TypeCase forNumber(int value) {
           switch (value) {
             case 1: return PRODUCT_TABLE;
+            case 2: return TASK_TABLE;
+            case 3: return SALE_TABLE;
+            case 4: return CHANGE_TABLE;
+            case 5: return LOG_TABLE;
             case 0: return TYPE_NOT_SET;
             default: return null;
           }
@@ -11211,6 +21834,130 @@ public final class MarketplaceProto {
         return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ProductTable.getDefaultInstance();
       }
 
+      public static final int TASK_TABLE_FIELD_NUMBER = 2;
+      /**
+       * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+       * @return Whether the taskTable field is set.
+       */
+      @java.lang.Override
+      public boolean hasTaskTable() {
+        return typeCase_ == 2;
+      }
+      /**
+       * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+       * @return The taskTable.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable getTaskTable() {
+        if (typeCase_ == 2) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.getDefaultInstance();
+      }
+      /**
+       * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTableOrBuilder getTaskTableOrBuilder() {
+        if (typeCase_ == 2) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.getDefaultInstance();
+      }
+
+      public static final int SALE_TABLE_FIELD_NUMBER = 3;
+      /**
+       * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+       * @return Whether the saleTable field is set.
+       */
+      @java.lang.Override
+      public boolean hasSaleTable() {
+        return typeCase_ == 3;
+      }
+      /**
+       * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+       * @return The saleTable.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable getSaleTable() {
+        if (typeCase_ == 3) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.getDefaultInstance();
+      }
+      /**
+       * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTableOrBuilder getSaleTableOrBuilder() {
+        if (typeCase_ == 3) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.getDefaultInstance();
+      }
+
+      public static final int CHANGE_TABLE_FIELD_NUMBER = 4;
+      /**
+       * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+       * @return Whether the changeTable field is set.
+       */
+      @java.lang.Override
+      public boolean hasChangeTable() {
+        return typeCase_ == 4;
+      }
+      /**
+       * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+       * @return The changeTable.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable getChangeTable() {
+        if (typeCase_ == 4) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.getDefaultInstance();
+      }
+      /**
+       * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTableOrBuilder getChangeTableOrBuilder() {
+        if (typeCase_ == 4) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.getDefaultInstance();
+      }
+
+      public static final int LOG_TABLE_FIELD_NUMBER = 5;
+      /**
+       * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+       * @return Whether the logTable field is set.
+       */
+      @java.lang.Override
+      public boolean hasLogTable() {
+        return typeCase_ == 5;
+      }
+      /**
+       * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+       * @return The logTable.
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable getLogTable() {
+        if (typeCase_ == 5) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.getDefaultInstance();
+      }
+      /**
+       * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+       */
+      @java.lang.Override
+      public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTableOrBuilder getLogTableOrBuilder() {
+        if (typeCase_ == 5) {
+           return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable) type_;
+        }
+        return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -11220,6 +21967,30 @@ public final class MarketplaceProto {
 
         if (hasProductTable()) {
           if (!getProductTable().isInitialized()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+        }
+        if (hasTaskTable()) {
+          if (!getTaskTable().isInitialized()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+        }
+        if (hasSaleTable()) {
+          if (!getSaleTable().isInitialized()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+        }
+        if (hasChangeTable()) {
+          if (!getChangeTable().isInitialized()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+        }
+        if (hasLogTable()) {
+          if (!getLogTable().isInitialized()) {
             memoizedIsInitialized = 0;
             return false;
           }
@@ -11234,6 +22005,18 @@ public final class MarketplaceProto {
         if (typeCase_ == 1) {
           output.writeMessage(1, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ProductTable) type_);
         }
+        if (typeCase_ == 2) {
+          output.writeMessage(2, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable) type_);
+        }
+        if (typeCase_ == 3) {
+          output.writeMessage(3, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable) type_);
+        }
+        if (typeCase_ == 4) {
+          output.writeMessage(4, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable) type_);
+        }
+        if (typeCase_ == 5) {
+          output.writeMessage(5, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable) type_);
+        }
         unknownFields.writeTo(output);
       }
 
@@ -11246,6 +22029,22 @@ public final class MarketplaceProto {
         if (typeCase_ == 1) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ProductTable) type_);
+        }
+        if (typeCase_ == 2) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable) type_);
+        }
+        if (typeCase_ == 3) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable) type_);
+        }
+        if (typeCase_ == 4) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable) type_);
+        }
+        if (typeCase_ == 5) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable) type_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -11268,6 +22067,22 @@ public final class MarketplaceProto {
             if (!getProductTable()
                 .equals(other.getProductTable())) return false;
             break;
+          case 2:
+            if (!getTaskTable()
+                .equals(other.getTaskTable())) return false;
+            break;
+          case 3:
+            if (!getSaleTable()
+                .equals(other.getSaleTable())) return false;
+            break;
+          case 4:
+            if (!getChangeTable()
+                .equals(other.getChangeTable())) return false;
+            break;
+          case 5:
+            if (!getLogTable()
+                .equals(other.getLogTable())) return false;
+            break;
           case 0:
           default:
         }
@@ -11286,6 +22101,22 @@ public final class MarketplaceProto {
           case 1:
             hash = (37 * hash) + PRODUCT_TABLE_FIELD_NUMBER;
             hash = (53 * hash) + getProductTable().hashCode();
+            break;
+          case 2:
+            hash = (37 * hash) + TASK_TABLE_FIELD_NUMBER;
+            hash = (53 * hash) + getTaskTable().hashCode();
+            break;
+          case 3:
+            hash = (37 * hash) + SALE_TABLE_FIELD_NUMBER;
+            hash = (53 * hash) + getSaleTable().hashCode();
+            break;
+          case 4:
+            hash = (37 * hash) + CHANGE_TABLE_FIELD_NUMBER;
+            hash = (53 * hash) + getChangeTable().hashCode();
+            break;
+          case 5:
+            hash = (37 * hash) + LOG_TABLE_FIELD_NUMBER;
+            hash = (53 * hash) + getLogTable().hashCode();
             break;
           case 0:
           default:
@@ -11460,6 +22291,34 @@ public final class MarketplaceProto {
               result.type_ = productTableBuilder_.build();
             }
           }
+          if (typeCase_ == 2) {
+            if (taskTableBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = taskTableBuilder_.build();
+            }
+          }
+          if (typeCase_ == 3) {
+            if (saleTableBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = saleTableBuilder_.build();
+            }
+          }
+          if (typeCase_ == 4) {
+            if (changeTableBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = changeTableBuilder_.build();
+            }
+          }
+          if (typeCase_ == 5) {
+            if (logTableBuilder_ == null) {
+              result.type_ = type_;
+            } else {
+              result.type_ = logTableBuilder_.build();
+            }
+          }
           result.bitField0_ = to_bitField0_;
           result.typeCase_ = typeCase_;
           onBuilt();
@@ -11515,6 +22374,22 @@ public final class MarketplaceProto {
               mergeProductTable(other.getProductTable());
               break;
             }
+            case TASK_TABLE: {
+              mergeTaskTable(other.getTaskTable());
+              break;
+            }
+            case SALE_TABLE: {
+              mergeSaleTable(other.getSaleTable());
+              break;
+            }
+            case CHANGE_TABLE: {
+              mergeChangeTable(other.getChangeTable());
+              break;
+            }
+            case LOG_TABLE: {
+              mergeLogTable(other.getLogTable());
+              break;
+            }
             case TYPE_NOT_SET: {
               break;
             }
@@ -11528,6 +22403,26 @@ public final class MarketplaceProto {
         public final boolean isInitialized() {
           if (hasProductTable()) {
             if (!getProductTable().isInitialized()) {
+              return false;
+            }
+          }
+          if (hasTaskTable()) {
+            if (!getTaskTable().isInitialized()) {
+              return false;
+            }
+          }
+          if (hasSaleTable()) {
+            if (!getSaleTable().isInitialized()) {
+              return false;
+            }
+          }
+          if (hasChangeTable()) {
+            if (!getChangeTable().isInitialized()) {
+              return false;
+            }
+          }
+          if (hasLogTable()) {
+            if (!getLogTable().isInitialized()) {
               return false;
             }
           }
@@ -11708,6 +22603,570 @@ public final class MarketplaceProto {
           typeCase_ = 1;
           onChanged();;
           return productTableBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTableOrBuilder> taskTableBuilder_;
+        /**
+         * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+         * @return Whether the taskTable field is set.
+         */
+        @java.lang.Override
+        public boolean hasTaskTable() {
+          return typeCase_ == 2;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+         * @return The taskTable.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable getTaskTable() {
+          if (taskTableBuilder_ == null) {
+            if (typeCase_ == 2) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.getDefaultInstance();
+          } else {
+            if (typeCase_ == 2) {
+              return taskTableBuilder_.getMessage();
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+         */
+        public Builder setTaskTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable value) {
+          if (taskTableBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            taskTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+         */
+        public Builder setTaskTable(
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.Builder builderForValue) {
+          if (taskTableBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            taskTableBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+         */
+        public Builder mergeTaskTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable value) {
+          if (taskTableBuilder_ == null) {
+            if (typeCase_ == 2 &&
+                type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.getDefaultInstance()) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 2) {
+              taskTableBuilder_.mergeFrom(value);
+            }
+            taskTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 2;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+         */
+        public Builder clearTaskTable() {
+          if (taskTableBuilder_ == null) {
+            if (typeCase_ == 2) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 2) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            taskTableBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+         */
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.Builder getTaskTableBuilder() {
+          return getTaskTableFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTableOrBuilder getTaskTableOrBuilder() {
+          if ((typeCase_ == 2) && (taskTableBuilder_ != null)) {
+            return taskTableBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 2) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.TaskTable task_table = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTableOrBuilder> 
+            getTaskTableFieldBuilder() {
+          if (taskTableBuilder_ == null) {
+            if (!(typeCase_ == 2)) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.getDefaultInstance();
+            }
+            taskTableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTableOrBuilder>(
+                    (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.TaskTable) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 2;
+          onChanged();;
+          return taskTableBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTableOrBuilder> saleTableBuilder_;
+        /**
+         * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+         * @return Whether the saleTable field is set.
+         */
+        @java.lang.Override
+        public boolean hasSaleTable() {
+          return typeCase_ == 3;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+         * @return The saleTable.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable getSaleTable() {
+          if (saleTableBuilder_ == null) {
+            if (typeCase_ == 3) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.getDefaultInstance();
+          } else {
+            if (typeCase_ == 3) {
+              return saleTableBuilder_.getMessage();
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+         */
+        public Builder setSaleTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable value) {
+          if (saleTableBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            saleTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+         */
+        public Builder setSaleTable(
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.Builder builderForValue) {
+          if (saleTableBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            saleTableBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+         */
+        public Builder mergeSaleTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable value) {
+          if (saleTableBuilder_ == null) {
+            if (typeCase_ == 3 &&
+                type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.getDefaultInstance()) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 3) {
+              saleTableBuilder_.mergeFrom(value);
+            }
+            saleTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 3;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+         */
+        public Builder clearSaleTable() {
+          if (saleTableBuilder_ == null) {
+            if (typeCase_ == 3) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 3) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            saleTableBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+         */
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.Builder getSaleTableBuilder() {
+          return getSaleTableFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTableOrBuilder getSaleTableOrBuilder() {
+          if ((typeCase_ == 3) && (saleTableBuilder_ != null)) {
+            return saleTableBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 3) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.SalesTable sale_table = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTableOrBuilder> 
+            getSaleTableFieldBuilder() {
+          if (saleTableBuilder_ == null) {
+            if (!(typeCase_ == 3)) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.getDefaultInstance();
+            }
+            saleTableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTableOrBuilder>(
+                    (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.SalesTable) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 3;
+          onChanged();;
+          return saleTableBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTableOrBuilder> changeTableBuilder_;
+        /**
+         * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+         * @return Whether the changeTable field is set.
+         */
+        @java.lang.Override
+        public boolean hasChangeTable() {
+          return typeCase_ == 4;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+         * @return The changeTable.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable getChangeTable() {
+          if (changeTableBuilder_ == null) {
+            if (typeCase_ == 4) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.getDefaultInstance();
+          } else {
+            if (typeCase_ == 4) {
+              return changeTableBuilder_.getMessage();
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+         */
+        public Builder setChangeTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable value) {
+          if (changeTableBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            changeTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 4;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+         */
+        public Builder setChangeTable(
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.Builder builderForValue) {
+          if (changeTableBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            changeTableBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 4;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+         */
+        public Builder mergeChangeTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable value) {
+          if (changeTableBuilder_ == null) {
+            if (typeCase_ == 4 &&
+                type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.getDefaultInstance()) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 4) {
+              changeTableBuilder_.mergeFrom(value);
+            }
+            changeTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 4;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+         */
+        public Builder clearChangeTable() {
+          if (changeTableBuilder_ == null) {
+            if (typeCase_ == 4) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 4) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            changeTableBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+         */
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.Builder getChangeTableBuilder() {
+          return getChangeTableFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTableOrBuilder getChangeTableOrBuilder() {
+          if ((typeCase_ == 4) && (changeTableBuilder_ != null)) {
+            return changeTableBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 4) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.ChangeTable change_table = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTableOrBuilder> 
+            getChangeTableFieldBuilder() {
+          if (changeTableBuilder_ == null) {
+            if (!(typeCase_ == 4)) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.getDefaultInstance();
+            }
+            changeTableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTableOrBuilder>(
+                    (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.ChangeTable) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 4;
+          onChanged();;
+          return changeTableBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTableOrBuilder> logTableBuilder_;
+        /**
+         * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+         * @return Whether the logTable field is set.
+         */
+        @java.lang.Override
+        public boolean hasLogTable() {
+          return typeCase_ == 5;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+         * @return The logTable.
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable getLogTable() {
+          if (logTableBuilder_ == null) {
+            if (typeCase_ == 5) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.getDefaultInstance();
+          } else {
+            if (typeCase_ == 5) {
+              return logTableBuilder_.getMessage();
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+         */
+        public Builder setLogTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable value) {
+          if (logTableBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            type_ = value;
+            onChanged();
+          } else {
+            logTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+         */
+        public Builder setLogTable(
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.Builder builderForValue) {
+          if (logTableBuilder_ == null) {
+            type_ = builderForValue.build();
+            onChanged();
+          } else {
+            logTableBuilder_.setMessage(builderForValue.build());
+          }
+          typeCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+         */
+        public Builder mergeLogTable(nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable value) {
+          if (logTableBuilder_ == null) {
+            if (typeCase_ == 5 &&
+                type_ != nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.getDefaultInstance()) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.newBuilder((nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable) type_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              type_ = value;
+            }
+            onChanged();
+          } else {
+            if (typeCase_ == 5) {
+              logTableBuilder_.mergeFrom(value);
+            }
+            logTableBuilder_.setMessage(value);
+          }
+          typeCase_ = 5;
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+         */
+        public Builder clearLogTable() {
+          if (logTableBuilder_ == null) {
+            if (typeCase_ == 5) {
+              typeCase_ = 0;
+              type_ = null;
+              onChanged();
+            }
+          } else {
+            if (typeCase_ == 5) {
+              typeCase_ = 0;
+              type_ = null;
+            }
+            logTableBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+         */
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.Builder getLogTableBuilder() {
+          return getLogTableFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+         */
+        @java.lang.Override
+        public nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTableOrBuilder getLogTableOrBuilder() {
+          if ((typeCase_ == 5) && (logTableBuilder_ != null)) {
+            return logTableBuilder_.getMessageOrBuilder();
+          } else {
+            if (typeCase_ == 5) {
+              return (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable) type_;
+            }
+            return nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.marketplace.Message.DBResponse.LogTable log_table = 5;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTableOrBuilder> 
+            getLogTableFieldBuilder() {
+          if (logTableBuilder_ == null) {
+            if (!(typeCase_ == 5)) {
+              type_ = nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.getDefaultInstance();
+            }
+            logTableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable.Builder, nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTableOrBuilder>(
+                    (nsu.oop.marketplace.inet.MarketplaceProto.Message.DBResponse.LogTable) type_,
+                    getParentForChildren(),
+                    isClean());
+            type_ = null;
+          }
+          typeCase_ = 5;
+          onChanged();;
+          return logTableBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -20599,6 +32058,26 @@ public final class MarketplaceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_marketplace_DBFullProduct_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_DBFullTask_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_DBFullTask_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_DBFullSales_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_DBFullSales_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_DBFullChanges_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_DBFullChanges_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_DBFullLog_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_DBFullLog_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_marketplace_Message_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -20644,6 +32123,26 @@ public final class MarketplaceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_marketplace_Message_DBRequest_ProductTable_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_DBRequest_TaskTable_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_DBRequest_TaskTable_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_DBRequest_SalesTable_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_DBRequest_SalesTable_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_DBRequest_ChangeTable_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_DBRequest_ChangeTable_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_DBRequest_LogTable_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_DBRequest_LogTable_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_marketplace_Message_DBResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -20653,6 +32152,26 @@ public final class MarketplaceProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_marketplace_Message_DBResponse_ProductTable_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_DBResponse_TaskTable_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_DBResponse_TaskTable_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_DBResponse_SalesTable_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_DBResponse_SalesTable_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_DBResponse_ChangeTable_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_DBResponse_ChangeTable_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_marketplace_Message_DBResponse_LogTable_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_marketplace_Message_DBResponse_LogTable_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_marketplace_Message_ChatMessage_descriptor;
   private static final 
@@ -20707,52 +32226,81 @@ public final class MarketplaceProto {
       ":\003800\022\022\n\nserverPort\030\003 \002(\005\"\031\n\tChatUsers\022\014" +
       "\n\004name\030\001 \003(\t\"M\n\rDBFullProduct\022\n\n\002id\030\001 \002(" +
       "\005\022\014\n\004name\030\002 \002(\t\022\r\n\005price\030\003 \002(\t\022\023\n\013descri" +
-      "ption\030\004 \002(\t\"\240\r\n\007Message\022\017\n\007msg_seq\030\001 \002(\003" +
-      "\022\021\n\tsender_id\030\002 \001(\005\022\023\n\013receiver_id\030\003 \001(\005" +
-      "\022,\n\004ping\030\004 \001(\0132\034.marketplace.Message.Pin" +
-      "gMsgH\000\022*\n\003ack\030\005 \001(\0132\033.marketplace.Messag" +
-      "e.AckMsgH\000\022<\n\014announcement\030\006 \001(\0132$.marke" +
-      "tplace.Message.AnnouncementMsgH\000\022,\n\004join" +
-      "\030\007 \001(\0132\034.marketplace.Message.JoinMsgH\000\022." +
-      "\n\005error\030\010 \001(\0132\035.marketplace.Message.Erro" +
-      "rMsgH\000\0225\n\tuser_info\030\t \001(\0132 .marketplace." +
-      "Message.UserInfoMsgH\000\0220\n\004chat\030\n \001(\0132 .ma" +
-      "rketplace.Message.ChatMessageH\000\0223\n\tdbReq" +
-      "uest\030\013 \001(\0132\036.marketplace.Message.DBReque" +
-      "stH\000\0225\n\ndbResponse\030\014 \001(\0132\037.marketplace.M" +
-      "essage.DBResponseH\000\032\t\n\007PingMsg\032\010\n\006AckMsg" +
-      "\032=\n\017AnnouncementMsg\022*\n\006config\030\001 \002(\0132\032.ma" +
-      "rketplace.SessionConfig\032*\n\007JoinMsg\022\r\n\005lo" +
-      "gin\030\001 \002(\t\022\020\n\010password\030\002 \002(\t\032!\n\010ErrorMsg\022" +
-      "\025\n\rerror_message\030\001 \002(\t\032Y\n\013UserInfoMsg\022#\n" +
-      "\004type\030\001 \002(\0162\025.marketplace.UserType\022\021\n\tfi" +
-      "rstName\030\002 \002(\t\022\022\n\nsecondName\030\003 \002(\t\032i\n\tDBR" +
-      "equest\022D\n\rproduct_table\030\001 \001(\0132+.marketpl" +
-      "ace.Message.DBRequest.ProductTableH\000\032\016\n\014" +
-      "ProductTableB\006\n\004Type\032\235\001\n\nDBResponse\022E\n\rp" +
-      "roduct_table\030\001 \001(\0132,.marketplace.Message" +
-      ".DBResponse.ProductTableH\000\032@\n\014ProductTab" +
+      "ption\030\004 \002(\t\"4\n\nDBFullTask\022\n\n\002id\030\001 \002(\005\022\014\n" +
+      "\004name\030\002 \002(\t\022\014\n\004task\030\003 \002(\t\"g\n\013DBFullSales" +
+      "\022\022\n\nproduct_id\030\001 \002(\005\022\024\n\014product_name\030\002 \002" +
+      "(\t\022\014\n\004date\030\003 \002(\t\022\020\n\010quantity\030\004 \002(\t\022\016\n\006am" +
+      "ount\030\005 \002(\t\"l\n\rDBFullChanges\022\n\n\002id\030\001 \002(\005\022" +
+      "\024\n\014product_name\030\002 \002(\t\022\023\n\013change_type\030\003 \002" +
+      "(\t\022\021\n\tnew_value\030\004 \002(\t\022\021\n\tuser_name\030\005 \002(\t" +
+      "\"H\n\tDBFullLog\022\021\n\tuser_name\030\001 \002(\t\022\023\n\013desc" +
+      "ription\030\002 \002(\t\022\023\n\013action_type\030\003 \002(\t\"\314\023\n\007M" +
+      "essage\022\017\n\007msg_seq\030\001 \002(\003\022\021\n\tsender_id\030\002 \001" +
+      "(\005\022\023\n\013receiver_id\030\003 \001(\005\022,\n\004ping\030\004 \001(\0132\034." +
+      "marketplace.Message.PingMsgH\000\022*\n\003ack\030\005 \001" +
+      "(\0132\033.marketplace.Message.AckMsgH\000\022<\n\014ann" +
+      "ouncement\030\006 \001(\0132$.marketplace.Message.An" +
+      "nouncementMsgH\000\022,\n\004join\030\007 \001(\0132\034.marketpl" +
+      "ace.Message.JoinMsgH\000\022.\n\005error\030\010 \001(\0132\035.m" +
+      "arketplace.Message.ErrorMsgH\000\0225\n\tuser_in" +
+      "fo\030\t \001(\0132 .marketplace.Message.UserInfoM" +
+      "sgH\000\0220\n\004chat\030\n \001(\0132 .marketplace.Message" +
+      ".ChatMessageH\000\0223\n\tdbRequest\030\013 \001(\0132\036.mark" +
+      "etplace.Message.DBRequestH\000\0225\n\ndbRespons" +
+      "e\030\014 \001(\0132\037.marketplace.Message.DBResponse" +
+      "H\000\032\t\n\007PingMsg\032\010\n\006AckMsg\032=\n\017AnnouncementM" +
+      "sg\022*\n\006config\030\001 \002(\0132\032.marketplace.Session" +
+      "Config\032*\n\007JoinMsg\022\r\n\005login\030\001 \002(\t\022\020\n\010pass" +
+      "word\030\002 \002(\t\032!\n\010ErrorMsg\022\025\n\rerror_message\030" +
+      "\001 \002(\t\032Y\n\013UserInfoMsg\022#\n\004type\030\001 \002(\0162\025.mar" +
+      "ketplace.UserType\022\021\n\tfirstName\030\002 \002(\t\022\022\n\n" +
+      "secondName\030\003 \002(\t\032\242\003\n\tDBRequest\022D\n\rproduc" +
+      "t_table\030\001 \001(\0132+.marketplace.Message.DBRe" +
+      "quest.ProductTableH\000\022>\n\ntask_table\030\002 \001(\013" +
+      "2(.marketplace.Message.DBRequest.TaskTab" +
+      "leH\000\022?\n\nsale_table\030\003 \001(\0132).marketplace.M" +
+      "essage.DBRequest.SalesTableH\000\022B\n\014change_" +
+      "table\030\004 \001(\0132*.marketplace.Message.DBRequ" +
+      "est.ChangeTableH\000\022<\n\tlog_table\030\005 \001(\0132\'.m" +
+      "arketplace.Message.DBRequest.LogTableH\000\032" +
+      "\016\n\014ProductTable\032\013\n\tTaskTable\032\014\n\nSalesTab" +
+      "le\032\r\n\013ChangeTable\032\n\n\010LogTableB\006\n\004Type\032\217\005" +
+      "\n\nDBResponse\022E\n\rproduct_table\030\001 \001(\0132,.ma" +
+      "rketplace.Message.DBResponse.ProductTabl" +
+      "eH\000\022?\n\ntask_table\030\002 \001(\0132).marketplace.Me" +
+      "ssage.DBResponse.TaskTableH\000\022@\n\nsale_tab" +
+      "le\030\003 \001(\0132*.marketplace.Message.DBRespons" +
+      "e.SalesTableH\000\022C\n\014change_table\030\004 \001(\0132+.m" +
+      "arketplace.Message.DBResponse.ChangeTabl" +
+      "eH\000\022=\n\tlog_table\030\005 \001(\0132(.marketplace.Mes" +
+      "sage.DBResponse.LogTableH\000\032@\n\014ProductTab" +
       "le\0220\n\014full_product\030\001 \003(\0132\032.marketplace.D" +
-      "BFullProductB\006\n\004Type\032\377\004\n\013ChatMessage\0228\n\004" +
-      "join\030\001 \001(\0132(.marketplace.Message.ChatMes" +
-      "sage.JoinMsgH\000\0226\n\003end\030\002 \001(\0132\'.marketplac" +
-      "e.Message.ChatMessage.EndMsgH\000\022<\n\006public" +
-      "\030\003 \001(\0132*.marketplace.Message.ChatMessage" +
-      ".PublicMsgH\000\022>\n\007private\030\004 \001(\0132+.marketpl" +
-      "ace.Message.ChatMessage.PrivateMsgH\000\022<\n\004" +
-      "list\030\005 \001(\0132,.marketplace.Message.ChatMes" +
-      "sage.UserListMsgH\000\022:\n\005error\030\006 \001(\0132).mark" +
-      "etplace.Message.ChatMessage.ErrorMsgH\000\032\027" +
-      "\n\007JoinMsg\022\014\n\004name\030\001 \002(\t\032\026\n\006EndMsg\022\014\n\004nam" +
-      "e\030\001 \002(\t\0320\n\tPublicMsg\022\022\n\nsenderName\030\001 \002(\t" +
-      "\022\017\n\007message\030\002 \002(\t\032G\n\nPrivateMsg\022\022\n\nsende" +
-      "rName\030\001 \002(\t\022\024\n\014receiverName\030\002 \002(\t\022\017\n\007mes" +
-      "sage\030\003 \002(\t\0327\n\013UserListMsg\022(\n\010userList\030\001 " +
-      "\002(\0132\026.marketplace.ChatUsers\032\031\n\010ErrorMsg\022" +
-      "\r\n\005error\030\001 \002(\tB\006\n\004TypeB\006\n\004Type*M\n\010UserTy" +
-      "pe\022\023\n\017UNAUTHENTICATED\020\000\022\014\n\010DIRECTOR\020\001\022\021\n" +
-      "\rADMINISTRATOR\020\002\022\013\n\007MANAGER\020\003B,\n\030nsu.oop" +
-      ".marketplace.inetB\020MarketplaceProto"
+      "BFullProduct\0327\n\tTaskTable\022*\n\tfull_task\030\001" +
+      " \003(\0132\027.marketplace.DBFullTask\032:\n\nSalesTa" +
+      "ble\022,\n\nfull_sales\030\001 \003(\0132\030.marketplace.DB" +
+      "FullSales\032>\n\013ChangeTable\022/\n\013full_change\030" +
+      "\001 \003(\0132\032.marketplace.DBFullChanges\0324\n\010Log" +
+      "Table\022(\n\010full_log\030\001 \003(\0132\026.marketplace.DB" +
+      "FullLogB\006\n\004Type\032\377\004\n\013ChatMessage\0228\n\004join\030" +
+      "\001 \001(\0132(.marketplace.Message.ChatMessage." +
+      "JoinMsgH\000\0226\n\003end\030\002 \001(\0132\'.marketplace.Mes" +
+      "sage.ChatMessage.EndMsgH\000\022<\n\006public\030\003 \001(" +
+      "\0132*.marketplace.Message.ChatMessage.Publ" +
+      "icMsgH\000\022>\n\007private\030\004 \001(\0132+.marketplace.M" +
+      "essage.ChatMessage.PrivateMsgH\000\022<\n\004list\030" +
+      "\005 \001(\0132,.marketplace.Message.ChatMessage." +
+      "UserListMsgH\000\022:\n\005error\030\006 \001(\0132).marketpla" +
+      "ce.Message.ChatMessage.ErrorMsgH\000\032\027\n\007Joi" +
+      "nMsg\022\014\n\004name\030\001 \002(\t\032\026\n\006EndMsg\022\014\n\004name\030\001 \002" +
+      "(\t\0320\n\tPublicMsg\022\022\n\nsenderName\030\001 \002(\t\022\017\n\007m" +
+      "essage\030\002 \002(\t\032G\n\nPrivateMsg\022\022\n\nsenderName" +
+      "\030\001 \002(\t\022\024\n\014receiverName\030\002 \002(\t\022\017\n\007message\030" +
+      "\003 \002(\t\0327\n\013UserListMsg\022(\n\010userList\030\001 \002(\0132\026" +
+      ".marketplace.ChatUsers\032\031\n\010ErrorMsg\022\r\n\005er" +
+      "ror\030\001 \002(\tB\006\n\004TypeB\006\n\004Type*M\n\010UserType\022\023\n" +
+      "\017UNAUTHENTICATED\020\000\022\014\n\010DIRECTOR\020\001\022\021\n\rADMI" +
+      "NISTRATOR\020\002\022\013\n\007MANAGER\020\003B,\n\030nsu.oop.mark" +
+      "etplace.inetB\020MarketplaceProto"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20782,8 +32330,32 @@ public final class MarketplaceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_marketplace_DBFullProduct_descriptor,
         new java.lang.String[] { "Id", "Name", "Price", "Description", });
-    internal_static_marketplace_Message_descriptor =
+    internal_static_marketplace_DBFullTask_descriptor =
       getDescriptor().getMessageTypes().get(4);
+    internal_static_marketplace_DBFullTask_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_DBFullTask_descriptor,
+        new java.lang.String[] { "Id", "Name", "Task", });
+    internal_static_marketplace_DBFullSales_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_marketplace_DBFullSales_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_DBFullSales_descriptor,
+        new java.lang.String[] { "ProductId", "ProductName", "Date", "Quantity", "Amount", });
+    internal_static_marketplace_DBFullChanges_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_marketplace_DBFullChanges_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_DBFullChanges_descriptor,
+        new java.lang.String[] { "Id", "ProductName", "ChangeType", "NewValue", "UserName", });
+    internal_static_marketplace_DBFullLog_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_marketplace_DBFullLog_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_DBFullLog_descriptor,
+        new java.lang.String[] { "UserName", "Description", "ActionType", });
+    internal_static_marketplace_Message_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_marketplace_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_marketplace_Message_descriptor,
@@ -20829,25 +32401,73 @@ public final class MarketplaceProto {
     internal_static_marketplace_Message_DBRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_marketplace_Message_DBRequest_descriptor,
-        new java.lang.String[] { "ProductTable", "Type", });
+        new java.lang.String[] { "ProductTable", "TaskTable", "SaleTable", "ChangeTable", "LogTable", "Type", });
     internal_static_marketplace_Message_DBRequest_ProductTable_descriptor =
       internal_static_marketplace_Message_DBRequest_descriptor.getNestedTypes().get(0);
     internal_static_marketplace_Message_DBRequest_ProductTable_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_marketplace_Message_DBRequest_ProductTable_descriptor,
         new java.lang.String[] { });
+    internal_static_marketplace_Message_DBRequest_TaskTable_descriptor =
+      internal_static_marketplace_Message_DBRequest_descriptor.getNestedTypes().get(1);
+    internal_static_marketplace_Message_DBRequest_TaskTable_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_DBRequest_TaskTable_descriptor,
+        new java.lang.String[] { });
+    internal_static_marketplace_Message_DBRequest_SalesTable_descriptor =
+      internal_static_marketplace_Message_DBRequest_descriptor.getNestedTypes().get(2);
+    internal_static_marketplace_Message_DBRequest_SalesTable_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_DBRequest_SalesTable_descriptor,
+        new java.lang.String[] { });
+    internal_static_marketplace_Message_DBRequest_ChangeTable_descriptor =
+      internal_static_marketplace_Message_DBRequest_descriptor.getNestedTypes().get(3);
+    internal_static_marketplace_Message_DBRequest_ChangeTable_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_DBRequest_ChangeTable_descriptor,
+        new java.lang.String[] { });
+    internal_static_marketplace_Message_DBRequest_LogTable_descriptor =
+      internal_static_marketplace_Message_DBRequest_descriptor.getNestedTypes().get(4);
+    internal_static_marketplace_Message_DBRequest_LogTable_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_DBRequest_LogTable_descriptor,
+        new java.lang.String[] { });
     internal_static_marketplace_Message_DBResponse_descriptor =
       internal_static_marketplace_Message_descriptor.getNestedTypes().get(7);
     internal_static_marketplace_Message_DBResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_marketplace_Message_DBResponse_descriptor,
-        new java.lang.String[] { "ProductTable", "Type", });
+        new java.lang.String[] { "ProductTable", "TaskTable", "SaleTable", "ChangeTable", "LogTable", "Type", });
     internal_static_marketplace_Message_DBResponse_ProductTable_descriptor =
       internal_static_marketplace_Message_DBResponse_descriptor.getNestedTypes().get(0);
     internal_static_marketplace_Message_DBResponse_ProductTable_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_marketplace_Message_DBResponse_ProductTable_descriptor,
         new java.lang.String[] { "FullProduct", });
+    internal_static_marketplace_Message_DBResponse_TaskTable_descriptor =
+      internal_static_marketplace_Message_DBResponse_descriptor.getNestedTypes().get(1);
+    internal_static_marketplace_Message_DBResponse_TaskTable_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_DBResponse_TaskTable_descriptor,
+        new java.lang.String[] { "FullTask", });
+    internal_static_marketplace_Message_DBResponse_SalesTable_descriptor =
+      internal_static_marketplace_Message_DBResponse_descriptor.getNestedTypes().get(2);
+    internal_static_marketplace_Message_DBResponse_SalesTable_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_DBResponse_SalesTable_descriptor,
+        new java.lang.String[] { "FullSales", });
+    internal_static_marketplace_Message_DBResponse_ChangeTable_descriptor =
+      internal_static_marketplace_Message_DBResponse_descriptor.getNestedTypes().get(3);
+    internal_static_marketplace_Message_DBResponse_ChangeTable_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_DBResponse_ChangeTable_descriptor,
+        new java.lang.String[] { "FullChange", });
+    internal_static_marketplace_Message_DBResponse_LogTable_descriptor =
+      internal_static_marketplace_Message_DBResponse_descriptor.getNestedTypes().get(4);
+    internal_static_marketplace_Message_DBResponse_LogTable_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_marketplace_Message_DBResponse_LogTable_descriptor,
+        new java.lang.String[] { "FullLog", });
     internal_static_marketplace_Message_ChatMessage_descriptor =
       internal_static_marketplace_Message_descriptor.getNestedTypes().get(8);
     internal_static_marketplace_Message_ChatMessage_fieldAccessorTable = new
