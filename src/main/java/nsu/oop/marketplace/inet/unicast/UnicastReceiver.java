@@ -60,6 +60,16 @@ public class UnicastReceiver extends Thread {
                 messageAcceptor.acceptMessage(messageSenderId, messageSequence);
                 listener.receiveChatMsg(msg.getChat(), messageSenderId);
             }
+            case DBREQUEST -> {
+                System.out.println("DBREQUEST " + msg.getDbRequest().getTypeCase() + " senderId:" + messageSenderId + " seq=" + messageSequence);
+                messageAcceptor.acceptMessage(messageSenderId, messageSequence);
+                listener.receiveDBRequestMsg(msg.getDbRequest(), messageSenderId);
+            }
+            case DBRESPONSE -> {
+                System.out.println("DBRESPONSE " + msg.getDbResponse().getTypeCase() + " senderId:" + messageSenderId + " seq=" + messageSequence);
+                messageAcceptor.acceptMessage(messageSenderId, messageSequence);
+                listener.receiveDBResponseMsg(msg.getDbResponse(), messageSenderId);
+            }
         }
     }
 

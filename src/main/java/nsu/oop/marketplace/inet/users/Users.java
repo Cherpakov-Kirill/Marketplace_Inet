@@ -10,6 +10,8 @@ public interface Users {
     void sendErrorMessage(String errorMessage, int receiverId);
     void sendJoinMessage(String login, String password);
     void sendChatMessage(MarketplaceProto.Message.ChatMessage chatMessage, int receiverId);
+    void sendDBRequestMessage(MarketplaceProto.Message.DBRequest request, int receiverId);
+    void sendDBResponseMessage(MarketplaceProto.Message.DBResponse response, int receiverId);
     void disconnectUser(String errorMessage, int userId);
     int getNumberOfUsers();
     List<MarketplaceProto.User> getUsersList();

@@ -157,6 +157,16 @@ public class InetController implements Inet, MulticastPublisherListener, Multica
     }
 
     @Override
+    public void receiveDBRequestMsg(MarketplaceProto.Message.DBRequest dbRequest, int messageSenderId) {
+        listener.receiveDBRequestMsg(dbRequest, messageSenderId);
+    }
+
+    @Override
+    public void receiveDBResponseMsg(MarketplaceProto.Message.DBResponse dbResponse, int messageSenderId) {
+        listener.receiveDBResponseMsg(dbResponse, messageSenderId);
+    }
+
+    @Override
     public void receiveUserInfoMsg(MarketplaceProto.Message.UserInfoMsg userInfoMsg, int receiverId) {
         listener.receiveUserInfoMsg(receiverId, userInfoMsg.getType(), userInfoMsg.getFirstName(), userInfoMsg.getSecondName());
     }
