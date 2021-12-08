@@ -158,7 +158,7 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.DBFullLog dbFullChangeBuilder(String userName, String description, String actionType){
+    public static MarketplaceProto.DBFullLog dbFullLogBuilder(String userName, String description, String actionType){
         return MarketplaceProto.DBFullLog.newBuilder()
                 .setUserName(userName)
                 .setDescription(description)
