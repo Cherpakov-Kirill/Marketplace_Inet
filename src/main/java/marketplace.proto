@@ -40,6 +40,34 @@ message DBFullProduct {// Полная информация по продукт�
   required string description = 4;
 }
 
+message DBFullTask {// Полная информация по продукту из таблицы products
+  required int32 id = 1; //понял что нужен id для дальнейшего удаления задания из таблицы
+  required string name = 2; //полное имя исполнителя
+  required string task = 3;
+}
+
+message DBFullSales {// Полная информация по продукту из таблицы sales
+  required int32 product_id = 1;
+  required string product_name = 2;
+  required string date = 3;//дату продажи
+  required string quantity = 4;
+  required string amount = 5;//общая сумма на которую был продан товар(quantity * product_price)
+}
+
+message DBFullChanges {
+  required int32 id = 1;//id изменения чтобы потом можно было его принять
+  required string product_name = 2;
+  required string change_type = 3;
+  required string new_value = 4;
+  required string user_name = 5;
+}
+
+message DBFullLog {
+  required string user_name = 1;
+  required string description = 2;
+  required string action_type = 3;
+}
+
 // Общий формат любого сообщения
 message Message {
   // Говорим что мы живы с интервалом ping_delay_ms
@@ -70,10 +98,21 @@ message Message {
   message DBRequest{
     message ProductTable{}
 
+    message TaskTable{}
+
+    message SalesTable{}
+
+    message ChangeTable{}
+
+    message LogTable{}
 
     // Тип сообщения
     oneof Type {
       ProductTable product_table = 1;
+      TaskTable task_table = 2;
+      SalesTable sale_table = 3;
+      ChangeTable change_table = 4;
+      LogTable log_table = 5;
     }
   }
 
@@ -82,9 +121,29 @@ message Message {
       repeated DBFullProduct full_product = 1;
     }
 
+    message TaskTable{
+      repeated DBFullTask full_task = 1;
+    }
+
+    message SalesTable{
+      repeated DBFullSales full_sales = 1;
+    }
+
+    message ChangeTable{
+      repeated DBFullChanges full_change = 1;
+    }
+
+    message LogTable{
+      repeated DBFullLog full_log = 1;
+    }
+
     // Тип сообщения
     oneof Type {
       ProductTable product_table = 1;
+      TaskTable task_table = 2;
+      SalesTable sale_table = 3;
+      ChangeTable change_table = 4;
+      LogTable log_table = 5;
     }
   }
 
