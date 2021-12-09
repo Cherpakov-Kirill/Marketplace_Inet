@@ -107,6 +107,14 @@ message Message {
 
     message LogTable{}
 
+    message CompleteTask{
+      required int32 id = 1;
+    }
+
+    message AcceptChange{
+      required int32 id = 1;
+    }
+
     // Тип сообщения
     oneof Type {
       ProductTable product_table = 1;
@@ -114,6 +122,8 @@ message Message {
       SalesTable sale_table = 3;
       ChangeTable change_table = 4;
       LogTable log_table = 5;
+      CompleteTask complete_task = 6;
+      AcceptChange accept_change = 7;
     }
   }
 
@@ -138,6 +148,18 @@ message Message {
       repeated DBFullLog full_log = 1;
     }
 
+    message CompleteTask{
+      required int32 id = 1;
+      required bool success = 2;
+      required string error_message = 3;
+    }
+
+    message AcceptChange{
+      required int32 id = 1;
+      required bool success = 2;
+      required string error_message = 3;
+    }
+
     // Тип сообщения
     oneof Type {
       ProductTable product_table = 1;
@@ -145,6 +167,8 @@ message Message {
       SalesTable sale_table = 3;
       ChangeTable change_table = 4;
       LogTable log_table = 5;
+      CompleteTask complete_task = 6;
+      AcceptChange accept_change = 7;
     }
   }
 

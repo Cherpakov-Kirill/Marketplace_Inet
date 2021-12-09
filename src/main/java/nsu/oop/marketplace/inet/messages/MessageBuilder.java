@@ -85,27 +85,43 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.Message.DBRequest dbLogTableRequestMsgBuilder() {
+    public static MarketplaceProto.Message.DBRequest dbFullLogTableRequestMsgBuilder() {
         return MarketplaceProto.Message.DBRequest.newBuilder()
                 .setLogTable(MarketplaceProto.Message.DBRequest.LogTable.newBuilder().build())
                 .build();
     }
 
-    public static MarketplaceProto.Message.DBRequest dbTaskTableRequestMsgBuilder() {
+    public static MarketplaceProto.Message.DBRequest dbFullTaskTableRequestMsgBuilder() {
         return MarketplaceProto.Message.DBRequest.newBuilder()
                 .setTaskTable(MarketplaceProto.Message.DBRequest.TaskTable.newBuilder().build())
                 .build();
     }
 
-    public static MarketplaceProto.Message.DBRequest dbSalesTableRequestMsgBuilder() {
+    public static MarketplaceProto.Message.DBRequest dbFullSalesTableRequestMsgBuilder() {
         return MarketplaceProto.Message.DBRequest.newBuilder()
                 .setSaleTable(MarketplaceProto.Message.DBRequest.SalesTable.newBuilder().build())
                 .build();
     }
 
-    public static MarketplaceProto.Message.DBRequest dbGlobalChangesTableRequestMsgBuilder() {
+    public static MarketplaceProto.Message.DBRequest dbFullGlobalChangesTableRequestMsgBuilder() {
         return MarketplaceProto.Message.DBRequest.newBuilder()
                 .setChangeTable(MarketplaceProto.Message.DBRequest.ChangeTable.newBuilder().build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBRequest dbCompleteTaskRequestMsgBuilder(int id) {
+        return MarketplaceProto.Message.DBRequest.newBuilder()
+                .setCompleteTask(MarketplaceProto.Message.DBRequest.CompleteTask.newBuilder()
+                        .setId(id)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBRequest dbAcceptChangeRequestMsgBuilder(int id) {
+        return MarketplaceProto.Message.DBRequest.newBuilder()
+                .setAcceptChange(MarketplaceProto.Message.DBRequest.AcceptChange.newBuilder()
+                        .setId(id)
+                        .build())
                 .build();
     }
 
@@ -128,7 +144,7 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.Message.DBResponse productTableBuilder(List<MarketplaceProto.DBFullProduct> productList){
+    public static MarketplaceProto.Message.DBResponse productTableResponseBuilder(List<MarketplaceProto.DBFullProduct> productList) {
         return MarketplaceProto.Message.DBResponse.newBuilder()
                 .setProductTable(MarketplaceProto.Message.DBResponse.ProductTable.newBuilder()
                         .addAllFullProduct(productList)
@@ -136,7 +152,7 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.DBFullTask dbFullTaskBuilder(int id, String name, String task, boolean done){
+    public static MarketplaceProto.DBFullTask dbFullTaskBuilder(int id, String name, String task, boolean done) {
         return MarketplaceProto.DBFullTask.newBuilder()
                 .setId(id)
                 .setName(name)
@@ -145,7 +161,7 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.Message.DBResponse taskTableBuilder(List<MarketplaceProto.DBFullTask> taskList){
+    public static MarketplaceProto.Message.DBResponse taskTableResponseBuilder(List<MarketplaceProto.DBFullTask> taskList) {
         return MarketplaceProto.Message.DBResponse.newBuilder()
                 .setTaskTable(MarketplaceProto.Message.DBResponse.TaskTable.newBuilder()
                         .addAllFullTask(taskList)
@@ -153,7 +169,7 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.DBFullSales dbFullSaleBuilder(int productId, String productName, String date, String quantity, String amount){
+    public static MarketplaceProto.DBFullSales dbFullSaleBuilder(int productId, String productName, String date, String quantity, String amount) {
         return MarketplaceProto.DBFullSales.newBuilder()
                 .setProductId(productId)
                 .setProductName(productName)
@@ -163,7 +179,7 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.Message.DBResponse salesTableBuilder(List<MarketplaceProto.DBFullSales> salesList){
+    public static MarketplaceProto.Message.DBResponse salesTableResponseBuilder(List<MarketplaceProto.DBFullSales> salesList) {
         return MarketplaceProto.Message.DBResponse.newBuilder()
                 .setSaleTable(MarketplaceProto.Message.DBResponse.SalesTable.newBuilder()
                         .addAllFullSales(salesList)
@@ -171,7 +187,7 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.DBFullChanges dbFullChangeBuilder(int id, String productName, String changeType, String newValue, String userName){
+    public static MarketplaceProto.DBFullChanges dbFullChangeBuilder(int id, String productName, String changeType, String newValue, String userName) {
         return MarketplaceProto.DBFullChanges.newBuilder()
                 .setId(id)
                 .setProductName(productName)
@@ -181,7 +197,7 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.Message.DBResponse changeTableBuilder(List<MarketplaceProto.DBFullChanges> changeList){
+    public static MarketplaceProto.Message.DBResponse changeTableResponseBuilder(List<MarketplaceProto.DBFullChanges> changeList) {
         return MarketplaceProto.Message.DBResponse.newBuilder()
                 .setChangeTable(MarketplaceProto.Message.DBResponse.ChangeTable.newBuilder()
                         .addAllFullChange(changeList)
@@ -189,7 +205,7 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.DBFullLog dbFullLogBuilder(String userName, String description, String actionType){
+    public static MarketplaceProto.DBFullLog dbFullLogBuilder(String userName, String description, String actionType) {
         return MarketplaceProto.DBFullLog.newBuilder()
                 .setUserName(userName)
                 .setDescription(description)
@@ -197,10 +213,30 @@ public class MessageBuilder {
                 .build();
     }
 
-    public static MarketplaceProto.Message.DBResponse logTableBuilder(List<MarketplaceProto.DBFullLog> logList){
+    public static MarketplaceProto.Message.DBResponse logTableResponseBuilder(List<MarketplaceProto.DBFullLog> logList) {
         return MarketplaceProto.Message.DBResponse.newBuilder()
                 .setLogTable(MarketplaceProto.Message.DBResponse.LogTable.newBuilder()
                         .addAllFullLog(logList)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBResponse acceptChangeResponseBuilder(int id, boolean success, String errorMessage) {
+        return MarketplaceProto.Message.DBResponse.newBuilder()
+                .setAcceptChange(MarketplaceProto.Message.DBResponse.AcceptChange.newBuilder()
+                        .setId(id)
+                        .setSuccess(success)
+                        .setErrorMessage(errorMessage)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBResponse completeTaskResponseBuilder(int id, boolean success, String errorMessage) {
+        return MarketplaceProto.Message.DBResponse.newBuilder()
+                .setCompleteTask(MarketplaceProto.Message.DBResponse.CompleteTask.newBuilder()
+                        .setId(id)
+                        .setSuccess(success)
+                        .setErrorMessage(errorMessage)
                         .build())
                 .build();
     }
