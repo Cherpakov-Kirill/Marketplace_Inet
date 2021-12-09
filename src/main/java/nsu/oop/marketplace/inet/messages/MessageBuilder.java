@@ -297,6 +297,48 @@ public class MessageBuilder {
                 .build();
     }
 
+    public static MarketplaceProto.Message.DBResponse successfullyBuilder() {
+        return MarketplaceProto.Message.DBResponse.newBuilder()
+                .setSuccessfully(MarketplaceProto.Message.DBResponse.Successfully.newBuilder().build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBResponse unsuccessfullyBuilder() {
+        return MarketplaceProto.Message.DBResponse.newBuilder()
+                .setUnsuccessfully(MarketplaceProto.Message.DBResponse.Unsuccessfully.newBuilder().build())
+                .build();
+    }
+
+    public static MarketplaceProto.DBUser dbUserBuilder(int id, String fullName) {
+        return MarketplaceProto.DBUser.newBuilder()
+                .setId(id)
+                .setFullUserName(fullName)
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBResponse userListBuilder(List<MarketplaceProto.DBUser> userList) {
+        return MarketplaceProto.Message.DBResponse.newBuilder()
+                .setUserList(MarketplaceProto.Message.DBResponse.UserList.newBuilder()
+                        .addAllUser(userList)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.DBProduct dbProductBuilder(int id, String name) {
+        return MarketplaceProto.DBProduct.newBuilder()
+                .setId(id)
+                .setName(name)
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBResponse productListBuilder(List<MarketplaceProto.DBProduct> productList) {
+        return MarketplaceProto.Message.DBResponse.newBuilder()
+                .setProductList(MarketplaceProto.Message.DBResponse.ProductList.newBuilder()
+                        .addAllProduct(productList)
+                        .build())
+                .build();
+    }
+
     //Создание сообщений по чату
 
     public static MarketplaceProto.Message chatMsgBuilder(MarketplaceProto.Message.ChatMessage chatMessage, int senderId, int receiverId) {
