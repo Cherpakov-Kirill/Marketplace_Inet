@@ -125,6 +125,62 @@ public class MessageBuilder {
                 .build();
     }
 
+    public static MarketplaceProto.Message.DBRequest dbAddNewUserRequestMsgBuilder(String firstName, String secondName, String role, String login, String password) {
+        return MarketplaceProto.Message.DBRequest.newBuilder()
+                .setAddNewUser(MarketplaceProto.Message.DBRequest.AddNewUser.newBuilder()
+                        .setFirstName(firstName)
+                        .setSecondName(secondName)
+                        .setRole(role)
+                        .setLogin(login)
+                        .setPassword(password)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBRequest dbAddNewProductRequestMsgBuilder(String name, String price, String description) {
+        return MarketplaceProto.Message.DBRequest.newBuilder()
+                .setAddNewProduct(MarketplaceProto.Message.DBRequest.AddNewProduct.newBuilder()
+                        .setName(name)
+                        .setPrice(price)
+                        .setDescription(description)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBRequest dbUserListRequestMsgBuilder() {
+        return MarketplaceProto.Message.DBRequest.newBuilder()
+                .setUserList(MarketplaceProto.Message.DBRequest.UserList.newBuilder().build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBRequest dbSetTaskRequestMsgBuilder(int userId, String task) {
+        return MarketplaceProto.Message.DBRequest.newBuilder()
+                .setSetNewTask(MarketplaceProto.Message.DBRequest.SetNewTask.newBuilder()
+                        .setUserId(userId)
+                        .setTask(task)
+                        .build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBRequest dbProductListRequestMsgBuilder() {
+        return MarketplaceProto.Message.DBRequest.newBuilder()
+                .setProductList(MarketplaceProto.Message.DBRequest.ProductList.newBuilder().build())
+                .build();
+    }
+
+    public static MarketplaceProto.Message.DBRequest dbChangeProductInfoRequestMsgBuilder(int id, String name, String price, String description) {
+        return MarketplaceProto.Message.DBRequest.newBuilder()
+                .setChangeProductInfo(MarketplaceProto.Message.DBRequest.ChangeProductInfo.newBuilder()
+                        .setProduct(MarketplaceProto.DBFullProduct.newBuilder()
+                                .setId(id)
+                                .setName(name)
+                                .setPrice(price)
+                                .setDescription(description)
+                                .build())
+                        .build())
+                .build();
+    }
+
     public static MarketplaceProto.Message dbResponseMsgBuilder(MarketplaceProto.Message.DBResponse response, int senderId, int receiverId) {
         return MarketplaceProto.Message.newBuilder()
                 .setDbResponse(response)

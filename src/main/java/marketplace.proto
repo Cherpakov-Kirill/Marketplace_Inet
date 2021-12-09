@@ -69,6 +69,16 @@ message DBFullLog {
   required string action_type = 3;
 }
 
+message DBUser {
+  required int32 id = 1;
+  required string full_user_name = 2;
+}
+
+message DBProduct {
+  required int32 id = 1;
+  required string name = 2;
+}
+
 // Общий формат любого сообщения
 message Message {
   // Говорим что мы живы с интервалом ping_delay_ms
@@ -115,6 +125,33 @@ message Message {
       required int32 id = 1;
     }
 
+    message AddNewUser{
+      required string first_name = 1;
+      required string second_name = 2;
+      required string role = 3;
+      required string login = 4;
+      required string password = 5;
+    }
+
+    message AddNewProduct{
+      required string name = 1;
+      required string price = 2;
+      required string description = 3;
+    }
+
+    message SetNewTask{
+      required int32 user_id = 1;
+      required string task = 2;
+    }
+
+    message UserList{}    // перед отправкой новой задачи, клиент присылает запрос на список пользователей
+
+    message ChangeProductInfo{
+      required DBFullProduct product = 1;
+    }
+
+    message ProductList{} // перед отправкой изменений инфы товара, клиент присылает запрос на список товаров
+
     // Тип сообщения
     oneof Type {
       ProductTable product_table = 1;
@@ -124,6 +161,12 @@ message Message {
       LogTable log_table = 5;
       CompleteTask complete_task = 6;
       AcceptChange accept_change = 7;
+      AddNewUser add_new_user = 8;
+      AddNewProduct add_new_product = 9;
+      SetNewTask set_new_task = 10;
+      UserList user_list = 11;
+      ChangeProductInfo change_product_info = 12;
+      ProductList product_list = 13;
     }
   }
 
@@ -160,6 +203,18 @@ message Message {
       required string error_message = 3;
     }
 
+    message UserList{
+      repeated DBUser user = 1;
+    }
+
+    message ProductList{
+      repeated DBProduct product = 1;
+    }
+
+    message Successfully{}  //add user, add product, set task, change product info
+
+    message Unsuccessfully{} //add user, add product, set task, change product info
+
     // Тип сообщения
     oneof Type {
       ProductTable product_table = 1;
@@ -169,6 +224,10 @@ message Message {
       LogTable log_table = 5;
       CompleteTask complete_task = 6;
       AcceptChange accept_change = 7;
+      UserList user_list = 8;
+      ProductList product_list = 9;
+      Successfully successfully = 10;
+      Unsuccessfully unsuccessfully = 11;
     }
   }
 
